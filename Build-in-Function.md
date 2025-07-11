@@ -2,7 +2,9 @@
 
 ### Empty();
 
-yeah check karta hai ke variable khaali hai ya nahi.
+yeah check karta hai ke variable khaali hai ya nahi. <br>
+ager Empty yeah Null hai tu yeah (True) Return karayga <br>
+ager yeah Empty yeah Null nahe hai tu yeah (False) Return karayga
 
 ```php
 $name = "";
@@ -17,7 +19,8 @@ if (empty($name)) {
 yeah check karta hai ke:
 Variable set hai (matlab ban gaya hai), <br>
 or NULL nahi hai Yani variable bana to hai, lekin khaali hai, usme kuch bhi assign nahi kiya gaya.<br>
-Agar variable set hai aur NULL nahi hai, to isset() return karta hai true.
+Agar variable set hai aur NULL nahi hai means Value hai, to isset return karta hai (True) <br>
+Ager Variable mein Value nahe hai yeah Varaible create nahe hai yeah Null hai tu yeah return karayga (False)
 
 ```php
 $city = NULL;
