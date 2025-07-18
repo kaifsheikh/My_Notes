@@ -5,7 +5,7 @@
 yeah check karta hai ke variable khaali hai ya nahi. <br>
 ager Empty yeah Null hai tu yeah (True) Return karayga <br>
 ager yeah Empty yeah Null nahe hai tu yeah (False) Return karayga
-
+v
 ```php
 $name = "";
 
@@ -82,6 +82,63 @@ print_r($colors);
 // Output: Array ( [0] => red [1] => blue [2] => green )
 ```
 
+### count();
+
+Array mein kitne items hain?
+
+```php
+$colors = ["red", "green", "blue"];
+echo count($colors);  // Output: 3
+```
+### array_pop();
+
+Aakhri item hatao
+
+```php
+$names = ["Ali", "Sara", "Zain"];
+array_pop($names);
+print_r($names);
+// Output: ["Ali", "Sara"]
+```
+### array_shift();
+
+Pehla item hatao
+
+```php
+$nums = [10, 20, 30];
+array_shift($nums);
+print_r($nums);
+// Output: [20, 30]
+```
+### array_merge();
+
+Do arrays ko jodna
+
+```php
+$a = ["red", "green"];
+$b = ["blue", "yellow"];
+$combined = array_merge($a, $b);
+print_r($combined);
+// Output: ["red", "green", "blue", "yellow"]
+```
+### array_unique()
+Duplicate values hatao
+
+```php
+$nums = [1, 2, 2, 3, 3, 3];
+$unique = array_unique($nums);
+print_r($unique);
+// Output: [1, 2, 3]
+```
+### sort()
+Array ko ascending order mein sort karo
+
+```php
+$nums = [5, 2, 9, 1];
+sort($nums);
+print_r($nums);
+// Output: [1, 2, 5, 9]
+```
 ### in_push();
 
 Check karta hai ke koi value array ke andar exist karti hai ya nahi.
