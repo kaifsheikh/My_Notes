@@ -6,26 +6,6 @@
   <title>Document</title>
 </head>
 <body>
-    <script>
-       let a = new Promise(function(resolve , reject){
-          let result = false;
 
-          if(result){
-            resolve("Work in Resolve.")
-          
-          }else{
-            resolve("Work in Reject.")
-
-          }          
-       });
-
-       a.then(function(finalResult){
-        console.log("Success: " , finalResult)
-       })
-
-       a.catch(function(finalResult){
-        console.log("Reject: " , finalResult)
-       })
-    </script>
 </body>
 </html>

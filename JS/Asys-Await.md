@@ -55,6 +55,31 @@ console.log(result);
 // 30 -> (phela muje result variable ka data milayga)
 // Promise {<pending>} -> (oiska bad muje Promise return hoga)
 ```
+## Example 03
+```js
+ function getData(){
+        return new Promise(function(resolve , reject){
+          
+          setTimeout(function(){
+            resolve("Data Received");
+          }, 2000)
+
+        })
+      }
+
+      // Async Function
+      async function showData(){
+        console.log("Data is Processsing...");
+
+        let result = await getData();
+        console.log(result);
+
+        console.log("Work is Done Now !");
+
+      }
+
+      showData();
+```
 
 # Promise
 Promise ek JavaScript ka object hota hai jo future mein kisi kaam ke complete hone ka wada (commitment) karta hai.<br>
