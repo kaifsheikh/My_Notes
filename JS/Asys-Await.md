@@ -105,4 +105,7 @@ Tab .then() ke andar jo function likha hota hai, wo chalta hai. jaisa ka finalRe
 Matlab .then() success handler hai.
 
 ## .catch()
-Jab Promise fail ho jaye (reject ho) to uska error ko handle karta hai.
+Jab Promise fail ho jaye (reject ho) to .catch() uska error ko handle karta hai. <br>
+means ka jab Promise fail ho jaye (tu reject() call hoga), <br>
+Tab .catch() ke andar jo function likha hota hai, wo chalta hai. jaise ka finalResult()<br>
+Matlab .catch() error handler hai. <br>
