@@ -3,37 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transform Hover Practice</title>
-  <style>
-    body {
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-
-    .box {
-      width: 120px;
-      height: 120px;
-      background: tomato;
-      margin: 30px auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.5s ease; /* smooth animation */
-    }
-  </style>
+  <title>Document</title>
 </head>
 <body>
+    <script>
+       let a = new Promise(function(resolve , reject){
+          let result = false;
 
-  <h2>Transform Practice with Hover</h2>
+          if(result){
+            resolve("Work in Resolve.")
+          
+          }else{
+            resolve("Work in Reject.")
 
-  <div class="box move-right">Translate Right</div>
-  <div class="box move-left">Translate Left</div>
-  <div class="box move-both">Translate Both</div>
+          }          
+       });
 
+       a.then(function(finalResult){
+        console.log("Success: " , finalResult)
+       })
 
-  <div class="box rotate">Rotate</div>
-  <div class="box scale">Scale</div>
-  <div class="box skew">Skew</div>
-
+       a.catch(function(finalResult){
+        console.log("Reject: " , finalResult)
+       })
+    </script>
 </body>
 </html>

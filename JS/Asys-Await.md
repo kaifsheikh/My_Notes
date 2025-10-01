@@ -20,16 +20,6 @@
 5. Tum async function likh sakte ho bina await ke. <br>
 6. Lekin tum await tabhi likh sakte ho jab function async ho.
 
-# Promise
-JavaScript mein Promise ek object hai jo future mein ek value dene ka waada (commitment) karta hai.
-Matlab:<br>
-Promise ke 3 states hoti hain:
-1. Pending → shuru mein (abhi kaam ho raha hai, result nahi aaya).
-2. Fulfilled (Resolved) → kaam success hogaya, result mil gaya.
-3. Rejected → kaam fail hogaya, error aaya.
-
-“Promise ya to tumhe data dunga ✅ ya error dunga ❌, par khali haath nahi chodunga.”
-
 # Example 01 (Without Async and Await)
 ```js
  let a = 10;
@@ -65,3 +55,54 @@ console.log(result);
 // 30 -> (phela muje result variable ka data milayga)
 // Promise {<pending>} -> (oiska bad muje Promise return hoga)
 ```
+
+# Promise
+Promise ek JavaScript ka object hota hai jo future mein kisi kaam ke complete hone ka wada (commitment) karta hai.<br>
+1. API se data lana <br>
+2. File read karna <br>
+3. Time delay ke baad kuch karna
+
+## Promise ke 3 states hoti hain:
+1. Pending → shuru mein (abhi kaam ho raha hai, result nahi aaya).
+2. Fulfilled (Resolved) → jab kaam successfully hojata hai, result mil gaya.
+3. Rejected → kaam fail hogaya, error aaya.
+
+“Promise ya to tumhe data dunga✅<br>
+ya error dunga ❌<br>par khali haath nahi chodunga.”
+
+## Example:
+```js
+  let a = new Promise(function(resolve , reject){
+          let result = false;
+
+          if(result){
+            resolve("Work in Resolve.")
+          
+          }else{
+            resolve("Work in Reject.")
+
+          }          
+       });
+
+       a.then(function(finalResult){
+        console.log("Success: " , finalResult)
+       })
+
+       a.catch(function(finalResult){
+        console.log("Reject: " , finalResult)
+})
+
+// Jab tum new Promise(...) likhte ho, JavaScript tumhare function ko do helper functions bhejta hai
+// 1. resolve (success ke liye)
+// 2. reject (fail ke liye).
+// Tum unhe parameters ki tarah use karte ho, aur jab kaam complete ho jaye, unko call karte ho.
+```
+# Promise Methods:
+## .then()
+Jab Promise successfully complete ho jaye (resolve ho) to .then() uska result ko handle karta hai.<br>
+means ka ab Promise successfully complete ho jaye (tu resolve() call hoga) oisko handle karta hai .then() <br>
+Tab .then() ke andar jo function likha hota hai, wo chalta hai. jaisa ka finalResult()<br>
+Matlab .then() success handler hai.
+
+## .catch()
+Jab Promise fail ho jaye (reject ho) to uska error ko handle karta hai.
