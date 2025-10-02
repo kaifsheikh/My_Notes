@@ -81,3 +81,38 @@ transform: skew(30deg, 20deg);
 
 */
 ```
+# 1. `matrix()` kya hai?
+CSS ka `matrix()` function **ek hi line mein element ko move, scale, rotate aur skew** karne ke liye use hota hai.  
+
+**Simple words:**  
+> “Ek hi function se element ka size, angle aur position change kar sakte ho.”
+
+---
+
+## 2. Matrix ke 6 numbers
+
+`matrix(a, b, c, d, e, f)` mein 6 numbers hote hain:
+
+| Number | Meaning | Easy Words |
+|--------|---------|------------|
+| a      | Horizontal scale (width) | Width ko kitna bada/chhota karna hai |
+| b      | Vertical skew (y-axis) | Element ko vertical tilt karna |
+| c      | Horizontal skew (x-axis) | Element ko horizontal tilt karna |
+| d      | Vertical scale (height) | Height ko kitna bada/chhota karna hai |
+| e      | TranslateX (horizontal move) | Element ko horizontal move karna (px ya %) |
+| f      | TranslateY (vertical move) | Element ko vertical move karna (px ya %) |
+
+> **Tip:**  
+- a & d → size (scale)  
+- b & c → rotate/skew  
+- e & f → move (translate)
+
+---
+
+## 3. Examples
+
+### A. Normal element (no transform)
+```css
+div {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
