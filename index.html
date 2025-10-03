@@ -2,10 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pizza Order</title>
 </head>
 <body>
+  <h2>🍕 Pizza Order Form</h2>
 
+  <form id="orderForm">
+    <label>Pizza Name:</label>
+    <input type="text" id="pizza" required><br><br>
+
+    <label>Price:</label>
+    <input type="number" id="price" required><br><br>
+
+    <label>Address:</label>
+    <input type="text" id="address" required><br><br>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    
+    function placeOrder(orderDetails){
+      return new Promise((resolve, reject) => {
+        document.getElementById("message").innerText = "⏳ Placing your order... Please wait";
+
+        setTimeout(function(){
+          if(orderDetails.pizza && orderDetails.address){
+            resolve(`Your order for ${orderDetails.pizza} is Placed! Price: Rs: ${orderDetails.price}`)
+          }else{
+            reject('Order Failed: Missing details.');
+          }
+        }, 2000)
+
+      });
+    }
+
+    // Handle form submit
+    document.getElementById('orderForm').addEventListener('submit' , function(e){
+      e.preventDefault();
+
+      // Object
+      let order = {
+        pizza: document.getElementById("pizza").value,
+        price: document.getElementById("price").value,
+        address: document.getElementById("address").value
+      };
+
+      placeOrder(order)
+        .then(function(msg){
+          document.getElementById('message').innerHTML = msg;
+        
+        })
+        .catch(function(error){
+          document.getElementById('message').innerHTML = error;
+        })
+
+    });
+  </script>
 </body>
 </html>

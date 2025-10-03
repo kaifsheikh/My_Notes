@@ -88,12 +88,13 @@ Promise ek JavaScript ka object hota hai jo future mein kisi kaam ke complete ho
 3. Time delay ke baad kuch karna
 
 ## Promise ke 3 states hoti hain:
-1. Pending → shuru mein (abhi kaam ho raha hai, result nahi aaya).
-2. Fulfilled (Resolved) → jab kaam successfully hojata hai, result mil gaya.
-3. Rejected → kaam fail hogaya, error aaya.
+1. Pending → kaam chal raha hai (not done yet)
+2. Fulfilled → kaam successful ho gaya.
+3. Rejected → kaam fail ho gaya.
 
-“Promise ya to tumhe data dunga✅<br>
-ya error dunga ❌<br>par khali haath nahi chodunga.”
+Promise ya to tumhe Fulfilled ka result dyta hai✅<br>
+ya phir Rejected ki result dyta hai ❌<br>
+lakin empty result nahe dyta
 
 ## Example:
 ```js
@@ -134,3 +135,43 @@ Jab Promise fail ho jaye (reject ho) to .catch() uska error ko handle karta hai.
 means ka jab Promise fail ho jaye (tu reject() call hoga), <br>
 Tab .catch() ke andar jo function likha hota hai, wo chalta hai. jaise ka finalResult()<br>
 Matlab .catch() error handler hai. <br>
+
+## Example 2:
+```js
+    function placeOrder(orderDetails){
+      return new Promise((resolve, reject) => {
+        document.getElementById("message").innerText = "⏳ Placing your order... Please wait";
+
+        setTimeout(function(){
+          if(orderDetails.pizza && orderDetails.address){
+            resolve(`Your order for ${orderDetails.pizza} is Placed! Price: Rs: ${orderDetails.price}`)
+          }else{
+            reject('Order Failed: Missing details.');
+          }
+        }, 2000)
+
+      });
+    }
+
+    // Handle form submit
+  document.getElementById('orderForm').addEventListener('submit' , function(e){
+      e.preventDefault();
+
+      // Object
+      let order = {
+        pizza: document.getElementById("pizza").value,
+        price: document.getElementById("price").value,
+        address: document.getElementById("address").value
+      };
+
+      placeOrder(order)
+        .then(function(msg){
+          document.getElementById('message').innerHTML = msg;
+        
+        })
+        .catch(function(error){
+          document.getElementById('message').innerHTML = error;
+        })
+
+  });
+```
