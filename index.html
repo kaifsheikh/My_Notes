@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #bg-video {
+        position: fixed; /* screen pe fix ho jaye */
+        top: 0;
+        left: 0;
+        width: 100%; /* full width cover kare */
+        height: 100%; /* full height cover kare */
+        object-fit: cover; /* video stretch na ho, aspect ratio maintain ho */
+        z-index: -1; /* content ke peeche rahe */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="watch.mp4" type="video/mp4" />
+    </video>
+  </body>
+</html>
