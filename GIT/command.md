@@ -1,55 +1,252 @@
-# Git Command:
+# 📘 Git Commands Cheat Sheet
 
-## git branch "Branch Name"
-    Is command ki madad se aik branch create hojayegi jiska naam kuch rakh sakte hain.
+Yeh document Git ke most used commands ko simple aur easy words mein explain karta hai.
 
-## git checkout -b "Branch_Name"
-    isa aik new Branch create hojayge or -b ka matlab hai wo switch bhe hojayge new branch per
+---
 
-## 	git branch
-    Is command ki madad se sari branches ajayengi jo humne create ki hui hain.
+## 🔹 Basic Setup
 
-## git checkout "Branch_Name_here"
-    Agar kisi specific branch ke andar jana ho to yehi command hai.
+1. **Check Git Version**
 
-## git branch -d "Branch_name_here"
-    Agar kisi branch ko delete karna ho to yehi command hai.
+   ```bash
+   git --version
+   ```
 
-## 	git branch -m "New_Branch_Name"
-    Agar kisi branch ka name rename karna ho to yehi command hai.
+   → Git install hua hai ya nahi aur konsa version hai, yeh check karein.
 
-## Git log
-    Yeah Commad History dekhati hai jiski madaad se hum apne saray commit dehk sekhte hai ka humne kab or kis waqt or kis time per commit kiya tha."or yeah her Commit per aik Link generate hota hai jiska hum ID bolte hai
+2. **Set Username**
 
-## Git log --oneline
-    Ye command aapko har commit ka short summary dikhata hai — sirf ek line mein.
+   ```bash
+   git config --global user.name "Your_Name"
+   ```
 
-## git show "Commit_Link"
-    yeah humera commit wale link ki Information Provide karti hai.
+   → GitHub ke liye ek username set karein.
 
-## Git checkout "Past here Commit Link"
-    Ager hume koi Commit delete karna ho jo humne phela kiya the tu oiski commad yeah hai ise humera Commit delete hojayga
-    
-## Git push origin "Branch_Name_Here"
-    Is command ki madaad se humeri Branch jo humne phela se create ki the wo Branch humera Github ki Repository per Upload ho jayge lakin main/ master branch ka andar upload nahe hoge iski alag se branch create hoge github per.
+3. **Set Email**
 
-## Git diff main
-    Is command ki madaad se hum kisi branch ko kisi dosre branch se compare kar sekhte hai jis branch ko apne compare karna hai phela oiska andar ana hai then yeah command likhne hai (Git diff main) tu yeah apki main branch se compare karayge.
+   ```bash
+   git config --global user.email "your_email@example.com"
+   ```
 
-## Git merge branch_name
-    Yeah command hum jab likhte hai jab hume kisi branch ko merge karna ho kisi dosre branch mein example ka liya meri aik main branch hai or aik css ki branch hai jiska andar mena css se related saray commits karay hua hai ager hume apne css wali branch ko main branch mein merge karna hai tu subse phela hume main branch ka andar ana hai or yeah command likhne hai. Isa humeri css wali branch main branch ka andar marge hojayge.
-    
-    yeah command humera Visual Studio ka terminal se Aik branch ko dosre branch se marge karta hai
-    
-## Git pull origin main
-    Ager humne github ki website se kisi branch ko kisi dosre branch se merge kia hai tu yeah command hum likhte hai
+   → GitHub ke account wali email yahan likhni zaroori hai.
 
-## Git Deleting Methods
+4. **Check Config Details**
+
+   ```bash
+   git config --list
+   ```
+
+   → Ab tak set ki gayi sari Git settings dikhayega.
+
+5. **Edit Config**
+
+   ```bash
+   git config --global --edit
+   ```
+
+   → Username aur Email ko edit karne ke liye.
+
+---
+
+## 🔹 Directory Navigation (Git Bash / Terminal)
+
+* `pwd` → Current directory ka path dikhata hai.
+* `ls` → Current directory ke files/folders dikhata hai.
+* `cd folder_name` → Kisi folder ke andar jaane ke liye.
+* `cd ..` → Pichli directory mein wapas jane ke liye.
+
+---
+
+## 🔹 Start a New Project
+
+1. **Initialize Git in a Project Folder**
+
+   ```bash
+   git init
+   ```
+
+   → Project ko Git se connect karta hai.
+
+2. **Check Current Status**
+
+   ```bash
+   git status
+   ```
+
+   → Konsi files modified, untracked ya staged hain, dikhata hai.
+
+3. **Add Files to Staging**
+
+   ```bash
+   git add file_name
+   git add .
+   ```
+
+   → Specific file ya sari files ko staging area mein daalta hai.
+
+4. **Commit Changes**
+
+   ```bash
+   git commit -m "Your message here"
+   ```
+
+   → Changes ko locally save karta hai ek message ke saath.
+
+---
+
+## 🔹 Work with Remote Repository (GitHub)
+
+1. **Connect Local Project to GitHub Repo**
+
+   ```bash
+   git remote add origin <repo_link>
+   ```
+
+   → Local project ko GitHub repo se connect karta hai.
+
+2. **Upload Project to GitHub**
+
+   ```bash
+   git push -u origin main
+   ```
+
+   → Local project ko GitHub pe bhejta hai.
+
+3. **Clone a GitHub Repository**
+
+   ```bash
+   git clone <repo_link>
+   ```
+
+   → GitHub se poori repo download karta hai.
+
+4. **Pull Latest Changes from GitHub**
+
+   ```bash
+   git pull origin main
+   ```
+
+   → GitHub se latest code apne local system mein laata hai.
+
+---
+
+## 🔹 Branch Management
+
+1. **Create New Branch**
+
+   ```bash
+   git branch branch_name
+   ```
+
+   → Ek nayi branch banata hai.
+
+2. **Create & Switch to New Branch**
+
+   ```bash
+   git checkout -b branch_name
+   ```
+
+   → Nayi branch banata hai aur usi pe switch kar deta hai.
+
+3. **List All Branches**
+
+   ```bash
+   git branch
+   ```
+
+   → Sari branches dikhata hai.
+
+4. **Switch Branch**
+
+   ```bash
+   git checkout branch_name
+   ```
+
+   → Kisi dusri branch pe switch karne ke liye.
+
+5. **Delete Branch**
+
+   ```bash
+   git branch -d branch_name
+   ```
+
+   → Branch delete karta hai.
+
+6. **Rename Branch**
+
+   ```bash
+   git branch -m new_branch_name
+   ```
+
+   → Branch ka naam change karta hai.
+
+---
+
+## 🔹 Logs & Commits
+
+1. **View Commit History**
+
+   ```bash
+   git log
+   ```
+
+   → Detailed commit history dikhata hai.
+
+2. **Short Commit History**
+
+   ```bash
+   git log --oneline
+   ```
+
+   → Ek line mein short history dikhata hai.
+
+3. **Show Details of a Commit**
+
+   ```bash
+   git show commit_id
+   ```
+
+   → Specific commit ke details dikhata hai.
+
+4. **Checkout Old Commit**
+
+   ```bash
+   git checkout commit_id
+   ```
+
+   → Purane commit ke code par wapas jane ke liye.
+
+---
+
+## 🔹 Compare & Merge
+
+1. **Compare Current Branch with Main**
+
+   ```bash
+   git diff main
+   ```
+
+   → Current branch aur main branch ka difference dikhata hai.
+
+2. **Merge Branch into Main**
+
+   ```bash
+   git checkout main
+   git merge branch_name
+   ```
+
+   → Kisi branch ko main branch ke andar merge karta hai.
+
+---
+
+## 🔹 Reset / Delete Commits
 
 ```bash
-Difference Samjho:
-Command	| Commit	   | Code	        | Staging
---soft	| ❌ Delete   | ✅ Safe	    | ✅ Staged
---mixed	| ❌ Delete	  | ✅ Safe	        | ❌ Unstaged
---hard	| ❌ Delete	  | ❌ Delete	    | ❌ Delete
+git reset --soft commit_id   # Commit delete, code safe, staged
+git reset --mixed commit_id  # Commit delete, code safe, unstaged
+git reset --hard commit_id   # Commit + code delete (dangerous)
 ```
+
+---
+
+✅ Ab yeh `.md` file banakar aap apne project mein use kar sakte ho as a **Git Cheatsheet**.
