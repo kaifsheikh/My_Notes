@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="news"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <div id="news"></div>
 
-    <script>
+<script>
       let Api = fetch(
-        "https://newsapi.org/v2/everything?q=tesla&from=2025-09-06&sortBy=publishedAt&apiKey=b8d291e010374213b1c3d1e6ac920833"
+        "https://api.allorigins.win/raw?url=https://zenquotes.io/api/quotes"
       );
 
       Api.then(function (result) {
@@ -21,20 +21,22 @@
         // Actual data response mein hai json format mein
         console.log(response);
 
-        let data = document.getElementById("news"); // Get id
+        // let data = document.getElementById("news"); // Get id
 
-        response.articles.forEach(function (news) {
-          // forEach loop run kiya or articles mein wo sara data hai
-          data.innerHTML += `
-                <div>
-                  <h3>${news.title}</h3>
-                  <p>${news.description}</p>
-                  <p>${news.author}</p>
-                  <img src="${news.urlToImage}" width="300">
-                  <hr>
-              </div>`;
-        });
+        // response.articles.forEach(function (news) {
+        //   // forEach loop run kiya or articles mein wo sara data hai
+        //   data.innerHTML += `
+        //         <div>
+        //           <h3>${news.title}</h3>
+        //           <p>${news.description}</p>
+        //           <p>${news.author}</p>
+        //           <p>${news.content}</p>
+        //           <p>${news.source.name}</p>
+        //           <img src="${news.urlToImage}" width="300">
+        //           <hr>
+        //       </div>`;
+        // });
       });
-    </script>
-  </body>
+</script>
+</body>
 </html>

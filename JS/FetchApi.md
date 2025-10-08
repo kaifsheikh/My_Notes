@@ -216,3 +216,44 @@ taake different software aapas me baat kar sakein
       });
 </script>
 ```
+
+# 🧠 Error Handling (CORS Explained)
+
+1.  Tumhara browser ek **security rule** follow karta hai --- jiska naam
+    hai **CORS** = *Cross-Origin Resource Sharing*.
+2.  Browser jab **dusre domain** se data fetch karta hai, to wo check
+    karta hai ki **wo domain allow karta hai ya nahi**.
+3.  Agar **API ne data dene se mana kiya**, to browser request **block
+    kar deta hai**.
+
+```{=html}
+ Access to fetch at 'https://zenquotes.io/api/quotes' from origin 'http://127.0.0.1:5500'
+    has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+```
+------------------------------------------------------------------------
+
+# What is Proxy?
+**Proxy ek middleman (beech ka aadmi)** hota hai jo **tumhare aur API ke
+beech** kaam karta hai.\
+Agar browser ko API se data lene ki permission nahi milti,\
+to proxy tumhare behalf pe API se data lekar tumhe de deta hai
+
+------------------------------------------------------------------------
+
+## Technical Definition:
+
+Proxy ek **server** hota hai jo **requests forward karta hai** ek system
+(client) se dusre system (server) tak.\
+Ye request aur response ke beech mein ek **bridge (bridge)** ka kaam
+karta hai,\
+aur CORS restrictions ko bypass karne mein madad karta hai.
+
+------------------------------------------------------------------------
+# 🔗 Proxy URL Breakdown
+
+| Part | Meaning |
+|------|----------|
+| **https://api.allorigins.win/raw?url=** | Ye proxy website ka address hai |
+| **/raw** | Ye batata hai ke hume “raw data” chahiye (JSON ya text format) |
+| **?url=** | Ye parameter kehta hai ke kis API se data chahiye |
+| **https://zenquotes.io/api/quotes** | Ye original API hai jahan se proxy data fetch karega |
