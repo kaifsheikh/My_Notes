@@ -246,7 +246,4 @@ git reset --soft commit_id   # Commit delete, code safe, staged
 git reset --mixed commit_id  # Commit delete, code safe, unstaged
 git reset --hard commit_id   # Commit + code delete (dangerous)
 ```
-
 ---
-
-✅ Ab yeh `.md` file banakar aap apne project mein use kar sakte ho as a **Git Cheatsheet**.
