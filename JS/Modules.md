@@ -8,30 +8,44 @@
 
 ## Example 01
 ```js
-// math.js
+// main.js
 
-export function add(a, b) {
-  return a + b;
+// Export Varialbe
+export let message = "This is the Sample Txt here.";
+
+// Export Function
+export function sum(a , b){
+    let total = a + b;
+    return total;
 }
 
-export function sub(a, b) {
-  return a - b;
-}
-
-// Yahaan humne 2 functions banaye
-// aur unhe export kiya taake dusri file use kar sake.
+// export { message , sum }
 ```
 
 ```js
-// main.js
+// libaray.js
 
-import { add, sub } from './math.js';
+// Import message or sum
+import { message , sum } from './main.js';
 
-console.log(add(5, 3)); // 8
-console.log(sub(5, 3)); // 2
+// 2 Method Import
+// import * as sample from './main.js'
 
-// Yahaan humne math.js se add aur sub import kiye,
-// aur apni file main.js mein unhe use kar liya.
+document.body.innerHTML = message;
+console.log(sum(10 , 10))
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./libaray.js"></script>
+</head>
+<body></body> 
+</html>
 ```
 
 
