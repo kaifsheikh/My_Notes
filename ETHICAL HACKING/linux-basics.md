@@ -86,3 +86,6 @@ Matlab hardware bhi file jaisa dikhai deta hai.
 
 Yahan wo files hoti hain jisse Linux on (boot) hota hai.
 Jaise kernel aur bootloader.
+
+
+https://youtu.be/cKEf8H9cQGM?si=BQV1_1l_3Otroin1&t=11469
