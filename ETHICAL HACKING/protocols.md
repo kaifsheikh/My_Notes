@@ -17,13 +17,9 @@ Agar sab apni apni language use karenge to communication possible hi nahi hoga. 
 
 # What is Packet?
 1. Packet = humara data ka ek chhota tukda hota hai jo network ke through travel karta hai.
-
 2. Agar tum ek file, message ya video bhejte ho → usko ek saath nahi bheja jata.
-
 3. Usko chhote-chhote parts (packets) me tod diya jata hai.
-
 4. Har packet me tumhara data ka ek hissa + address + instructions hote hain.
-
 5. Jab ye packets destination (dusre computer/server) pe pohanch jaate hain → wahan dubara jod diye jaate hain → aur tumhe poora data mil jata hai.
 
 ## TCP - (Important Flags)
