@@ -16,6 +16,7 @@ Agar tum beginner ho to ye **basic commands** zaroor seekho 👇
 | `cd foldername` | Folder change karna | `cd Downloads` | Ye tumhe kisi aur folder ke andar le jata hai. |
 | `cd ..` | Ek step peeche | `cd ..` | Ye tumhe ek level upar le jata hai. |
 | `cd ~` | Home folder | `cd ~` | Ye tumhe apne home folder mein le jata hai. |
+| `mkdir folder_name` | folder create karta hai | `mkdir myWork` | yeah Folder create karne ki command hai. |
 
 ---
 
@@ -97,15 +98,6 @@ Agar tum beginner ho to ye **basic commands** zaroor seekho 👇
 
 ---
 
-## 🔄 9. File Permission Commands
-
-| Command | Matlab | Example | Easy Samajh |
-|----------|---------|----------|-------------|
-| `chmod` | Permission change | `chmod 755 file.sh` | File ka read/write/execute permission change karta hai. |
-| `chown` | Owner change | `chown ali:ali file.txt` | File ka owner badalta hai. |
-
----
-
 ## 🧹 10. Extra Useful Commands
 
 | Command | Matlab | Example | Easy Samajh |
@@ -116,16 +108,26 @@ Agar tum beginner ho to ye **basic commands** zaroor seekho 👇
 
 ---
 
-## 💡 Tips For Beginners
+## `File Permission Commands:`
+1. Linux (jaise Kali Linux) mein file permissions ka matlab hota hai —
+“Kaun file ko padh sakta hai, badal sakta hai, ya chala sakta hai.”
 
-1. Linux case-sensitive hota hai (A ≠ a).  
-2. Admin commands ke liye `sudo` use karo.  
-3. Agar command yaad nahi to `man command` likh kar dekh lo.  
-4. `Tab` key se auto-complete hota hai (bahut help karta hai).  
-5. Always be careful with delete (`rm -r`) commands ⚠️
+## `Har file aur folder ke liye ye decide hota hai ke:`
+1. `Owner` kya kar sakta hai
+2. `Group` kya kar sakta hai
+2. `Others` (baaki log) kya kar sakte hain
 
----
+## `Types of Permissions`
+| Symbol | Name | Meaning |
+|----------|---------|----------|
+| `r` | Read | `File ka content dekh sakte ho` | 
+| `w` | Write | `File ko edit/delete kar sakte ho` |
+| `x` | Execute | `File ya program ko run kar sakte ho` |
 
-👨‍💻 **Author:** Tumhara Kali Linux Dost  
-🧠 **Purpose:** Easy aur simple learning beginners ke liye  
-📅 **Version:** 1.0 (Roman Urdu Edition)
+## `Types of Users (jin par permission lagti hai)`
+| Symbol | Name | Meaning |
+|----------|---------|----------|
+| `u` | User (Owner) | `File ka malik` | 
+| `g` | Group | `File ke group wale log` |
+| `o` | Others | `Baaki sab log` |
+| `a` | All | `Sab (u+g+o)` |
