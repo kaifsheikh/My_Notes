@@ -127,13 +127,13 @@ Ye structures data ko **organize aur manage** karne me help karte hain — jaise
 
 # `Data Frame:`
 1. Data Frame ek table hoti hai jisme rows aur columns hote hain, bilkul Excel sheet ki tarah.
-2. Isme hum data ko store karte hain — numbers, text, categories sab kuch.
+2. Isme hum her type ka data ko store karte hain — numbers, text, categories sab kuch.
 
 ## `Object`
 1. Object ek `box` ya `container` jisme hum koi bhi cheez (data, list, result, ya function) store kar sakte hain.
 2. aur is box ke andar `number`, `text`, `vector`, `matrix`, `data frame`, `function`... sab kuch aa sakta hai.
 
-## `Example 01 (Data Frane):`
+## `Example 01 (Data Frame):`
 ```r
 df <- data.frame(
   name = c("Ali" , "Ahmed" , "Karlie" , "Smith" , "Shai1"),
@@ -144,6 +144,41 @@ df <- data.frame(
 1. # `df` - df yeah object hai iske andar hum ek data frame (table) store kar rahe ha.
 2. # data.frame() - Ye function hai jo ek table (data frame) banata hai.
 2. # `name` , `marks` , `age` - yeh humera columns hai jo object ka andar hai or inha hum Variables bolte hai.
+```
+# `	Matrix():`
+1. Matrix ek aisi table hoti hai jisme sirf `Numbers` store hote hain koi dosre type ka data store nahe hota hai.
+2. Matrix mein hum `Text` (jaise "Ali", "Ahmed" etc.) store nahi kar sakte.
+3. aur data rows aur columns mein arrange hota hai Excel ki terha.
+4. Matrix 2D hota hai means `2 Dimensional` jiska matlab hai Rows and Columns mein data store hota ha.
+
+## `Purpose of Matrix()`
+1. Mathematical operations karna like Matrix se hum addition, subtraction, multiplication jaise operations easily kar sakte hain.
+2. Matrix ka use linear algebra, machine learning aur statistics mein hota hai.
+
+## `Example 01 Matrix():`
+```r
+mat <- matrix(
+  c(1,2,3,4,5,6),   # or yeah Data hai
+  nrow = 2,         # means 2 Rows create karayga
+  ncol = 3          # means 3 Columns create karayga
+)
+
+mat
+```
+## `Example 02 Matrix():`
+```r
+mat <- matrix(
+  c(1,2,3,4,5,6),   # or yeah Data hai
+  nrow = 2,         # means 2 Rows create karayga
+  ncol = 3,         # means 3 Columns create karayga
+  byrow = TRUE      # ek line khatam hone ke baad agli line mein jao
+)
+
+mat
+
+# 1. byrow = TRUE - Data ko row ke hisaab se fill karo (ek line khatam hone ke baad agli line mein jao)
+# 2. Aur agar byrow = FALSE (ya default hota hai), means:
+# 3. Data ko column ke hisaab se fill karo (ek column khatam hone ke baad agla column). 
 ```
 
 | No.  | Data Structure | Example | Easy Meaning |
@@ -156,11 +191,5 @@ df <- data.frame(
 | 12️⃣ | **Factor** | `factor(c("Male","Female","Male"))` | **Categorical data** store karta hai (jaise Gender, City, Grade). Ye labels ko internally numbers me convert karta hai. |
 
 ---
-
-## `Example 02:`
-```r
-
-```
-
-https://youtu.be/73vO2EAZKdE?si=nm4YjPDXXs00974N&t=2240
+https://youtu.be/73vO2EAZKdE?si=sGvvPP_VlFWDyeY9&t=2523
 E-Book : https://codanics.com/books/abc-of-statistics-for-data-science/
