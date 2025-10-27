@@ -125,6 +125,27 @@ Ye structures data ko **organize aur manage** karne me help karte hain — jaise
 
 ## 🔸 Types of Data Structures in R
 
+# `Data Frame:`
+1. Data Frame ek table hoti hai jisme rows aur columns hote hain, bilkul Excel sheet ki tarah.
+2. Isme hum data ko store karte hain — numbers, text, categories sab kuch.
+
+## `Object`
+1. Object ek `box` ya `container` jisme hum koi bhi cheez (data, list, result, ya function) store kar sakte hain.
+2. aur is box ke andar `number`, `text`, `vector`, `matrix`, `data frame`, `function`... sab kuch aa sakta hai.
+
+## `Example 01 (Data Frane):`
+```r
+df <- data.frame(
+  name = c("Ali" , "Ahmed" , "Karlie" , "Smith" , "Shai1"),
+  marks = c(480 , 300 , 259 , 400 , 360),
+  age = c(20 , 24 , 29 , 19 , 18)
+)
+
+1. # `df` - df yeah object hai iske andar hum ek data frame (table) store kar rahe ha.
+2. # data.frame() - Ye function hai jo ek table (data frame) banata hai.
+2. # `name` , `marks` , `age` - yeh humera columns hai jo object ka andar hai or inha hum Variables bolte hai.
+```
+
 | No.  | Data Structure | Example | Easy Meaning |
 |------|----------------|----------|---------------|
 | 7️⃣ | **Vector** | `c(10, 20, 30)` | Ye same **type** ke multiple values ko ek hi variable me store karta hai. |
@@ -141,7 +162,5 @@ Ye structures data ko **organize aur manage** karne me help karte hain — jaise
 
 ```
 
-
-
-https://youtu.be/73vO2EAZKdE?si=spln1r0utDRM9QTT&t=1687
+https://youtu.be/73vO2EAZKdE?si=nm4YjPDXXs00974N&t=2240
 E-Book : https://codanics.com/books/abc-of-statistics-for-data-science/
