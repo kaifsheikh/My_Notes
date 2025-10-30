@@ -32,29 +32,6 @@
 
 ---
 
-## 🔹 Pandas ke main data structures
-> 
-> **Series**: Series ek single column data structure hai.
-> Matlab ek hi type ka data ya mixed data ek line mein store hota hai.
-> Har item ka ek index (number) hota hai, jisse hum item ko access kar sakte hain.
-
-## `Example 01 for Series`
-```py
-import pandas as pd
-
-data = [10, 20, 30, 40]
-s = pd.Series(data)
-
-print(s)
-print(s[0]) # 10
-```
-
-> **DataFrame**: DataFrame 2-dimensional table hota hai (rows + columns) jaisa
-> 
-* **Panel**: 2D labeled table (rows & columns) — Excel sheet jaisa
-
----
-
 ## 🔹 Installation (How to install pandas)
 
 1. Check Python installed:
@@ -83,14 +60,30 @@ pip show pandas
 import pandas as pd
 print(pd.__version__)
 ```
+--- 
 
+## 🔹 Pandas ke main data structures
+## `Series`
+> **Series**: Series ek single column data structure hai.
+> Matlab ek hi type ka data ya mixed data ek line mein store hota hai. <br>
+> Har item ka ek index (number) hota hai, jisse hum item ko access kar sakte hain.
+
+## `Example 01 for Series`
+```py
+import pandas as pd
+
+data = [10, 20, 30, 40]
+s = pd.Series(data)
+
+print(s)
+print(s[0]) # 10
+```
+## `DataFrame` 
+> **DataFrame**: DataFrame 2-dimensional table hota hai (rows + columns)
 ---
 
-## 🔹 Examples (simple & clear)
-
-### Example 1 — Create DataFrame from dictionary
-
-```python
+## `Example 01 for DataFrame`
+```py
 import pandas as pd
 
 data = {
@@ -102,65 +95,4 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 ```
-
-**Output:**
-
-```
-   Name  Age     City
-0   Ali   22   Lahore
-1  Sara   25  Karachi
-2  Umar   20   Multan
-```
-
-### Example 2 — Read CSV and basic ops
-
-```python
-import pandas as pd
-
-df = pd.read_csv('students.csv')
-print(df.head())
-print(df['Marks'].mean())
-print(df[df['Marks'] >= 50])
-```
-
-### Example 3 — Series basics
-
-```python
-s = pd.Series([10,20,30])
-print(s.sum(), s.mean(), s.max())
-```
-
 ---
-
-## 🔹 Real-life use-cases
-
-* Business reports and dashboards
-* Data cleaning for Machine Learning
-* Financial data analysis
-* ETL pipelines (extract, transform, load)
-* Quick prototyping and exploration of data
-
----
-
-## 🔹 Tips & Best Practices (easy)
-
-* Use `df.head()` aur `df.info()` pehle to samjho data structure.
-* Missing values check: `df.isnull().sum()`
-* To change column names: `df.rename(columns={'old':'new'}, inplace=True)`
-* Large datasets: use chunks (`pd.read_csv(..., chunksize=10000)`) or use `dtypes` to optimize memory.
-* Save work: export cleaned data `df.to_csv('cleaned.csv', index=False)`
-
----
-
-## 🔹 Short Summary
-
-* **Pandas = Python library** for table-like data (Excel-like) but programmable and fast.
-* **Main tools:** Series (1D) and DataFrame (2D).
-* **Install:** `pip install pandas`.
-* **Use:** read, clean, analyze, convert, and save data.
-
----
-
-### ✅ Need more?
-
-* Agar chaho to mai ye file `pandas_guide.md` ko ek downloadable file me convert kar du (ya GitHub-ready README style bana du).
