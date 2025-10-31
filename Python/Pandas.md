@@ -92,7 +92,44 @@ data = {
     'City': ['Lahore','Karachi','Multan']
 }
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data) # Ye dictionary ko Pandas DataFrame me convert karti hai. 
 print(df)
+
+# Ye ek Python dictionary hai (key-value pairs ke form me).
+# Isme teen keys hain: 'Name', 'Age', 'City'
+# Har key ke paas ek list of values hai.
 ```
 ---
+
+## Pandas Methods:
+
+| Methods      |        Usages            |        
+| ------------ | -----------------------: |
+| **.to_csv("")**  | Pandas ka ek function hai jo aapke DataFrame ko CSV file me save kar deta hai. |    
+| **.to_excel("")**  | Pandas ka ek function hai jo aapke DataFrame ko Excel file me save kar deta hai. |    
+
+## `Examples:`
+
+```py
+# File Save Different Formats
+import pandas as pd
+
+data = {
+    "Name": ["Ali", "Shayan", "Smith"],
+    "Age": [10, 11, 30],
+    "City": ["Hyd", "Karachi", "Lahore"]
+}
+
+df = pd.DataFrame(data)
+
+# 1. DataFrame ko CSV file me save karna
+df.to_csv("students.csv", index=False)
+
+# 2. DataFrame ko Excel file me save karna
+df.to_excel("students.xlsx", index=False)
+
+# 3. DataFrame ko Json file me save karna
+df.to_json("students.json", index=False)
+
+# 4. index=False -> Isse row numbers (0,1,2...) CSV me nahi likhe jayenge
+```
