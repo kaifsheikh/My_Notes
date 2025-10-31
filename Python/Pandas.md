@@ -108,10 +108,9 @@ print(df)
 | **.to_csv("")**  | Pandas ka ek function hai jo aapke DataFrame ko CSV file me save kar deta hai. |    
 | **.to_excel("")**  | Pandas ka ek function hai jo aapke DataFrame ko Excel file me save kar deta hai. |    
 
-## `Examples:`
+## `Examples: (File Save Different Formats)`
 
 ```py
-# File Save Different Formats
 import pandas as pd
 
 data = {
@@ -132,4 +131,25 @@ df.to_excel("students.xlsx", index=False)
 df.to_json("students.json", index=False)
 
 # 4. index=False -> Isse row numbers (0,1,2...) CSV me nahi likhe jayenge
+```
+## `Examples: (More Methods in Pandas)`
+
+```py
+import pandas as pd
+
+data = {
+    "Name": ["Ali", "Shayan", "Smith"],
+    "Age": [10, 11, 30],
+    "City": ["Hyd", "Karachi", "Lahore"]
+}
+
+df = pd.DataFrame(data)
+
+print(df.head()) # Pehli 5 rows dikhata hai
+print(df.tail()) # Aakhri 5 rows dikhata hai
+print(df.shape()) # Kitni rows aur columns hain
+print(df.info()) # Column aur datatype ki info 
+print(df.describe()) # Numbers ka summary (avg, max, min)
+print(df.columns) # Column ke naam dikhata hai
+ 
 ```
