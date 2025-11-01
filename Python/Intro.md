@@ -42,3 +42,15 @@
 - 🤖 **Scikit-learn & TensorFlow:** Machine ko seekhne aur predict karne ke liye.  
 - 🌐 **Flask & Django:** Website aur backend apps banane ke liye.  
 - ⚙️ **Selenium & PyAutoGUI:** Computer aur browser ke kaam automate karne ke liye.
+
+# What is Pip?
+1. Package Installer for Python
+2. Yani PIP ek tool hai jiska kaam hota hai Python ke extra packages (ya libraries) install karna.
+3. Package ya library ka matlab hota hai — pehle se likha gaya Python code jo aap use kar sakte ho.
+
+```py
+1. pip install package_name # Install karne ke liye
+2. pip uninstall package_name # Package Uninstall karne ke liye
+3. pip show package_name # Check karne ke liye ke package install hai ya nahi
+4. pip list # List of installed packages dekhne ke liye
+```

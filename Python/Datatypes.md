@@ -49,6 +49,17 @@ print(age >= 18) # True
 age = 18
 print(age >= 20) # False
 ```
+## 5. `None  — empty value`
+1. Jab kisi variable, function, ya expression ke paas koi actual value nahi hoti,
+2. tab Python uske liye None use karta hai.
+3. None use hota hai jab aap chahte ho ke
+4. “abhi ke liye ye khaali rahe, baad mein value dunga.”
+
+## `Example 01`
+```py
+x = None
+print(x)
+```
 ## 4. `List (list) — Multiple Items ek sath`
 1. List ek box jesi hoti hai jisme hum multiple values ek sath rakh sakte hain.
 2. List ke items index (0 se start) hote hain.

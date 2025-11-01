@@ -79,7 +79,7 @@ print(s)
 print(s[0]) # 10
 ```
 ## `DataFrame` 
-> **DataFrame**: DataFrame 2-dimensional table hota hai (rows + columns)
+> **DataFrame**: DataFrame 2-dimensional table hota hai (rows + columns) bilkul Excel ki terha Tablular form ki terha
 ---
 
 ## `Example 01 for DataFrame`
@@ -87,27 +87,25 @@ print(s[0]) # 10
 import pandas as pd
 
 data = {
-    'Name': ['Ali','Sara','Umar'],
+    'Name': ['Ali','Sara','Umar'], 
     'Age': [22,25,20],
     'City': ['Lahore','Karachi','Multan']
-}
+} # yeah Dictionary hai Python mein
 
-df = pd.DataFrame(data) # Ye dictionary ko Pandas DataFrame me convert karti hai. 
+df = pd.DataFrame(data)
+
 print(df)
 
-# Ye ek Python dictionary hai (key-value pairs ke form me).
+# df = pd.DataFrame(data) -> DataFrame function dictionary ko table format mein convert karta hai.
+
 # Isme teen keys hain: 'Name', 'Age', 'City'
+
 # Har key ke paas ek list of values hai.
 ```
 ---
 
 ## Pandas Methods:
-
-| Methods      |        Usages            |        
-| ------------ | -----------------------: |
-| **.to_csv("")**  | Pandas ka ek function hai jo aapke DataFrame ko CSV file me save kar deta hai. |    
-| **.to_excel("")**  | Pandas ka ek function hai jo aapke DataFrame ko Excel file me save kar deta hai. |    
-
+   
 ## `Examples: (File Save Different Formats)`
 
 ```py
@@ -130,7 +128,7 @@ df.to_excel("students.xlsx", index=False)
 # 3. DataFrame ko Json file me save karna
 df.to_json("students.json", index=False)
 
-# 4. index=False -> Isse row numbers (0,1,2...) CSV me nahi likhe jayenge
+# 4. index=False -> Isse row numbers (0,1,2...) nahi likhe jayenge
 ```
 ## `Examples: (More Methods in Pandas)`
 
@@ -147,9 +145,18 @@ df = pd.DataFrame(data)
 
 print(df.head()) # Pehli 5 rows dikhata hai
 print(df.tail()) # Aakhri 5 rows dikhata hai
-print(df.shape()) # Kitni rows aur columns hain
+print(df.shape) # Kitni rows aur columns hain
 print(df.info()) # Column aur datatype ki info 
 print(df.describe()) # Numbers ka summary (avg, max, min)
+print(df.dtype) # Datatype batata hai
+print(df['Name'].dtype) # yeah Name ki Datatype batayga
+
+print(df[["Name"]]) # yeah Name key ka sara Data dyga
+
+print(df.loc[0]) # Index number ke zariye row access karta hai (label-based).
+
+print(df.iloc[0]) # Index number ke zariye row access karta hai (Number-based).
+
 print(df.columns) # Column ke naam dikhata hai
  
 ```
