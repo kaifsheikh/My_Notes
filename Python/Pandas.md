@@ -128,7 +128,9 @@ df.to_excel("students.xlsx", index=False)
 # 3. DataFrame ko Json file me save karna
 df.to_json("students.json", index=False)
 
-# 4. index=False -> Isse row numbers (0,1,2...) nahi likhe jayenge
+# 4. index=False -> Isse Row Index Numbers ka Column (0,1,2...) nahi likhega.
+
+# By Default yeah True hota hai jisa Row Index Number likha ate hai
 ```
 ## `Examples: (More Methods in Pandas)`
 
@@ -160,3 +162,6 @@ print(df.iloc[0]) # Index number ke zariye row access karta hai (Number-based).
 print(df.columns) # Column ke naam dikhata hai
  
 ```
+
+# How to Read Data in Pandas
+
