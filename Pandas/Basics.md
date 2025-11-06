@@ -137,7 +137,17 @@ df = pd.DataFrame(data)
 print(df["Name"]) # yeah Single Column means Name key ka sara Data dyga 
 print(df[["Name" , "Age"]]) # Ager multiple Columns dehkne ho tu oiska sara Data dyga
 ```
-## `Examples:  (Accessing Rows)`
+# Row Column and Index Number `(Accessing Rows)`
+
+| Term (Naam) | Matlab (Simple Words)                          | Example (Table me kya hota hai) | Yaad Rakhne ka Easy Trick |
+| ----------- | ---------------------------------------------- | ------------------------------- | ------------------------- |
+| **Column**  | Data ka **vertical part** (upar se neeche tak) | Jaise “Name”, “Age”, “City”     | Column = **Heading**      |
+| **Row**     | Data ka **horizontal part** (ek line)          | Jaise “Ali – 22 – Lahore”       | Row = **Record**          |
+| **Index**   | Har row ka **number ya ID**                    | 0 (Ali), 1 (Sara), 2 (Umar)     | Index = **Row ka number** |
+
+## `loc[] -> ()`
+1. loc[] ek function (tool) hai.
+2. jo DataFrame me se row aur column ka data “naam se” or (Index Number se) nikalta hai.
 ```py
 import pandas as pd
 
@@ -149,8 +159,19 @@ data = {
 
 df = pd.DataFrame(data)
 
-print(df.loc[0]) # Index number ke zariye row access karta hai (label-based).
-print(df.iloc[0]) # Index number ke zariye row access karta hai (Number-based).
+a = df.loc[1, "Name"] # Name Column se Index 1 ka data ayga -> Shayan
+
+a = df.loc[1])      # Row 1 ka sara Data ayga
+a = df.loc[[0 , 2]] # sirf 0 or 2 wali Row ka sara data ayga 
+a = df.loc[0 : 2]   # 0 se 2 tak ki sari Rows ka data ayga 
+
+a = df.loc[: , "Name"]          # Name Column ka sara Data ayga
+a = df.loc[:, ["Name" , "Age"]] # Name or Age Column ka sara Data milayga
+
+
+a = df.loc[0:5, ["Name" , "Age"]] # Name or Age Column ka data milayga lakin 0 se 5 tak ki rows ka sirf
+
+print(a)
 ```
 ## `Examples: describe()`
 
