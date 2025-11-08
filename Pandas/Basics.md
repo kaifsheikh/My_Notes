@@ -161,7 +161,7 @@ df = pd.DataFrame(data)
 
 a = df.loc[1, "Name"] # Name Column se Index 1 ka data ayga -> Shayan
 
-a = df.loc[1])      # Row 1 ka sara Data ayga
+a = df.loc[1]       # Row 1 ka sara Data ayga
 a = df.loc[[0 , 2]] # sirf 0 or 2 wali Row ka sara data ayga 
 a = df.loc[0 : 2]   # 0 se 2 tak ki sari Rows ka data ayga 
 
