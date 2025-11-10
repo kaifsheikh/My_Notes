@@ -96,5 +96,21 @@ student = {
 print(student.get("name")) # Ali
 ```
 
+## Map() Function
+1. map() aik function hai jiska kaam hai Collection of Data (jaise list, tuple, set) ke har element par ek function apply karna
+2. taake har element pe koi task perform ho jaye.
+3. Ab jab hum kehte hain “map() har element par function apply karta hai” to iska matlab hai:
+4. “map() list ke andar jo bhi elements hain, un sab pe ek hi function ek ek karke chalata hai.”
+
+```py
+numbers = [2, 4, 6]
+
+def double(x):
+    return x * 2
+
+result = map(double, numbers)
+print(list(result)) # Output : [4, 8, 12]
+```
+
 
 https://youtu.be/UrsmFxEIp5k?si=ozZ6gIK6mhjt1wvX&t=5695
