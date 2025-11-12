@@ -96,20 +96,32 @@ student = {
 print(student.get("name")) # Ali
 ```
 
-## Map() Function
+## map(function, iterable)
 1. map() aik function hai jiska kaam hai Collection of Data (jaise list, tuple, set) ke har element par ek function apply karna
 2. taake har element pe koi task perform ho jaye.
 3. Ab jab hum kehte hain “map() har element par function apply karta hai” to iska matlab hai:
-4. “map() list ke andar jo bhi elements hain, un sab pe ek hi function ek ek karke chalata hai.”
+4. Iterable ek aisi cheez jisme ek se zyada items hote hain jinko ek ek karke access kar sakte hain
+5. “map() list ke andar jo bhi elements hain, un sab pe ek hi function ek ek karke chalata hai.”
 
 ```py
-numbers = [2, 4, 6]
+numbers = [2, 4, 6] # numbers aik iterable hai or list bhe hai
 
 def double(x):
     return x * 2
 
 result = map(double, numbers)
 print(list(result)) # Output : [4, 8, 12]
+
+# ==========================
+
+prices = [100, 200, 300]
+
+def add_tax(price):
+    return price + (price * 0.1)
+
+new_prices = map(add_tax, prices)
+print(list(new_prices))  # Output: [110.0, 220.0, 330.0]
+
 ```
 
 
