@@ -3,31 +3,29 @@
 # Purpose of Learning Django
 
 # Installation of Django
-```cmd
-pip install django
-django-admin --version
-```
-## isa new project create hoga
-```cmd
-1. django-admin startproject mysite
 
-2. yeah humera Project ka Structure hai:
+| **Step** | **Command** | **Description (Easy Words)** |
+|-----------|--------------|-------------------------------|
+| **1** | `pip install django` | Ye command Django ko install karti hai Python environment mein. (Internet se Django download aur setup hota hai.) |
+| **2** | `django-admin --version` | Ye check karta hai ke Django install hua hai ya nahi, aur agar hua hai to kaunsa version hai. |
+| **3** | `django-admin startproject mysite` | Ye ek naya Django project create karta hai jiska naam “mysite” hoga. |
+| **4** | `python manage.py runserver` | Ye command Django ka development server start karti hai. Default address hota hai **http://127.0.0.1:8000/** |
+| **5** | `python manage.py runserver 4444` | Is command se server **port 8000** ki jagah **4444** pe run hota hai. (Address: **http://127.0.0.1:4444/**) |
+| **6** | `python manage.py startapp home` | Ye command ek “App” create karti hai. |
 
-mysite/
-│
-├── manage.py
-└── mysite/
-    ├── __init__.py
-    ├── settings.py
-    ├── urls.py
-    ├── asgi.py
-    └── wsgi.py
+---
 
-3. python manage.py runserver -> http://127.0.0.1:8000/
-4. python manage.py runserver 4444 -> isa Default Port Number change hokar 4444 hojayga
-```
+✅ **Note:**  
+- App Django ke project ka aik chhota part (module) hota hai — jo specific kaam karta hai.
+- App → us website ke andar ek “feature” ya “section” banana ka liye use hote hai hai
+- App banana ka reason ye hai ke hum apni website ke har feature (kaam) ko alag-alag rakh sakein.
+Taake project organized, clean, aur reusable rahe.
+
+
 
 # Understanding File Structure:
+1. yeah humera Project ka root Structure hai:
+   
 ```cmd
 firstSite/
 │
