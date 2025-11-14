@@ -41,5 +41,3 @@ urlpatterns = [
     path('home/<int:courseId>' , views.courseDetail ),
 ]
 ```
-
-https://youtu.be/ZtiPjEarJyU?si=yWsWvDI2KyHMuxKg&t=628
