@@ -29,6 +29,11 @@ class Student(models.Model):
 - Aur tables ke beech relation kaise hoga (ForeignKey)
 - Schema table ka structure (columns + Datatype) ko he Schema bolte hai.
 
+# How to Define Rules in Model?
+- `max_length = 100` -> Yeh sirf CharField aur EmailField jaisay text fields ke liye hota hai.
+- `null=True` -> Yeh database ko batata hai ka “Is field ko database mein empty (NULL) rehne do, koi masla nahi.
+- `blank=null` -> Yeh forms ko batata hai User form mein yeh field khaali chhor sakta hai means form validation error nahi dega.
+
 # What is Migration?
 1. Django mein jab hum model banate hain, toh woh sirf Python code hota hai jo database table ka design (structure) describe karta hai. <br>
 2. Lekin yeh model khud-ba-khud database mein table nahi banata. Is design ko actual database ki table mein convert karne ke liye, hum migration commands use karte hain.
@@ -45,6 +50,8 @@ class Student(models.Model):
 3. ab Agar hum baad mein koi naya model create karte hain ya existing model mein koi change karte hain (jaise naya field add karna , rename karna , datatype change karna), tu phir se `makemigrations` wali command run karte hain, toh Django phir se nayi migration file banata hai `0002_auto_xyz.py`) jo pehli migration file ka upar depend karti hai aur batati hai ke database mein kya changes karne hain, phir jab hum `migrate` command run karte hai tu wo changes actual tables mein implement hote jate hai.
    
 4. Is tarah Django ka migration system har nayi model creation ya changes ko track karta hai aur iterative process ke through database ko sync rakhta hai, jahan har change ke liye ek nayi migration file banti hai aur usko apply karne ke liye migrate chalana padta hai, aur ye process tab tak repeat hota hai jab tak hum models mein naye changes karte rehte hain.
+
+5. maan lu jab humne first model create kara oisa makemigrations command run ki tu apke app mein migrations folder ka andar 0001_initial.py name se file create hoti hai ab ager muje ois model mein kch change karna hai jasise ka `rename , remove , add column , change datatype , etc` tu hum model mein change karke phir se makemigrations run karte hai command lakin ager 0001_initial.py file delete hogai yeah kch kisi bhe waja se wo file nhe hoti tu migrations nahe hoge kue ka new Migrations apki purane file per depend hoti hai. 
 
 # What is Migrate?
 
