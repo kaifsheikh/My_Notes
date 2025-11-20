@@ -69,17 +69,6 @@ ye real-time features (jaise chat apps, live updates) ke liye use hoti hai.
 
 2. Ye mainly production servers ke liye use hoti hai — jab project live karte ho (deploy karte ho).
 
-## Why we Create Template or Static Folder?
-1. Django backend Manage karta hai,
-2. lekin frontend (HTML, CSS, JS or Images) ko Manage karne ka liya oisa Read karne ka liya hum `Templates` or `Static` folder create karte hai.
-
-## `Templates` (HTML ke liye):
-1. Templates wo folder hota hai jisme HTML files rakhi jaati hain —
-ye files website ka page structure dikhati hain (like Home, About, Contact).
-
-## `Static` (CSS, JS, Images ke liye):
-1. Static folder mein CSS, JavaScript, aur images rakhi jaati hain ye files website ka design aur look banati hain.
-
 
 
 
