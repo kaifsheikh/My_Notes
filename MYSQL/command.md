@@ -44,17 +44,14 @@
 
    → Table ke columns aur unke datatypes dikhata hai.
 
-3. **Drop Table**
+3. **Table Delete karne ka liye**
 
    ```sql
    DROP TABLE users;
    ```
-
-   → Table poori ki poori delete ho jaati hai.
-
 ---
 
-## 🔹 Insert Data
+🔹 **Multiple rows ek sath insert karne ke liye.**
 
 ```sql
 INSERT INTO users (name, age, city)
@@ -64,19 +61,21 @@ VALUES
 ('Hina Sheikh', 24, 'Multan');
 ```
 
-→ Multiple rows ek sath insert karne ke liye.
-
 ---
 
 ## 🔹 Alter Table (Modify Columns)
 
-1. **Add New Column**
+1. **Single Column Add karne ka liye**
 
    ```sql
    ALTER TABLE users ADD email VARCHAR(100);
    ```
+   
+1. **Multiple New Columns add karne ke liye.**
 
-   → Naya column add karne ke liye.
+   ```sql
+   ALTER TABLE users ADD (email VARCHAR(100) , age INT);
+   ```
 
 2. **Add Column After Specific Column**
 
@@ -84,7 +83,7 @@ VALUES
    ALTER TABLE users ADD gender VARCHAR(10) AFTER name;
    ```
 
-3. **Modify Column Datatype**
+3. **Modify Column Datatype Only**
 
    ```sql
    ALTER TABLE users MODIFY age BIGINT;
@@ -99,18 +98,36 @@ VALUES
 5. **Sirf Column Name Change Karna**
 
    ```sql
-   ALTER TABLE users CHANGE old_name new_name VARCHAR(100);
+   ALTER TABLE users CHANGE old_column_name new_column_name VARCHAR(100);
    ```
 
-6. **Drop Column**
+6. **Table ke Columns ko Delete karne ka liye**
 
    ```sql
    ALTER TABLE users DROP COLUMN age;
    ```
 
-   → Table ke andar se ek column hataane ke liye.
+7. **Table ke Naam change karne ka liya.**
 
----
+   ```sql
+   ALTER TABLE Old_table_Name RENAME TO New_table_Name;
+   ```
+
+8. **Column mein Default Value Set karne ka liya.**
+
+   ```sql
+   ALTER TABLE table_name
+   ALTER COLUMN column_name SET DEFAULT default_value;
+   
+   ALTER TABLE users
+   ALTER COLUMN city SET DEFAULT "Hyd";
+
+   ```
+   **Existing Default Value ko Remove karne ka liya**
+   ```sql
+   ALTER TABLE users
+   ALTER COLUMN city DROP DEFAULT;
+   ``` 
 
 ---
 
