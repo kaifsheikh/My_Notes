@@ -112,28 +112,6 @@ VALUES
 
 ---
 
-## 🔹 Constraints (Rules for Data)
-
-* **NOT NULL** → Value empty nahi ho sakti
-* **UNIQUE** → Har value alag honi chahiye
-* **DEFAULT** → Agar value na di jaye to default value set ho jaaye
-* **CHECK** → Condition lagane ke liye
-* **PRIMARY KEY** → Har row ki unique pehchan
-* **FOREIGN KEY** → Do tables ko connect karne ke liye
-
-Example:
-
-```sql
-CREATE TABLE users(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE,
-    age INT CHECK (age >= 18),
-    city VARCHAR(100) DEFAULT 'Hyderabad',
-    gender ENUM('Male','Female')
-);
-```
-
 ---
 
 ## 🔹 Update Data
@@ -166,7 +144,6 @@ CREATE TABLE users(
    ```
 
    → Multiple records ek hi query mein update karne ke liye.
-
 ---
 
 ## 🔹 Delete Data
