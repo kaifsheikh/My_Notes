@@ -2,7 +2,8 @@
 1. R ek programming language hai — jaise Python, C, ya Java hoti hain.
 2. lekin iska main focus “data” aur “statistics” par hota hai.
 3. Iska use hum data ko samajhne (analyze karne), calculations karne (statistics) aur graphs banane (visualize karne) ke liye karte hain means.
-4. Data ko drawing (picture) ke form me dikhana isa hum Graphs bolte hai.
+4. Data kia hota hai jaise Numbers , Words , Values , Categories yeah sub Data hai. 
+5. Data ko drawing (picture) ke form me dikhana isa hum Graphs bolte hai.
 
 # What is Statistic:
 1. Data ke numbers ko study karna aur unse meaning nikalna iska (Statistic) bolte hai.
