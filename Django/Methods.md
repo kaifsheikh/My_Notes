@@ -52,3 +52,58 @@ urlpatterns = [
     path('users/', views.home)
 ]
 ```
+
+# A way to redirect to another page after clicking a link?
+1. `urls.py` file mein `name='products'` iska naam humne use kiya hai.
+2. `templates/base.html` is file mein `href="{% url 'product' %}"` use kiya hai
+
+```py
+# urls.py
+urlpatterns = [
+    path('products/' , views.products , name='product'),
+]
+```
+
+```py
+# views.py
+def products(request):
+    return render(request , 'products.html')
+```
+
+```py
+# templates/base.html
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'product' %}">Products</a>
+</li>
+```
+
+## If we want to display dynamic code between the header and footer, but we only want to show a limited portion of the dynamic code (meaning not all of it), then for that
+
+1. iska matlab hai jab ap `sigup.html` or `products.html` files per jaogay tu oisme `hide_extra_code` yeah wala code nahe ayga in files mein kue ka humne waha per if condition lagai hue hai or oinhe `products function` mein or `sigup function` mein use kiya hua hai. 
+```py
+# urls.py
+urlpatterns = [
+    path('products/' , views.products , name='product'),
+    path('sigup/' , views.sigup , name='register')
+]
+```
+```py
+# views.py
+def products(request):
+    return render(request , 'products.html' , {'hide_extra_code' : True})
+
+def sigup(request):
+    return render(request , 'register/sigup.html' , {'hide_extra_code' : True})
+```
+```py
+# templates/base.html
+  {% if not hide_extra_code %}
+
+    # Categories ka code
+
+    # Banner Code
+
+    # etc...
+
+  {% endif %}
+```
