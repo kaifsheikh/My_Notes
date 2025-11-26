@@ -193,12 +193,30 @@ VALUES
    SELECT name, city FROM users;
    ```
 
-3. **WHERE Clause**
+3. **WHERE Clause Sirf 20 se Greater Age Show Hoge**
 
    ```sql
    SELECT * FROM users WHERE age > 20;
+   SELECT * FROM users WHERE city > "Hyd";
    ```
+4. **Ye duplicate data remove kar deta hai, sirf unique values show karta hai.**
 
+   ```sql
+   SELECT DISTINCT column_name FROM table_name;
+   SELECT DISTINCT * FROM table_name;
+   ```
+5. **IS NULL (Ye check karne ke liye hota hai ki column empty hai ya nahi)**
+
+   ```sql
+   SELECT * FROM table_name WHERE Gender is NULL;
+   SELECT Column_Name FROM tabl_name WHERE Gender is NULL;
+   ```
+   
+   **Jo students ka address empty hai, wo show honge.**
+   ```sql
+   SELECT * FROM Table_Name WHERE address IS NOT NULL;
+   ```
+   
 4. **AND / OR / IN**
 
    ```sql
