@@ -220,14 +220,30 @@ VALUES
 4. **AND / OR / IN**
 
    ```sql
-   SELECT * FROM users WHERE city = 'Lahore' OR city = 'Karachi';
+   SELECT * FROM users WHERE city = 'Lahore' OR Age >= 20;
+   
+   SELECT * FROM users
+   WHERE age < 25 OR age > 28;
+
+   SELECT * FROM users
+   WHERE age < 25 OR age = 28 OR city = 'Islamabad' OR name = 'Sara';
+
+   SELECT * FROM users
+   WHERE age > 24 AND city = 'Karachi';
+
    SELECT * FROM users WHERE city IN ('Lahore','Karachi','Multan');
+
+   SELECT * FROM users WHERE Age IN (20 , 25 , 26);
    ```
 
 5. **BETWEEN**
 
    ```sql
    SELECT * FROM users WHERE age BETWEEN 20 AND 30;
+
+   SELECT * FROM users WHERE age BETWEEN 20 AND 30 AND City = "Hyderabad";
+
+   SELECT * FROM users WHERE age BETWEEN 20 AND 30 OR City = "Hyderabad";
    ```
 
 6. **NOT BETWEEN**
