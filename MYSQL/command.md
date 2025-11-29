@@ -199,12 +199,7 @@ VALUES
    SELECT * FROM users WHERE age > 20;
    SELECT * FROM users WHERE city > "Hyd";
    ```
-4. **Ye duplicate data remove kar deta hai, sirf unique values show karta hai.**
 
-   ```sql
-   SELECT DISTINCT column_name FROM table_name;
-   SELECT DISTINCT * FROM table_name;
-   ```
 5. **IS NULL (Ye check karne ke liye hota hai ki column empty hai ya nahi)**
 
    ```sql
@@ -268,10 +263,25 @@ VALUES
    SELECT * FROM users ORDER BY age DESC;
    ```
 
-9. **DISTINCT (Unique Values)**
+9. **Ye duplicate data remove kar deta hai, sirf unique values show karta hai.**
 
    ```sql
-   SELECT DISTINCT city FROM users;
+   1. SELECT DISTINCT column_name FROM table_name;
+   2. SELECT DISTINCT column_name , column_name FROM table_name;
+   3. SELECT DISTINCT * FROM table_name;
+   4. SELECT DISTINCT * FROM table_name ORDER BY Name ASC
+   5. SELECT COUNT(DISTINCT city) FROM users;
+   6. SELECT COUNT(DISTINCT c_name) FROM table_name
+   7. SELECT COUNT(DISTINCT c_name , c_name) FROM users;
+
+   ```
+
+9. **Column Alias means Column ko temporary naam dena**
+
+   ```sql
+   1. SELECT First_Name AS Name FROM users
+   2. SELECT First_Name Name FROM users
+   3. SELECT First_Name AS fname , Phone_Number AS Contact FROM users
    ```
 
 ---

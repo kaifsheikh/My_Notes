@@ -15,9 +15,58 @@ R language ko yeh jaanna zaroori hota hai taake wo data ko sahi tarike se proces
 ---
 
 # Charater (Text)
+1. Character R mein wo datatype hota hai jis mein -> Alphabets , Words , Sentences , Special characters , Numbers-as-text
+
+2. Character values double quotes " " ya single quotes ' ' ke andar hoti hain.
+
 ```r
 x <- "Hello World"
 typeof(x) # "character"
+
+# Agar string ke andar quotes use karo, escape karna hoga
+x <- "He Said, I Will Come"
+print(x) # ""
+
+# her word , se Seperate hoga Seperator dosra bhe use kar sekhte hai like . / ; etc .
+message <- paste("Hello", "This is", "Sample", "Text", sep="-")
+print(message) # "Hello-This is-Sample-Text"
+
+paste("Hello", "Kaif")   # "Hello Kaif"
+paste0("Hello", "Kaif")  # "HelloKaif"
+
+# String ka break karta hai
+strsplit("A-B-C", "-") # "A" "B" "C"
+
+# Charater Count karne ka liye
+a <- nchar("Pakistan")
+print(a) # 8
+
+# Uppercase or Lowercase ka liye
+toupper("pakistan")
+tolower("PAKISTAN")
+
+# String ka part ko Extract karega
+substr("Pakistan", 1, 4) # "Paki"
+
+# Number ko Charater Datatype mein convert karne ka liye
+num <- 150
+char_num <- as.character(num)
+class(char_num)   # "character"
+
+# Special Characters (Escape Sequences)
+
+1. Escape sequences wo special characters hain jo aap normally directly string ke andar nahi likh sakte.
+Is liye R inko represent karne ke liye backslash \ ka use karta hai.
+
+| Escape | Meaning       |
+| ------ | ------------- |
+| `\"`   | Inside quotes |
+| `\'`   | Single quote  |
+| `\\`   | Backslash     |
+| `\n`   | New line      |
+| `\t`   | Tab           |
+
+
 ```
 
 # Numeric (Real Numbers)
