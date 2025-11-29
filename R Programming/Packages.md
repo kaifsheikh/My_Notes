@@ -45,6 +45,19 @@ lapply(all_packages, library, character.only = TRUE)
 detach("package:package_name" , unload=TRUE)
 ```
 
-# How to Open Excel CSV or different File in R:
+# How to Open and Read files in different format:
+
+## Read `CSV` File
+```r
+data <- read.csv("folder_name/students.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# header = TRUE → R ko pata chal gaya ke Name, Age, Grade yeah columns hain.
+
+# header = FALSE → R unko column names nahi samjhega, numbers assign karega: V1, V2, V3
+
+# stringsAsFactors = FALSE → iska matlab: Text (like Name) ko as text hi rakho, factor na banao.
+```
+
+
 
 <!-- https://youtu.be/yejGKijmZ6I?si=EQKPwOWZUZaHM3-l&t=9795 -->
