@@ -23,19 +23,22 @@ R language ko yeh jaanna zaroori hota hai taake wo data ko sahi tarike se proces
 x <- "Hello World"
 typeof(x) # "character"
 
-# Agar string ke andar quotes use karo, escape karna hoga
-x <- "He Said, I Will Come"
-print(x) # ""
 
-# her word , se Seperate hoga Seperator dosra bhe use kar sekhte hai like . / ; etc .
+# Ye function characters ko join karta hai aur space by default beech mein dal deta hai.
+paste("Hello", "Kaif")   # "Hello Kaif"
+
+# yeah Without space join karta hai
+paste0("Hello", "Kaif")  # "HelloKaif"
+
+
+# her word ko , se Seperate karta hai Seperator dosra bhe use kar sekhte hai like . / ; etc
 message <- paste("Hello", "This is", "Sample", "Text", sep="-")
 print(message) # "Hello-This is-Sample-Text"
 
-paste("Hello", "Kaif")   # "Hello Kaif"
-paste0("Hello", "Kaif")  # "HelloKaif"
 
-# String ka break karta hai
+# String ko break karta hai
 strsplit("A-B-C", "-") # "A" "B" "C"
+
 
 # Charater Count karne ka liye
 a <- nchar("Pakistan")
@@ -51,7 +54,7 @@ substr("Pakistan", 1, 4) # "Paki"
 # Number ko Charater Datatype mein convert karne ka liye
 num <- 150
 char_num <- as.character(num)
-class(char_num)   # "character"
+typeof(char_num)   # "character"
 
 # Special Characters (Escape Sequences)
 
@@ -65,7 +68,6 @@ Is liye R inko represent karne ke liye backslash \ ka use karta hai.
 | `\\`   | Backslash     |
 | `\n`   | New line      |
 | `\t`   | Tab           |
-
 
 ```
 
