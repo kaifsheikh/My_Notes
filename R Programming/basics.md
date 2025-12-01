@@ -10,14 +10,14 @@
 # isa Dropdown menu ajata hai
 ### Some other Operators----
 
-
 ```
 
 # Variable in R Language:
 1. Variable ek dabba (box) hota hai jisme hum kisi number, text, ya data ko rakhte hain, aur baad me usi value ko use kar sakte hain.
-2. Variable ka main kaam hota hai — “value ko store karna.”
-3. R me `=` aur `<-` dono value assign karte hain,
-3. lekin `<-` R ka original style hai, aur zyada use hota hai.
+2. Variable ko hum Object bolte hai R programming mein Mostly.
+3. Variable ka main kaam hota hai — “value ko store karna.”
+4. R me `=` aur `<-` dono value assign karte hain,
+5. lekin `<-` R ka original style hai, aur zyada use hota hai.
 ```r
 x = 10
 y = 20
@@ -30,17 +30,14 @@ y - x # Output : 10
 
 # Example 02
 
-x <- 10
-y <- 20
+age <- 25          # value = 25
+name <- "Ali"      # value = "Ali"
+isStudent <- TRUE  # value = TRUE
 
-# Yeah bhe Same hai 10 x mein or 20 y mein store ho reha hai
-
-x + y # Output : 30
-y - x # Output : 10
 ```
 
 ## `print()` - Optional
-1. print() variable ko print karta hai without print() bhe hum value ko run kar sekhta hai
+1. `print()` variable ko print karta hai without print() bhe hum value ko run kar sekhta hai
 ```r
 x <- 10
 y <- 20

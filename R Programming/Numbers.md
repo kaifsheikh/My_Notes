@@ -8,7 +8,6 @@ yeah (Numeric/Integer) par kaam karne waale (important) built-in functions hai.
 
 | Function | Maqsad (Purpose) | Syntax |
 | :--- | :--- | :--- |
-| `abs()` | Kisi number ki **Absolute Value** nikalna (negative sign hata deta hai). | `abs(x)` |
 | `sqrt()` | **Square Root** nikalna. | `sqrt(x)` |
 | `log()` | **Logarithm** nikalna. Base define kar sakte hain. | `log(x, base = e)` |
 | `exp()` | **Exponential** value nikalna ($e^x$). | `exp(x)` |
@@ -17,12 +16,96 @@ yeah (Numeric/Integer) par kaam karne waale (important) built-in functions hai.
 | `floor()` | Number ko usse **chote** nearest whole number tak round karna. | `floor(x)` |
 | `trunc()` | Decimal hissa **hata** kar sirf Integer part rakhna. | `trunc(x)` |
 
+## `abs()`
+1. Kisi number ki Absolute Value nikalna (negative sign hata deta hai).
+   
+```r
+a = 10
+b = 20
+c = abs(a - b)
+
+print(c)
+# Output: 10
+```
+
+## `is.numeric()`
+   
+```r
+a = "100"
+b = is.numeric(a)
+
+print(b) # FALSE
+
+
+a = 100
+b = is.numeric(a)
+
+print(b) # TRUE
+```
+
+## `as.numeric()`
+1. yeah `Character` Datatype ko `Number` mein Convert karta hai.
+   
+```r
+a = "100"
+print(typeof(a)) # Character
+
+b = as.numeric(a)
+print(typeof(b)) # Double
+```
+
+## `sum()`
+   
+```r
+a <- 10
+b <- 20
+c <- sum(a , b)
+
+print(c) # 30
+
+
+a <- c(10 , 20 , 30 , 40)
+c <- sum(a)
+
+print(c) # 100
+```
+
+## `mean()`
+1. Avergae karne ka liye hai
+
+```r
+a <- 10
+b <- 20
+c <- mean(a , b)
+
+print(c) # 10
+
+
+a <- c(40 , 40)
+c <- mean(a)
+
+print(c) # 40
+```
+
+## `max()`
+
+```r
+a <- 10
+b <- 20
+c <- max(a , b)
+
+print(c) # 20
+
+
+a <- c(40 , 40 , 100 , 90)
+c <- max(a)
+
+print(c) # 100
+```
+
 ### 💡 Examples:
 
 ```R
-# 1. Absolute Value
-print(abs(-15.7)) 
-# Output: 15.7
 
 # 2. Square Root
 print(sqrt(81))

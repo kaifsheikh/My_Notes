@@ -33,6 +33,34 @@
 ## Download R Studio (IDE)
 2. https://posit.co/download/rstudio-desktop/
 
-## What is IDE:
+## What is IDE (Integrated Development Environment):
 
-1. 
+1. Coding karne ka aik mukammal setup jahan editor + compiler + debugger sab sath mil kar kaam karte hain.
+
+## Example 01:
+1. VS Code
+2. PyCharm
+3. IntelliJ IDEA
+4. Android Studio
+5. Visual Studio
+
+# How to Create File , Folder
+![alt text](image.png)
+
+## 📝 Source Editor (Top-Left Panel)
+1. Yeh woh hissa hai jahan aap apna R code likhte, edit karte, aur save karte hain.
+
+## 📊 Console (Bottom-Left Panel)
+1. Yeh woh hissa hai jahan aapka code execute hota hai aur results dikhte hain.
+
+## 🌳 Environment/History/Tutorial (Top-Right Panel)
+1. Yeh panel variables aur data ko manage karta hai jo aapki current R session mein hain.
+
+## 📁 Files/Plots/Packages/Help (Bottom-Right Panel)
+1. Yeh panel files, graphical output, aur help documentation ke liye hai.
+
+# Shortcut Keys
+1. Ctrl + Shift + N -> isa new Script open hoge
+2. ```r 
+    dir.create("abc") # new folder create karne ka liya
+```
