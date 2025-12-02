@@ -1,14 +1,22 @@
 # What is urls.py?
-- `urls.py` is file ka kam hai ka jab User koi URL open karay tu.
-- ois URL per konsa `Views.py` file mein kis function ko run karna hai yeah kam `urls.py` ka hai. 
-- ab user browser me `/books/` likhega
-- to Django `views.py` file ke andar `books_list()` function ko call karega.
+- `urls.py` is file ka kam hai ka jab User koi URL open karay tu ois URL per kis `Function` ko call karna hai yeah kam `urls.py` ka hai.
 
-# What is View?
-1. is file mein Python function hote hai jo decide karta hai ke user ko kya dikhana hai. 
-1. User ki request lene ke baad, usko kya response (page ya message) dekhta hai means.
-2. Jab user koi website page open karta hai (jaise `/books` ya `/about`) to Django ko ye decide karna hota hai ka User ko konsa Page dikhaya jaye Ye decision View karta hai.
-3. jab hum koi app create karte hai tu `views.py` yeah file lazmi hoti hai her app ka andar
+- or wo `Functions` hum `views.py` file mein define karte hai
+
+- ab user browser me `/books/` likhega to Django `books_list()` ko function ko call karega jo ka `views.py` file ka andar define karte ha.
+
+# What is Views?
+1. `views.py` is file mein hum Python functions define karte hai jiska andar hum logics likhte hai jo yeah decide karta hai ke user ki request layne ka bad isko kia response (page yeah Message) show karna hai.
+
+2. Jab user koi website page open karta hai (jaise `/books` ya `/about`) to Django ko ye decide karna hota hai ka User ko konsa Page show kiya jay Ye decision View karta hai.
+
+3. or jo Response hum User ko Show karwate hai wo kam bhe View ka hai kue ka jo Response User ko show hota hai wo kam bhe view ka hai
+
+3. ager hum `Wihtout App` create kare kam karte hai tu hume `Inner Folder` mein `views.py` file khud se create karne hoti hai jaha per hum Functions ko define karte hai
+
+3. lakin jab hum koi `app create` karte hai tu waha per `views.py` phela se create hoti hai or yeh her App ka andar lazmi hoti hai
+
+4. 
 
 ## `Types of View`
 | Type                          | Matlab                          | Kaha likhte hain |
