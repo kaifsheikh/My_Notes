@@ -1,3 +1,27 @@
+# A way to redirect to another page after clicking a link?
+1. `urls.py` file mein `name='products'` iska naam humne use kiya hai.
+2. `templates/base.html` is file mein `href="{% url 'product' %}"` use kiya hai
+
+```py
+# urls.py
+urlpatterns = [
+    path('products/' , views.products , name='product'),
+]
+```
+
+```py
+# views.py
+def products(request):
+    return render(request , 'products.html')
+```
+
+```py
+# templates/base.html
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'product' %}">Products</a>
+</li>
+```
+
 ## Context:
 1. Context ek dictionary hoti hai jisme woh data hota hai jo hum apni view (Python file) se template (HTML file) ko bhejna chahte hain.
 2. hum Direct koi Data pass nahe kar sekhte hai jo bhe Data hoga wo Dictionary mein he Pass hoga.
@@ -51,30 +75,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', views.home)
 ]
-```
-
-# A way to redirect to another page after clicking a link?
-1. `urls.py` file mein `name='products'` iska naam humne use kiya hai.
-2. `templates/base.html` is file mein `href="{% url 'product' %}"` use kiya hai
-
-```py
-# urls.py
-urlpatterns = [
-    path('products/' , views.products , name='product'),
-]
-```
-
-```py
-# views.py
-def products(request):
-    return render(request , 'products.html')
-```
-
-```py
-# templates/base.html
-<li class="nav-item">
-    <a class="nav-link" href="{% url 'product' %}">Products</a>
-</li>
 ```
 
 ## If we want to display dynamic code between the header and footer, but we only want to show a limited portion of the dynamic code (meaning not all of it), then for that

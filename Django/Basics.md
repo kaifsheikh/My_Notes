@@ -24,50 +24,50 @@ Taake project organized, clean, aur reusable rahe.
 
 
 # Understanding File Structure:
-1. yeah humera Project ka root Structure hai:
-   
-```cmd
-firstSite/
+1. jab hum Django Project Create karte hai tu wo By Default 2 folders create karta hai oisi naam ka jo humne django Project Create karte time diya tha.
+
+```py
+firstSite/ # Outer Folder
 │
-├── manage.py
-└── firstSite/
+├── manage.py 
+|
+└── firstSite/ # Inner Folder
+    |
     ├── __init__.py
     ├── settings.py
     ├── urls.py
     ├── asgi.py
     └── wsgi.py
-
 ```
 
-## `firstSite/`
-1. Outer Folder: `firstSite/` (Project Root Folder)
-2. iska andar aik file hoti hai `manage.py`
-3. Ye Django ka project manager file hai.
-4. Isse hum project ke commands run karte hain.
+# Outer Folder
+- `Outer folder` isko `Root folder` bhe bolte hai kue ka iska andar hum `Django App` create karte hai.
+- `Static Folder` isme Image , Css or JS ki file hoti hai
+- `Templates Folter` isme Html ki files hoti hai
+- `manage.py` yeah file bhe outer folder mein hoti hai jo project ko run karte hai
 
-## `firstSite/`
-1. Inner Folder: `firstSite/` (Project Configuration Folder)
-2. Ye folder project ke settings aur configuration rakhta hai.
-3. matlab ye bataata hai Django ko tumhara project kaise run karna hai
-4. Iske andar `5 main files` hoti hain.
+# Inner Folder
+
+- `Inner Folder` isko (Project Configuration Folder) bolte hai
+- iska andar humari Actual Files hoti hai Django ki jaise `urls.py` , `settings.py`
+- Inner folder mein jo files hoti hai waha se humera project Operate hota hai.
 
 ## `settings.py`
-1. Ye sabse important file hai. Isme project ki configuration / settings hoti hain.
-
+- Ye sabse important file hai. Isme project ki configuration / settings hoti hain.
 
 ## `urls.py`
-1. Ye project ke routes (links / paths) control karta hai.
+- Ye project ke routes (links / paths) control karta hai.
 
 ## `asgi.py`
-1. Ye file Django ko ASGI (Asynchronous Server Gateway Interface) mode me chalane ke liye hoti hai.
+- Ye file Django ko ASGI (Asynchronous Server Gateway Interface) mode me chalane ke liye hoti hai.
 
-2. Iska kaam backend level par hota hai —
+- Iska kaam backend level par hota hai —
 ye real-time features (jaise chat apps, live updates) ke liye use hoti hai.
 
 ## `wsgi.py`
-1. Ye file Django ko WSGI (Web Server Gateway Interface) mode me chalane ke liye hoti hai.
+- Ye file Django ko WSGI (Web Server Gateway Interface) mode me chalane ke liye hoti hai.
 
-2. Ye mainly production servers ke liye use hoti hai — jab project live karte ho (deploy karte ho).
+- Ye mainly production servers ke liye use hoti hai — jab project live karte ho (deploy karte ho).
 
 
 
