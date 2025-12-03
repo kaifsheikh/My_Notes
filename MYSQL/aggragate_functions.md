@@ -6,10 +6,11 @@ Aggregate functions ka use multiple rows ke data ko **summarize** karne ke liye 
 
 ## 1. COUNT()
 
-* **Purpose:** Rows ki **count** nikalne ke liye
+- Rows ko **count** karta hai 
 
 ```sql
 SELECT COUNT(column_name) FROM table_name;
+SELECT COUNT(*) AS Total_Rows FROM table_name;
 ```
 ---
 
