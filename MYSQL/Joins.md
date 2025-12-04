@@ -7,6 +7,32 @@
 1. **Foreign Key (FK) woh key hai jo do tables ko aapas mein jorti hai.
 2. Yeh woh "bridge" hai jo JOINs mein istemaal hota hai.**    
 
+```sql
+CREATE TABLE Classes (
+    id INT PRIMARY KEY,
+    classes VARCHAR(50)
+);
+```
+```sql
+CREATE TABLE Students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    student_class INT,
+    FOREIGN KEY (student_class) REFERENCES Classes(id)
+);
+```
+- Students.student_class → ye foreign key column hai
+- Classes.id → ye primary key hai jisko ye follow kar raha ha
+
+## AGAR TABLES PEHLE SE BANAYE HUWE HO TO FOREIGN KEY BAAD ME LAGANA
+1. `fk_student_class` → foreign key ka naam name kch bhe de sekhte hai.
+
+```sql
+ALTER TABLE Students
+ADD CONSTRAINT fk_student_class
+FOREIGN KEY (student_class)
+REFERENCES Classes(id);
+```
 ## Example:
 - Table Name - `Classes`
 - Yeh asal list hai, jisme bataya gaya ke kon kon si classes exist karti hain:
@@ -40,7 +66,15 @@
 ---
 
 # Inner Join:
-- 
+- INNER JOIN SQL ka ek join hai jo 2 sirf wohi data dikhata hai jo dono tables mein match hota ho.
+- Agar koi record match nahi karta → wo result mein nahi aata.
+
+```sql
+SELECT Students.name, Classes.classes
+FROM Students
+INNER JOIN Classes
+ON Students.student_class = Classes.id;
+```
 
 ## 🔹 Primary Key (PK)
 
