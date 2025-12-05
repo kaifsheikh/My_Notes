@@ -40,14 +40,36 @@ Ye structures data ko **organize aur manage** karne me help karte hain — jaise
   
 ## `Example 01:`
 ```r
-numbers <- c(10, 20, 30, 40)
-names <- c("Ali", "Ahmed", "Karlie")
-logical_vec <- c(TRUE, FALSE, TRUE)
 mix <- c(10, "Ali", TRUE) # yeah galat hojayga mixed datatype aik Vector mein store nahe karte hai
+name <- c("Ali" , "Ahmed" , "Shayan" , "Bilal")
 
-print(numbers) # Output: 10, 20, 30, 40
-numbers[3]     # Output: 30
-numbers[2:4]   # Output: 2 se 4 tak ki values ayge sirf
+print(name)    # "Ali" , "Ahmed" , "Shayan" , "Bilal"
+name[3]        # "Shayan"
+name[1:3]      # "Ali" , "Ahmed" , "Shayan"
+name[c(1,4)]      # "Ali" , "Bilal"
+name[c(TRUE, FALSE, TRUE, FALSE)]  # "Ali" , "Shayan"
+```
+
+## `Example 02:`
+1. yeah Name ka `Character` ko count karayga
+2. jis naam mein Character 4 se Greater hue oisa yeah print karwa dyga
+
+```r
+name <- c("Ali" , "Ahmed" , "Shayan" , "Bilal")
+
+greater <- name[nchar(name) > 4] 
+
+print(greater) # "Ahmed" , "Shayan" , "Bilal"
+```
+
+## `head()` aur `tail()`
+
+```r
+name <- c("Ali" , "Ahmed" , "Shayan" , "Bilal")
+
+final = head(name) # "Ali" , "Ahmed" , "Shayan" , "Bilal"
+
+print(final)
 ```
 
 # `Data Frame:`
