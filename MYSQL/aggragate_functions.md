@@ -6,10 +6,11 @@ Aggregate functions ka use multiple rows ke data ko **summarize** karne ke liye 
 
 ## 1. COUNT()
 
-* **Purpose:** Rows ki **count** nikalne ke liye
+- Rows ko **count** karta hai 
 
 ```sql
 SELECT COUNT(column_name) FROM table_name;
+SELECT COUNT(*) AS Total_Rows FROM table_name;
 ```
 ---
 
@@ -48,6 +49,53 @@ SELECT MIN(column_name) FROM table_name;
 SELECT MAX(column_name) FROM table_name;
 ```
 ---
+
+## 5. GROUP BY()
+
+* **Purpose:** GROUP BY clause ka Purpose hai table ki rows (data ki lines) ko chote groups mein jama (collect) karna hai, taake hum un groups par Aggregate Functions (jaise SUM(), AVG(), COUNT()) laga saken.
+
+```sql
+-- Sample table code (MySQL)
+
+CREATE TABLE Sales_Data (
+    Order_ID INT PRIMARY KEY,
+    Product_Name VARCHAR(100),
+    City VARCHAR(50),
+    Sale_Amount DECIMAL(10, 2),
+    Quantity INT
+);
+
+-- Sample Insert code
+
+INSERT INTO Sales_Data (Order_ID, Product_Name, City, Sale_Amount, Quantity) VALUES
+(1, 'Laptop', 'Karachi', 1200.00, 1),
+(2, 'Mouse', 'Lahore', 25.00, 5),
+(3, 'Laptop', 'Karachi', 1500.00, 1),
+(4, 'Keyboard', 'Islamabad', 75.00, 3),
+(5, 'Mouse', 'Karachi', 20.00, 4),
+(6, 'Keyboard', 'Lahore', 80.00, 2),
+(7, 'Monitor', 'Islamabad', 300.00, 1);
+```
+
+## Example:
+
+```sql
+SELECT City, SUM(Sale_Amount) AS Total_Revenue 
+FROM  Sales_Data
+GROUP BY City;
+```
+---
+
+
+
+
+
+
+
+
+
+
+
 
 ## 6. GROUP_CONCAT()
 
