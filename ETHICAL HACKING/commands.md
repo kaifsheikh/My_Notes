@@ -131,3 +131,76 @@ Agar tum beginner ho to ye **basic commands** zaroor seekho 👇
 | `g` | Group | `File ke group wale log` |
 | `o` | Others | `Baaki sab log` |
 | `a` | All | `Sab (u+g+o)` |
+
+For Example:
+
+## drwxrwxr-x 13 kali kali 4096 Oct 18 05:46 Banners
+
+Isko 5 simple points mein samjho:
+
+⭐ 1) d → Ye ek FOLDER hai
+
+d = directory (folder)
+
+Agar - hota → file hoti
+Agar l hota → shortcut/link hota
+
+Yaha FOLDER hai → “Banners”
+
+⭐ 2) rwxrwxr-x → Permission
+
+Isko 3 parts mein divide karo:
+
+rwx | rwx | r-x
+user | group | others
+
+✔ USER (owner) = rwx
+
+Owner kali:
+
+r = padh sakta hai
+
+w = edit/delete kar sakta hai
+
+x = folder ke andar ja sakta hai
+
+➡ Owner ko full control hai.
+
+✔ GROUP = rwx
+
+Group ka naam bhi kali:
+
+Group wale users bhi:
+
+padh sakte
+
+edit/delete kar sakte
+
+folder me ja sakte
+
+➡ Group ko bhi full control hai.
+
+✔ OTHERS = r-x
+
+Baaki users:
+
+r = dekh sakte
+
+x = folder ke andar ja sakte
+
+❌ w = BUT edit/delete nahi kar sakte
+
+➡ Others sirf dekh sakte, change nahi kar sakte.
+
+⭐ 3) 13 → internal count
+
+Ye folder ke andar kuch technical count hota hai.
+Isko simple mein ignore kar do.
+
+⭐ 4) kali kali → Owner aur Group
+
+Pehla kali = folder kis ka hai (owner)
+
+Dusra kali = group ka naam
+
+⭐ 5) Banners → Folder ka naam
