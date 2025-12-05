@@ -64,23 +64,29 @@ nchar(x2 , type = "bytes") # 8 Bytes  -> yeah Bytes ko count karta hai
 x1 <- "A"
 charToRaw("x1") # 41 -> yah Hexadecimal (1 byte)
 
+
 x1 <- "Hii"
 charToRaw("x1") # 31 32 33 -> yah Hexadecimal (3 bytes)
 
-x <- charToRaw("Hello")
-print(x) # output: 48 65 6c 6c 6f
-
-y <- as.raw(100)
-print(y) # Output: 64
 
 x <- charToRaw("Hi")
 text <- rawToChar(x)
 print(text) # output: Hi
 
-x <- charToRaw("A")
-bits <- rawToBits(x)
-print(bits) # output: 10000010
 
+x <- charToRaw("A") # Hexadecimal
+bits <- rawToBits(x) # Hexadecimal se Bits mein convert kardiya
+print(bits) # 10000010
+
+```
+
+## as.raw()
+1. `as.raw()` kisi bhi number ko 0 se 255 ke beech wale raw byte mein badal deta hai.
+2. Ye hexadecimal format hota hai
+
+```r
+y <- as.raw(100)
+print(y) # Output: 64
 ```
 
 ## object.size()
@@ -89,18 +95,25 @@ print(bits) # output: 10000010
 ```r
 v <- c("A", "B", "C")
 object.size(v) # 160 bytes
+
+
+a <- "H"
+b <- object.size(x)
+print(b) # 112 Bytes
+
 ```
 
 ## is.na()
 1. Check karta hai missing values (NA) ko
-
+2. jo Value Missing hoge waha per `TRUE` likha ayga
+   
 ```r
-x1 <- c("A", "B", "C")
+x1 <- c("A", "B", NA, "C")
 is.na(x1) # FALSE FALSE TRUE FALSE
 ```
 
-## is.omit()
-1. Check karta hai missing values (NA) ko
+## na.omit()
+1. Check karta hai missing values (NA) ko or oisa `Remove` kar dyta hai
 
 ```r
 raw_data <- c(12, 45, NA, 30)
