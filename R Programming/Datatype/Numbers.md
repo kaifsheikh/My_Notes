@@ -1,3 +1,20 @@
+# Numeric (Real Numbers)
+1. eh woh numbers store karta hai jin mein decimal points (yaani fractions) ho sakte hain, jaise $3.14$, $10.5$, ya $-2.0$.
+   
+```r
+x <- 10.12
+typeof(x) # "double"
+```
+
+# Integer (Whole Number)
+1. yeah Pure Whole Number store karta hai jisme Decimal Point nahe hote hai
+2. Integer type hone ki nishani ke liye number ke aage L (capital L) lagana zaroori hai.
+
+```r
+x <- 10L
+typeof(x) # "integer"
+```
+
 # 🔢 R Programming: Built-in Numeric Functions
 
 yeah (Numeric/Integer) par kaam karne waale (important) built-in functions hai.

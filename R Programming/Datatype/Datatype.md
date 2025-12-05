@@ -6,115 +6,12 @@ number, text, TRUE/FALSE, ya kuch aur.
 R language ko yeh jaanna zaroori hota hai taake wo data ko sahi tarike se process kar sake.
 
 # `Type of Datatypes:`
-1. Character
-2. Numeric
-3. Integer
+1. [Character](Character.md)
+2. [Numeric](Numbers.md)
+3. [Integer](Numbers.md)
 4. Logical
 5. Complex
-6. Raw
----
-
-# Charater (Text)
-1. Character R mein wo datatype hota hai jis mein -> Alphabets , Words , Sentences , Special characters , Numbers-as-text
-
-2. Character values double quotes " " ya single quotes ' ' ke andar hoti hain.
-
-```r
-x <- "Hello World"
-typeof(x) # "character"
-
-
-# Ye function characters ko join karta hai aur space by default beech mein dal deta hai.
-paste("Hello", "Kaif")   # "Hello Kaif"
-
-# yeah Without space join karta hai
-paste0("Hello", "Kaif")  # "HelloKaif"
-
-
-# her word ko , se Seperate karta hai Seperator dosra bhe use kar sekhte hai like . / ; etc
-message <- paste("Hello", "This is", "Sample", "Text", sep="-")
-print(message) # "Hello-This is-Sample-Text"
-
-
-# String ko break karta hai
-strsplit("A-B-C", "-") # "A" "B" "C"
-
-
-# Charater Count karne ka liye
-a <- nchar("Pakistan")
-print(a) # 8
-
-# Uppercase or Lowercase ka liye
-toupper("pakistan")
-tolower("PAKISTAN")
-
-# String ka part ko Extract karega
-substr("Pakistan", 1, 4) # "Paki"
-
-# Number ko Charater Datatype mein convert karne ka liye
-num <- 150
-char_num <- as.character(num)
-typeof(char_num)   # "character"
-
-# Special Characters (Escape Sequences)
-
-1. Escape sequences wo special characters hain jo aap normally directly string ke andar nahi likh sakte.
-Is liye R inko represent karne ke liye backslash \ ka use karta hai.
-
-| Escape | Meaning       |
-| ------ | ------------- |
-| `\"`   | Inside quotes |
-| `\'`   | Single quote  |
-| `\\`   | Backslash     |
-| `\n`   | New line      |
-| `\t`   | Tab           |
-
-```
-
-# Numeric (Real Numbers)
-1. eh woh numbers store karta hai jin mein decimal points (yaani fractions) ho sakte hain, jaise $3.14$, $10.5$, ya $-2.0$.
-   
-```r
-x <- 10.12
-typeof(x) # "double"
-```
-
-# Integer (Whole Number)
-1. yeah Pure Whole Number store karta hai jisme Decimal Point nahe hote hai
-2. Integer type hone ki nishani ke liye number ke aage L (capital L) lagana zaroori hai.
-
-```r
-x <- 10L
-typeof(x) # "integer"
-```
-
-# Raw (Data)
-1. Raw data ka matlab hai binary data ya bytes.
-2. Ye data machine-readable hota hai, human-readable nahi.
-3. Har character ya number ko byte (0–255) mein store kiya jata hai.
-4. Encryption matlab data ko secure/lock karna taki koi bina permission use na padh sake.
-   
-## `Example 01:`
-
-```r
-x <- charToRaw("Hello")
-print(x)
-# output: 48 65 6c 6c 6f
-
-y <- as.raw(100)
-print(y)
-# Output: 64
-
-x <- charToRaw("Hi")
-text <- rawToChar(x)
-print(text)
-# output: Hi
-
-x <- charToRaw("A")
-bits <- rawToBits(x)
-print(bits)
-# output: 10000010
-```
+6. [Raw](Raw_data.md)
 ---
 
 # `Advanced Data Structures (Multiple values / group types)`
