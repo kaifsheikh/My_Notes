@@ -60,7 +60,7 @@ print(age >= 20) # False
 x = None
 print(x)
 ```
-## 4. `List (list) — Multiple Items ek sath`
+## 4. `List [list] — Multiple Items ek sath`
 1. List ek box jesi hoti hai jisme hum multiple values ek sath rakh sakte hain.
 2. List ke items index (0 se start) hote hain.
 3. List changeable hai means ka iska data change ho sekhta hai

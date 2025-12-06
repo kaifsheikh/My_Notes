@@ -49,8 +49,36 @@
 3. Package ya library ka matlab hota hai — pehle se likha gaya Python code jo aap use kar sakte ho.
 
 ```py
+1. python --version
+2. py --list # yeah apko apke python ka saray version show karayge jo apne download kiya hua hai apne system mein
 1. pip install package_name # Install karne ke liye
 2. pip uninstall package_name # Package Uninstall karne ke liye
 3. pip show package_name # Check karne ke liye ke package install hai ya nahi
 4. pip list # List of installed packages dekhne ke liye
+5. pip freeze > file_name.txt # isa hum Python ka jitne bhe packages jo Virtual Env mein yeah Global Python mein install hongay wo download hojaygay dosre file ka andar
+6.  
 ```
+
+# Virual Enviroment in Python
+1. Python ka Virtual Environment aik “alag jagah” hoti hai jahan hum apne project ki libraries clean aur safe tareeqe se install karte hain.
+
+```py
+1. python -m venv my_env_name # Ye command naya virtual environment banati hai
+2. my_env_name\Scripts\activate # is location per hum apne virtual Env ko ayse Activate karte hai
+3. deactivate # isa Deactive hojayga 
+
+# Activate karne ka bad hum sari Python ki Commands use kar sekhte hai jo Normally karte hai Install , List sub kch lakin Activate karne ka bad 
+```
+
+## Ager Python mein Different Version ho tu oin per work kaise kare. 
+
+```py
+1. py -version_name -m pip list # Yyeah apko apke kisi specific version mein kitne packages installed hai oiska batayga
+
+2. py -[Version Number] -m pip uninstall [Package Name] # ager kisi specific python version mein se package ko delete karna ho tu yeah oiska liye hai
+
+3. py -[Version Number] -m venv [Environment Ka Naam] # ager kisi specific python version mein Enviroment create karne ka liya hai yah 
+
+2. py -[Version Number] -m pip install [Package Name] # ager kisi specific python version mein package ko Install karna ho tu yeah oiska liye hai.
+```
+
