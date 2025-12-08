@@ -3,16 +3,25 @@
 
 2. Character values double quotes " " ya single quotes ' ' ke andar hoti hain.
 
+## `paste()` & `paste0()`
+```r
+a = "Hello"
+b = "World"
+final = paste(a , b)
+
+final # "Hello World" ---> Concate karne ka liya
+
+
+a = "Hello"
+b = "World"
+final = paste0(a , b)
+
+final # "HelloWorld" ---> Concate karne ka liya lakin without Spaces
+```
+
 ```r
 x <- "Hello World"
 typeof(x) # "character"
-
-
-# Ye function characters ko join karta hai aur space by default beech mein dal deta hai.
-paste("Hello", "Kaif")   # "Hello Kaif"
-
-# yeah Without space join karta hai
-paste0("Hello", "Kaif")  # "HelloKaif"
 
 
 # her word ko , se Seperate karta hai Seperator dosra bhe use kar sekhte hai like . / ; etc
@@ -25,15 +34,19 @@ strsplit("A-B-C", "-") # "A" "B" "C"
 
 
 # Charater Count karne ka liye
-a <- nchar("Pakistan")
+a = "Pakistan"
+final = nchar(a)
 print(a) # 8
 
 # Uppercase or Lowercase ka liye
 toupper("pakistan")
 tolower("PAKISTAN")
 
-# String ka part ko Extract karega
-substr("Pakistan", 1, 4) # "Paki"
+# Charaters ko Count karayga 1 se 4 tak
+a = "Hello World"
+final = substr(a , 1 , 4)
+
+final # Hell
 
 # Number ko Charater Datatype mein convert karne ka liye
 num <- 150
