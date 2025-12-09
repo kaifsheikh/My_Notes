@@ -25,3 +25,6 @@
 
 
 <!-- https://youtu.be/vU-_kX-fKVg?si=nr3UBYsBS0XnBfZ4&t=837 -->
+
+## Example `POST` Method
+

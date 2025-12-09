@@ -6,13 +6,7 @@
 ## `Example : 01`
 
 ```py
-# views.py -> File Name
-from django.http import HttpResponse # Request and Response ko Manage karne ka liya import kiya hai
-
-def abc(request):
-    return HttpResponse("Welcome Django")
-
-# urls.py -> File Name
+# urls.py
 from firstSite import views # import views.py 
 
 urlpatterns = [
@@ -20,8 +14,15 @@ urlpatterns = [
     path('home/' , views.abc ),
 ]
 
+
+# views.py
+from django.http import HttpResponse # Request and Response ko Manage karne ka liya import kiya hai
+
+def abc(request):
+    return HttpResponse("Welcome Django")
+
 # 'home/' -> yeah mera Route ka naam hai kch bhe rekh sekhte hai
-# views.abc -> views.abc: Jab user '/home/' type karega, toh Django views.py file mein mojood abc naam ke function ko chala dega (jis mein aapne return HttpResponse("Welcome Django") likha tha).
+# views.abc -> Jab user ne '/home/' type karega, toh Django views.py file mein mojood abc naam ke function ko run karayga (jis mein humne return HttpResponse("Welcome Django") likha tha).
 ```
 
 # What is Dynamic Routes:
