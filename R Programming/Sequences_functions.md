@@ -43,13 +43,27 @@ a <- c(10 , 20 , 30 , 40)
 seq(along.with = a)
 # 1 , 2 , 3 , 4 -> kue ka a variable mein 4 values hai tu along.with ne vector a ki lenght batai hai 4 or yeah 1 se count hota hai.
 
+
 x <- c(10, 20, 30, 40)
-seq_along(x)
-# 1 , 2 , 3 , 4 
+seq_along(x) # 1 , 2 , 3 , 4 
+
 
 y <- c("a" , "b" , "c" , "d" , "e")
 seq(from = 100, along.with = y)
 # means ka 100 se start hoga number or y ki length count karayga -> 100 101 102 103 104 -> isko hum kisi bhe number se start kar sekhte hai
+```
+
+```r
+students <- c("Ali", "Sara", "Ahmed", "Hina")
+
+# students -> ki Length Find karne ka liya
+roll_numbers_existing <- seq(along.with = students)
+print(roll_numbers_existing) # 1 2 3 4
+
+
+# Custom numbers se Start karne ka liya
+roll_numbers_custom <- seq(from = 101, along.with = students)
+print(roll_numbers_custom) # 101 102 103 104
 ```
 
 # What is X-Axis or Y-Axis
