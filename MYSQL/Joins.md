@@ -88,12 +88,54 @@ INNER JOIN Classes
 ON Students.student_class = Classes.id;
 ```
 
-## 🔹 Primary Key (PK)
+```sql
+-- 1. Employees table
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    dept_id INT
+);
 
-1. Har table mein sirf **1 Primary Key** hoti hai
-2. NULL values allowed nahi hoti
-3. Values unique hoti hain
-4. FOREIGN KEY, PK ke sath connect hoti hai
-5. Usually AUTO_INCREMENT hota hai
+-- 2. Departments table
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
 
----
+-- 3. Salaries table
+CREATE TABLE salaries (
+    emp_id INT PRIMARY KEY,
+    salary DECIMAL(10,2),
+);
+
+--- Insert Queries
+
+-- Employees
+INSERT INTO employees VALUES 
+(1, 'Ali', 101),
+(2, 'Sara', 102),
+(3, 'John', 101);
+
+-- Departments
+INSERT INTO departments VALUES
+(101, 'IT'),
+(102, 'HR');
+
+-- Salaries
+INSERT INTO salaries VALUES
+(1, 50000),
+(2, 60000),
+(3, 55000);
+
+--- Inner Join
+
+SELECT e.emp_name, d.dept_name, s.salary
+FROM employees e
+
+INNER JOIN departments d
+ON e.dept_id = d.dept_id
+
+INNER JOIN salaries s
+ON e.emp_id = s.emp_id;
+
+```
