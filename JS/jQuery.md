@@ -41,3 +41,45 @@ $(document).ready(function(){
   });
 });
 ```
+
+## `Example 06`
+```js
+$(document).ready(function(){
+  
+  // Fade in
+  $("#showBtn").click(function(){
+      $("#box").fadeIn("slow");
+  });
+
+  // Fade out
+  $("#hideBtn").click(function(){
+      $("#box").fadeOut(1000);
+  });
+
+  $("#toggleBtn").click(function(){
+      $("#box").fadeToggle(500);
+  });
+
+});
+```
+## `Example 07`
+```js
+$(document).ready(function(){
+  
+  // Slide up
+  $("#slideUpBtn").click(function(){
+      $("#box").slideUp("slow");
+  });
+
+  // Slide down
+  $("#slideDownBtn").click(function(){
+      $("#box").slideDown("slow");
+  });
+
+  // Slide toggle
+  $("#slideToggleBtn").click(function(){
+      $("#box").slideToggle(700);
+  });
+
+});
+```
