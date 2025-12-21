@@ -25,25 +25,3 @@
 # numbers = [1, 2, 3, 4]
 # 1. Element” ka matlab hota hai — list (ya koi collection) ke andar ka ek item jaise ka.
 # is List me 4 elements hain
-
-
-matrix = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
-]
-
-for row in matrix:
-    for col in row:
-        print(col , end=" ")
-    print()
-
-
-matrix = [1,2,3,4,5,6,7,8,9,10]
-even_numbers = []
-
-for num in matrix:
-    if num % 2 == 0:
-        even_numbers.append(num)
-    
-print(even_numbers)
