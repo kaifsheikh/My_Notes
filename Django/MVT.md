@@ -62,8 +62,12 @@ def books_list(request):
 
 # What is Model?
 1. Model decide karta hai ke database mein kya information store karne hai jaise (name, age, email) aur Data kis Type ka hoga jaise (text, number, email)
+   
 2. Model Django ka wo part hai jo database or tables ko Manage karta hai
-3. her app ka andar aik `models.py` naam ki file hoti hai jisme hum apne models create karte hai
+   
+3. her app ka andar aik `models.py` naam ki file hoti hai jisme hum apne models create karte hai.
+   
+4. Django mein model ko create karna sirf `app` ke andar possible hai, kyunki Django project directly models ko nahi samajhta. App ke andar hi migrations aur database commands chalti hain.
 
 ## Example 01 (MVT):
 
@@ -79,7 +83,7 @@ urlpatterns = [
     path('patients/', views.patients_list),
 ]
 
-# views.py
+# app/views.py
 from django.shortcuts import render
 from .models import Patient
 
@@ -87,7 +91,7 @@ def patients_list(request):
     patients = Patient.objects.all()  # Model se database ka data fetch
     return render(request, 'patients.html', {'patients': patients})
 
-# models.py
+# app/models.py
 from django.db import models
 
 class Patient(models.Model):

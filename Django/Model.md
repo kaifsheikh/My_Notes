@@ -5,6 +5,8 @@
    
 3. Model Django ka wo part hai jo database ke table ko represent/Describe karta hai ka oisme kitne Column hongay or Datatype kia hoge.
 
+4. Django mein model ko create karna sirf `app` ke andar possible hai, kyunki Django project directly models ko nahi samajhta. App ke andar hi migrations aur database commands chalti hain.
+
 ## Exmaple of Model:
 ```py
 from django.db import models
