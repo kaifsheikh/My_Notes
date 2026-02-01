@@ -1,27 +1,21 @@
-# 📦 Package Manager, Package aur Dependencies Cheat Sheet
-
-Yeh document Node.js aur npm ke concepts ko simple **Roman Urdu** mein explain karta hai.
-
----
-
 ## 🔹 Package Manager Kya Hota Hai?
 
-* **Package Manager** ek tool hota hai jo aapke liye ready-made code libraries download, install, update aur remove karta hai.
-* Node.js ke liye sabse zyada use hone wala package manager hai **npm (Node Package Manager)**.
+* **Package Manager** ek tool hota hai jo aapke liye ready-made code libraries download, install, update aur remove karne ka liya use hota hai.
+* her Language ka apna alag Package Manager ho sekhta hai.
+* **Python** | pip
+* **Laravel , PHP** | Composer
+* **React, Nodejs & Express** | Npm
 
 ---
 
 ## 🔹 Package aur Library
 
-1. **Library**
-   → Library ek collection hoti hai ready-made functions/code ki, jo ek specific kaam asaan banati hai.
-
-2. **Package**
-   → Package ek complete bundle hota hai jisme:
+1. **Library** → Library ek collection hoti hai ready-made functions/code ki, jo ek specific kaam asaan banati hai.
+2. **Package** → Package ek complete bundle hota hai jisme:
 
    * Code (Library)
    * Metadata (naam, version, author, license)
-   * Dependencies ka record hota hai.
+   * Dependencies ka record hota hai yeah sub Package mein ata hai.
 
 3. **Example**
 

@@ -1,3 +1,6 @@
+# What is ORM?
+[ORM](../../FAQ/ORM.md)
+
 # What is Model?
 1. Model ek Python class hoti hai jime hum likhte hain kaunse fields (columns) honge aur unka data type kya hoga
    
@@ -60,9 +63,11 @@ class Student(models.Model):
 1. Migrate Django ka command hai jo actually database me changes apply karta hai.
 2. Migrate ka use karke table database me create hota hai.
 
-# `Commands for Migrate:`
+# `Commands for Migratations:`
 
 ```cmd
-1. python manage.py migrate
-2. python manage.py createsuperuser
+1. python manage.py makemigrations
+1. python manage.py sqlmigrate Model_Name 0001
+2. python manage.py migrate
+3. python manage.py createsuperuser
 ```

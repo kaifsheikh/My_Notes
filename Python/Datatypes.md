@@ -85,22 +85,18 @@ colors = ("red", "green", "blue")
 
 print(colors) # ('red', 'green', 'blue')
 ```
-## 6. `Dictionary (dict) — Key-Value Pair Data`
-1. Dictionary ek data type hai jisme data key:value pair me store hota hai.
-2. Jaise ek mini database jahan name ke sath uska detail ho.
+## 6. `Dictionary {dict} — Key-Value = Pair`
+1. Dictionary ek datatype hai jisme data `key : value ke pair` me store hota hai means.
+2. Dictionary mein jis Order se hum Key Value define karte hai, oisi Order mein output ata hai.
+3. Dictionary mein har key unique hoti hai.
+3. Key sirf string nahi hoti, balke `string`, `number`, `float`, `tuple`, `boolean` or `frozenset` bhe ho sakti hai.
+5. Dictionary `MUTABLE` hoti hai kue ka Dictionary ko Create karne ka bad hum oisa Change kar sekhte hai means (Update) jo cheez change ho sekhti hai oisa hum Mutable bolte hai Ager `key` already exist karti hai Dictionary mein tu, oisa change nahi kar sakte hai lakin koi New Key bad mein Add kar sekhte hai means ka Key `immutable` hoti hai lakin `Value` Mutable hoti hai kue ka hum Exist value ko Change kar sekhte hai or bad mein kisi new value ko add bhe kar sekhte hai
 3. or isa `['key'] brackets` se Represent karte hai.
 
-## `Example 01`
 ```py
-student = {
-    "name": "Ali",
-    "age": 20,
-    "city": "Lahore"
-}
 
-print(student)          # {'name': 'Ali', 'age': 20, 'city': 'Lahore'}
-print(student["name"])  # Ali
 ```
+
 ## 7. `Set (set) — Unique Items ka Group`
 1. Set me duplicate values allowed nahi hoti or.
 2. Order fix nahi hota (random hota hai).

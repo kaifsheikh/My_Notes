@@ -1,4 +1,24 @@
-# What is Function?
+## What is Function?
+1. function aik "band dabbi" ki tarah hota hai.
+2. Iske andar hum jo bhe variable or coding karte hai wo function ka bahir wale code se bilkul alag thalag hoti hai. 
+3. Parameter Ye wo variable hai jinhe sirf function ka Brackets `()` mein define kiya jata hai taake bahir se ane wali `Values` ko store kare apne andar 
+4. Function sirf wahi kaam karega jis ke liye usay banaya gaya hai (Single Responsibility).
+5. 	Code ko aik dafa likh kar poore program mein kahin bhi baar baar chalaya ja sakta hai.
+6. Function apna kaam mukammal karne ke baad jo jawab (output) wapas bhejta hai.
+7. Statements" ka matlab hai programming ki lines (instructions). "Block" ka matlab hai un lines ka ek group.
+
+## Agar main function ke andar koi variable banau (e.g., x = 10), to kya main function ke bahar usay use kar sakta hoon?
+
+1. Nahi! Isay kehte hain `Local Scope`. Function ke andar ki cheez sirf function ke andar ki hai.
+
+## Agar function bahar ki dunya se bilkul alag hai, to phir hum bahar ka data usay dete kaise hain?
+
+1. Yehi wo jagah hai jahan Parameters kaam aate hain. Parameters wo (Window) hain jis ke zariye bahar se data function ka andar ata hai.
+
+## Agar Function ka andar ki coding bahar nazar nahi aati, to jo function se "Result" nikalta hai, wo humein kaise milta hai?
+
+1. Iske liye `return` ka keyword use hota hai.
+2. Ye function ke khatam hone par final result ko Function se bahir nikal dyta hai .
 
 # Local Variables in Function:
 1. Jo variable function ke andar create hai usay `local variable` kehte hain.

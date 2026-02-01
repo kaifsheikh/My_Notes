@@ -2,9 +2,7 @@
 1. Class ek design / blueprint hota hai isme hum Rules ko set karte hai sirf means.
 2. Class khud real cheez nahi hoti, sirf batati hai cheez kaisi hogi. isko `Mobile` Example se samjte hai.
 3. ager hum Mobile ki baat kare ka oiska design paper par bana hua (wo khud mobile nahi, sirf design hai)
-4. Class ka andar hum 2 cheeza define karte hai sirf:
-5. > `Properties (Varaibles)` <br>
-6. > `Function (Methods)` <br>
+4. Class ka andar hum 2 cheeza define karte hai sirf `Properties (Varaibles)` or `Function (Methods)`
 4. ab mobile ka andar kia kia hota hai:
 
 | **Real Life Example**        | **Programming (PHP OOP)** |
