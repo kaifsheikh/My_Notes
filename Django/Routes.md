@@ -1,7 +1,5 @@
 # What is Routes?
-1. Route Django ko batata hai ke jab user koi URL open kare, to kaunsa function run karna hai.
-3. Django ko batana ke user kis page par gaya hai aur us page ke liye kaunsa function (view) run karna hai.
-4. Har page ke liye alag route banana hota hai
+1. Django mein Route jisa URL Dispatcher ya URLconf kehte hain aik kism ka URL hota hai. jaise ka (www.example.com/contact/) jo user ki request ko sahi (View) Function tak pahunchana hota hai yeah ka Route ka hota hai.
 
 # Types of Routes
 1. Fix Routes
