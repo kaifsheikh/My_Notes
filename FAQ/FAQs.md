@@ -1,26 +1,48 @@
-## 🔹 Package Manager Kya Hota Hai?
+# 🔹 Module
+1. `Module` aik single file hoti hai jisme related code jaise (functions, classes, variables) hote hai, taake usay bar bar reuse kiya ja sake yeah specific kaam ke liye use hota hai.
 
-* **Package Manager** ek tool hota hai jo aapke liye ready-made code libraries download, install, update aur remove karne ka liya use hota hai.
-* her Language ka apna alag Package Manager ho sekhta hai.
-* **Python** | pip
-* **Laravel , PHP** | Composer
-* **React, Nodejs & Express** | Npm
+```bash
+# math.py
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+# main.py
+import math_utils
+```
+
+# 🔹 Package 
+1. `Package` aik folder hota hai jisme multiple `modules` hote hain, taake related code ko organize kiya ja sake jisa import karna easy ho jata hai.
+
+```bash
+myapp/
+ ├── utils.py
+ ├── helpers.py
+ └── validators.py
+
+# from myapp import utils
+```
+
+# 🔹 Library
+1. Library multiple `packages` aur `modules` ka complete collection hoti hai jo mil kar aik full functionality provide karti hai jo kisi specific kaam ko asaan banati hai yeah collection hota hai Packages + Modules ka.
 
 ---
 
-## 🔹 Package aur Library
+# 🔹 What is Package Manager in Programming?
 
-1. **Library** → Library ek collection hoti hai ready-made functions/code ki, jo ek specific kaam asaan banati hai.
-2. **Package** → Package ek complete bundle hota hai jisme:
+* `Package Manager` ek tool hota hai jo aapke liye ready-made code jaise `libraries` , `Packages`or `Modules` ko download, install, update aur remove karne ka liya use hota hai her Language ka apna alag Package Manager ho sekhta hai.
 
-   * Code (Library)
-   * Metadata (naam, version, author, license)
-   * Dependencies ka record hota hai yeah sub Package mein ata hai.
-
-3. **Example**
-
-   * Aap `express` package install karte ho (npm se).
-   * Ye aapko ek **server banane ki library** provide karta hai.
+| Language  | Package Manager | Example Command                      |
+| -------------------- | --------------- | ------------------------------------ |
+| Python               | pip             | `pip install requests`               |
+| Python (virtual env) | pipenv          | `pipenv install django`              |
+| JavaScript           | npm             | `npm install express`                |
+| JavaScript           | yarn            | `yarn add react`                     |
+| PHP                  | composer        | `composer require laravel/framework` |
+| Java                 | Maven           | `mvn install`                        |
+| Linux                | apt / yum       | `sudo apt install python3`           |
 
 ---
 
@@ -44,90 +66,5 @@
      * Testing tools (jest, mocha)
      * Code linting (eslint)
      * Auto-reload tools (nodemon)
-
----
-
-## 🔹 node_modules aur package.json
-
-1. **node_modules/**
-
-   * Is folder mein sari installed libraries ka real code store hota hai.
-   * Ye folder bahut bada ho sakta hai.
-
-2. **package.json**
-
-   * Project ki ek info file hoti hai.
-   * Isme project ke dependencies aur devDependencies dono list hote hain.
-   * Example:
-
-   ```json
-   {
-     "dependencies": {
-       "express": "^4.19.0"
-     },
-     "devDependencies": {
-       "nodemon": "^3.0.0"
-     }
-   }
-   ```
-
----
-
-## 🔹 npm Commands
-
-1. **Install Package**
-
-   ```bash
-   npm install package_name
-   ```
-
-   → Ek package download karein aur dependencies mein add ho jaata hai.
-
-2. **Install DevDependency**
-
-   ```bash
-   npm install package_name --save-dev
-   ```
-
-   → Package sirf devDependencies mein add hota hai.
-
-3. **Uninstall Package**
-
-   ```bash
-   npm uninstall package_name
-   ```
-
-   → Package remove karne ke liye.
-
----
-
-## 🔹 Scripts aur npm run
-
-`package.json` file mein ek `scripts` section hota hai jisme aap custom commands likh sakte ho.
-
-Example:
-
-```json
-"scripts": {
-  "start": "node server.js",
-  "chacha": "node index.js",
-  "test": "test"
-}
-```
-
-1. **npm start**
-
-   * Default script run karne ke liye.
-   * Yaha pe `server.js` run hoga.
-
-2. **npm run chacha**
-
-   * Custom script run karne ke liye.
-   * Yaha pe `index.js` run hoga.
-
-3. **npm test**
-
-   * Code test karne ke liye.
-   * Ye developer ke liye bugs dhundhne ka shortcut hai.
 
 ---

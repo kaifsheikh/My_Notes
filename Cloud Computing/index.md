@@ -1,163 +1,74 @@
-Theek hai bhai.
-Ab **bilkul start se**, jaise tum **aaj pehli dafa** sun rahe ho.
-Main **sirf basic words**, **choti choti baatein**, **ek hi example** use karunga.
-Slow read karo.
+# aik Website ko chalane ke liye kya chahiye?
 
----
-
-# STEP 1: Computer kya hota hai?
-
-Computer ek machine hoti hai jo:
-
-* kaam karti hai
-* programs chalati hai
-* data rakhti hai
-
-Tumhara **laptop bhi computer** hai.
-
----
-
-# STEP 2: Website chalane ke liye kya chahiye?
-
-Website chalane ke liye:
-
-* ek computer
-* jo **24 ghante ON** rahe
-* jo **internet se connected** ho
-
-Laptop is kaam ke liye theek nahi hota:
-
+* ek computer chaiya jo **24 ghante ON** rahe or **internet se connected** ho
+* lakin humera Laptop is kaam ke liye theek nahi hota:
 * band ho jata hai
 * light chali jati hai
+* Internet ruk jata hai or boht boht masle hai
 
 ---
 
-# STEP 3: Is problem ka solution
+# Is problem ka solution
 
-Companies ne socha:
-
-> “Hum aise computers banayen jo kabhi band na hon”
-
-Unhon ne:
-
-* bohot powerful computers banaye
-* data centers mein rakhe
+* Companies ne socha: “Hum aisa Computers banate hai jo kabe band na ho or jisme internet 24 hours run ho or aik boht powerfull computer jo jisme ram space boht zeyada ho.
+* tu company se bohot powerful computers banaye jo data centers mein rakhe hote hai or kaafi baray hote hai size mein 
 
 ---
 
-# STEP 4: Cloud Computing kya hai?
+# What is Cloud Computing?
 
-> **Cloud computing ka matlab:
-> Internet par kisi aur ka computer use karna**
+* Cloud computing ka matlab Internet par kisi aur ka computer use karna or wo computer humera nahe balke companines ka hote hai or boht baray or powerful hote hai.
 
-Bas.
-Is se zyada kuch nahi.
+* ek **bohot bada computer** jo company ka hai Isko kehte hain **Physical Server**  Ab company ne socha ka hum apne baray computer ko chote chote cumputer mein divide kar dyte hai jisko wo bad mein rent per dyte hai logon ko or oin chote computer ko hum `VPS` bolte hai jo internet per 24 hours run hote hai or is pure process ko hum `Virtulization` bolte hai
 
----
+## Company Provides different Services:
 
-# STEP 5: Ek bada computer (very important)
+1. IaaS 
+2. PaaS 
+3. SaaS 
 
-Socho:
+## Deployment Models
 
-* ek **bohot bada computer**
-* jo company ka hai
+1. IaaS/PaaS/SaaS batate hain ke aapko "Kya" Services Company ki teraf se Provide ho rehi hai lekin `Deployment Models` batate hain ke wo computer "Kahan" pada hai aur usko "Kaun" log or kis terha ka log istemal kar sakta hai. 
 
-Isko kehte hain **Physical Server**
+## Public Cloud (sab ka liya)
 
----
+## Private Cloud (sirf apke liya)
 
-# STEP 6: Virtualization (sab se important)
-
-Ab company ne socha:
-
-> “Ek computer se zyada log kaise use karein?”
-
-Unhon ne software use kiya aur:
-
-* ek computer ko
-* chotay chotay computers bana diya
-
-```
-1 bada computer
-↓
-5 chotay virtual computers
-```
-
-Is process ko kehte hain:
-
-> **Virtualization**
+## Hybrid Cloud (Mix Model)
 
 ---
 
-# STEP 7: VPS kya hota hai?
+# humera personal computer aur VPS mein kia farq hai:
 
-Jo chota computer bana:
+* humera Laptop yeah computer ghar mein hota hai band ho jata hai light chle jati hai or boht masle
 
-* usko kehte hain **VPS**
-
-> **VPS = internet par tumhara apna chota computer**
-
----
-
-# STEP 8: Laptop aur VPS ka farq
-
-Laptop:
-
-* tumhara
-* ghar mein
-* band ho jata hai
-
-VPS:
-
-* company ka
-* data center mein
-* 24/7 ON
+* `VPS` company ka chota computer jo aik baray computer se milkar bana hai
+* yeah data center mein hote hai or kaafi baray sizes ka hote hai.
+* or isme 24/7 internet run ho reha hota hai or ON rehte hai 
 
 ---
 
-# STEP 9: AWS, Azure, GCP kya hain?
+# `AWS`, `Azure` or `GCP` kya hain?
 
-Ab companies ke naam yaad rakho:
-
-* **AWS** → Amazon ki company
+* [AWS](./AWS.md) → Amazon ki company
 * **Azure** → Microsoft ki company
 * **GCP** → Google ki company
-
-Ye companies:
-
-* apne computers tumhein rent par deti hain
+* Ye companies apne computers ko hume rent par deti hain
 
 ---
 
-# STEP 10: Sab ko joro (most important)
-
-Ab is sentence ko yaad rakho:
+# Conclusion
 
 > **Cloud computing = internet se computer use karna**
 > **AWS / Azure / GCP = wo companies jo computer deti hain**
 > **Virtualization = ek computer se bohot computers banana**
 > **VPS = wo chota computer jo tum use karte ho**
 
----
+## Example:
 
-# STEP 11: Ek final example
-
-Agar tum kehte ho:
-
-> “Meri website VPS par chal rahi hai Azure pe”
-
-Iska matlab:
-
+* “Meri website VPS par chal rahi hai Azure pe” iska matlab hai ka
 * Microsoft ke computer par
 * ek chota virtual computer
 * jo 24/7 online hai
-
----
-
-# LAST LINE (yaad kar lo)
-
-> **Laptop personal computer hai**
-> **VPS online computer hai**
-> **Cloud computing system ka naam hai**
-
----
+* is per humera website deploy hue ve hai

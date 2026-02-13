@@ -1,10 +1,15 @@
-# 🖥️ Compiler, URL aur Semantic Versioning Cheat Sheet
+# 🔹 Compiler vs Interpreter vs Command Line Scripting
 
-Yeh document basic programming aur web concepts ko simple **Roman Urdu** mein explain karta hai.
+* jitne bhe programming languages hoti hai jo human se create kare hoti hai wo sirf machine ko instructions deti hai kue ka humera Computer sirf Binary language samajta hai isme sirf 0 or 1 hota hai
 
----
+* is liya humein translator ki need parti hai jo programming languages ko convert karti hai machine language mein or wo translation ka kam in teno ka hai 
 
-## 🔹 Compiler vs Interpreter vs Command Line Scripting
+* 1️⃣ Compiler
+* 2️⃣ Interpreter
+* 3️⃣ Command Line Scripting (CLI Scripting)
+
+* Har programming language ka apna compiler ya interpreter hota hai
+kyon ke har language ki grammar, rules, aur syntax alag hoti hai.
 
 1. **Compiler**
 
@@ -24,9 +29,18 @@ Yeh document basic programming aur web concepts ko simple **Roman Urdu** mein ex
    * Command Line Scripting ka matlab hai ke aap code bina browser/server ke, direct **terminal ya cmd** se run kar sako.
    * Example: PHP script ko `php file.php` ke zariye chalana.
 
+| Language   | Compiler / Interpreter | Naam             |
+| ---------- | ---------------------- | ---------------- |
+| C          | Compiler               | GCC, Clang       |
+| C++        | Compiler               | G++, MSVC        |
+| Python     | Interpreter            | CPython          |
+| Java       | Compiler + VM          | javac + JVM      |
+| JavaScript | Interpreter            | V8, SpiderMonkey |
+| PHP        | Interpreter            | Zend Engine      |
+
 ---
 
-## 🔹 URL (Uniform Resource Locator)
+# 🔹 URL (Uniform Resource Locator)
 
 **Format:**
 
@@ -80,9 +94,9 @@ https://www.youtube.com/contact?name=Ali&age=25
 
 ---
 
-## 🔹 Semantic Versioning (SemVer)
+# 🔹 Semantic Versioning (SemVer)
 
-Jab hum package install karte hain (jaise `express`), to uska version `package.json` mein likha hota hai.
+jab bhe hum kisi language ko use karte hai programming mein yeah koi packages ho yeah koi application ho oisme oinke `Versions` hote hai old bhe latest bhe tu oisme jo numbers hote hai oiska kch matlab hota hai.
 
 **Format:**
 

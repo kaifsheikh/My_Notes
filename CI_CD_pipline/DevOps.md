@@ -29,3 +29,26 @@ Ye ek level upar hai. Isme koi button dabane ki zaroorat nahi hoti. Agar CI ke s
 - Ya phir aap unka software download karke apne Local computer ya apni company ke server par install kar lo. Phir aapka code/data kahin bahar nahi jayega, sirf aapke apne local Computer mein rahega isme Internet ki bhe need nahe parti hai isa hum khud data ka owner bana jate hai.
 
 https://youtu.be/lFfqBxZf-6c?si=JYlcVyhx9XwnngvW
+
+# Gitlab Pipeline:
+1. jab hum Gitlab ka project mein is name ki file create karte hai `.gitlab-ci.yml` tu is file ko create karne se aik pipeline create ho jaate hai or ois Pipeline mein 4 stages hote hai .
+
+2. `Build` , `Test` , `Push` or `Deploy` in stages ko hume khud define karna hota hai is `.gitlab-ci.yml` file mein karte hai
+
+## Build:
+1. Ye pehla step hai. Iska kaam code ko tayyar karna hota hai taake wo chalne ke qabil ho jaye.
+
+## Test:
+1. Build hone ke baad check kiya jata hai ke code mein koi galti tu nahi.
+
+## Push:
+1. Jab code test ho jata hai, tu usay kahin safe jagah save kiya jata hai jahan se deployment ho sake.
+
+## Deploy:
+1. Ye aakhri step hai jahan aapka code "Live" ho jata hai.
+
+## Job:
+1. Python mein Job ka matlab hota hai wo commands jo hum terminal ya command prompt par manually likhte hain, lekin GitLab unhein hamare liye automated tareeqay se chalata hai.
+
+
+
