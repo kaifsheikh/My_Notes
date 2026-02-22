@@ -81,4 +81,3 @@
 
 2. py -[Version Number] -m pip install [Package Name] # ager kisi specific python version mein package ko Install karna ho tu yeah oiska liye hai.
 ```
-

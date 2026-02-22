@@ -94,7 +94,26 @@ print(colors) # ('red', 'green', 'blue')
 3. or isa `['key'] brackets` se Represent karte hai.
 
 ```py
+student = {
+    "name": "Kaif",
+    "age": 20,
+    "city": "Karachi",
+    "subjects": ["Python", "Django", "HTML"], # List
+    "class_info": ("Python", "Room 5"), # Tuple
+    "unique_subjects": {"Python", "Django", "Python"}, # Set
+    "marks": { 
+        "python": 90,
+        "django": 85
+    } # Inside Dictionary
+}
 
+print(student["name"]) # Dictionary
+print(student.get("age")) # Dictionary
+student["age"] = 21 # Update Dictionary Value
+print(student.keys()) # Get Key
+print(student.values()) # Get Value
+student.update({"age": 21}) # Update Key + Value
+print(student.items()) # 
 ```
 
 ## 7. `Set (set) — Unique Items ka Group`
