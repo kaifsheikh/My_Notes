@@ -3,6 +3,9 @@
 2. jisme hum computer ko instructions dete hain
 3. taake wo koi kaam apne aap kare — jaise calculation, data handle karna, website banana, ya machine learning.
 
+# How Python Work?
+
+
 ## Why python is Popular?
 
 | 💡 Reason              | 📝 Explanation (Easy Words)                                   |
