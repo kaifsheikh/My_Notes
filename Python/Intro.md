@@ -76,11 +76,18 @@
 ## Ager Python mein Different Version ho tu oin per work kaise kare. 
 
 ```py
-1. py -version_name -m pip list # Yyeah apko apke kisi specific version mein kitne packages installed hai oiska batayga
 
-2. py -[Version Number] -m pip uninstall [Package Name] # ager kisi specific python version mein se package ko delete karna ho tu yeah oiska liye hai
+1. py --version # isa sirf default version show hoga means new version
 
-3. py -[Version Number] -m venv [Environment Ka Naam] # ager kisi specific python version mein Enviroment create karne ka liya hai yah 
+2. py --list # yeah apko apke python ka saray version show karayge ager apne multiple python version download kiya hue hai tu apne system mein
 
-2. py -[Version Number] -m pip install [Package Name] # ager kisi specific python version mein package ko Install karna ho tu yeah oiska liye hai.
+3. py -version_name --version # isa pura python version show hoga means ka 3.11.9 is terha se
+
+4. py -version_name -m venv [Environment Ka Naam] # ager kisi specific python version mein Virtual Enviroment create karna ho tu yeah oiska liye hai 
+
+5. py -version_name -m pip list # yeah apko apke kisi specific version mein kitne packages installed hai wo check karna ho tu oiska liya hai
+
+6. py -version_name -m pip install [Package Name] # ager kisi specific python version mein package ko Install karna ho tu yeah oiska liye hai.
+
+7. py -version_name -m pip uninstall [Package Name] # ager kisi specific python version mein se package ko delete karna ho tu yeah oiska liye hai
 ```

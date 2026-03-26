@@ -1,7 +1,6 @@
 # LLM ki PROPER definition (Large Language Model)
-1. Large Language Model (LLM) ek AI model hota hai jise "Machine Learning" aur "Deep Learning" ke zariye billions (arbon) alfaaz par train kiya jata hai.
-2. Iska purpose ye hota hai ke wo text ko generate kare, translate kare, aur sawalon ke bilkul wese hi jawab de jaise koi insaan deta hai.
-3. jaise ka Chatgpt isme LLM model use hua hai
+1. Large Language Model (LLM) basically ek AI model hota hai jise "Machine Learning" aur "Deep Learning" ke zariye billions (arbon) alfaaz par train kiya jata hai.
+2. Iska purpose ye hota hai ke wo text ko generate kare, translate kare, aur sawalon ke bilkul wese hi jawab de jaise koi insaan deta hai. 
 
 # isa kin Purpose ka liya use karte hai:
 
@@ -63,35 +62,6 @@ Bilkul, aapki sahulat ke liye main ne tamam zaroori commands ko ek saaf-suthri t
 | **`/set verbose`** | Chat | Jawab ki speed aur time (stats) dekhna. | Jab check karna ho ke AI kitna fast jawab de raha hai. |
 
 ---
-
-# What is Model?
-1. Model aik trained mathematical function hota hai
-2. jo input (text, image, audio) ko process karke
-3. output (answer, prediction, text) generate karta hai.
-
-## Model Parameters?
-1. Parameter wo numerical values hotay hain
-2. jo model ke andar store hotay hain
-3. aur ye decide karte hain ke model input ko kaise process karega aur output kya dega.
-4. or parameters floating-point numbers hotay hain String , Integer yeah Words nahe hote hai
-5. Agar hum kahein ke GPT-3 ke 175 Billion parameters hain, to iska matlab hai uske paas 175 billion chotay chotay "knobs" ya "settings" hain jo usay batate hain ke kis lafz ka kya matlab nikalna hai Jitne zyada parameters, AI utna hi smart hota hai.
-
-## Model ka andar Paramter kaha per hote hai?
-Model ke andar hotay hain:
-1. Weights
-2. Biases
-
-## Weight:
-1. Weight aik number hota hai
-2. jo ye decide karta hai ke kisi input ki importance kitni hai.
-
-## Bias:
-1. Bias aik extra number hota hai
-2. jo output ko thora sa adjust karta hai.
-
-# What is Inference?
-1. Inference wo process hai jisme trained model ko new input diya jata hai aur output liya jata hai
-without training.
 
 # What is Hugging Face?
 1. Hugging Face koi AI model nahi hai, balkay ye aik Platform/Community hai.
