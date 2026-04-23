@@ -9,6 +9,20 @@
 3. **Coding Models:** Ye khas tor par programming languages (Python, Java, etc.) ke liye banaye jate hain, jaise CodeLlama.
 4. **Instruction Tuned Models:** Ye models khas tor par insani "instructions" (hukm) manne ke liye train kiye jate hain (Ollama par aksar yahi models milte hain).
 
+# Types of LLM?
+1. Open Weight Models
+2. Proprietary Models
+
+## Open Weight Models:
+1. yeah wo models hote hai jo open source publically free hote hai/
+2. hum isko locally apne system mein download karke use kar sekhte hai. or isko modify or fine-tune bhe kar sekhte hai.
+3. yeah free of course hote hai jaise ka phi3 , deepseek8b , llama etc.
+
+## Proprietary Models: 
+1. Yeh wo models hote hain jo kisi company ke control mein hote hain aur publicly open nahi hote.
+2. Inko tum locally download nahi kar sakte; sirf API ya web interface ke through use karte ho. (jaise ChatGPT ya GPT-4)
+3. nko modify ya fine-tune directly tum nahi kar sakte (sirf limited customization milta hai) or Yeh mostly paid hote hain ya usage-based pricing pe chalte hain.
+
 # How LLM Words in Detail:
 
 ## Step 01: `Data Collection` `(Dunya bhar ki maloomat jama karna)`
@@ -44,10 +58,13 @@ Embedding → Value (V) <br>
 
 ## Step 09: `Layers repeat hoti hain (depth)`
 
-## LLM Major Commands:
-Bilkul, aapki sahulat ke liye main ne tamam zaroori commands ko ek saaf-suthri table mein convert kar diya hai. Aap iska screenshot le sakte hain ya ise kahin save kar sakte hain:
 
-### **Ollama Ki Zaroori Commands Table**
+# What is Ollama:
+1. Ollama ek tool / platform hai jo hume LLMs ko locally run karne deta hai apne system mein bina internet ke.
+2. isa hum apne computers par open source AI model run kar sekhte ha easily Ollama khud LLM nahe hai yeh LLMs ko run karne ka environment hai.
+3. hum isme open-weight models download karke use kar sekhte ha.
+
+## ***Important Commands for Ollama***
 
 | Command | Category | Maqsad (Purpose) | Kab Istemal Karein? |
 | --- | --- | --- | --- |

@@ -1,8 +1,8 @@
 ## 🔹 Pandas ke main data structures
 ## `Series`
 > **Series**: Series ek single column data structure hai.
-> Matlab ek hi type ka data ya mixed data ek line mein store hota hai. <br>
-> Har item ka ek index (number) hota hai, jisse hum item ko access kar sakte hain.
+> Matlab ek hi type ka data ya mixed data ek line mein store hota hai. jisa hum 1 Dimensional data bolte hai <br>
+> Har item ka ek index (number) hota hai, jisse hum item ko access kar sakte hain or index number 0 se start hota hai.
 
 ## `Example 01 for Series`
 ```py
@@ -13,6 +13,49 @@ s = pd.Series(data)
 
 print(s)
 print(s[0]) # 10
+
+# --- Custom index
+import pandas as pd
+data = [10, 20, 30]
+s = pd.Series(data, index=["a", "b", "c"])
+print(s)
+print(s['a'])
+
+# --- Multiple Value Fetch
+import pandas as pd
+data = [10, 20, 30 , 30 , 45, 78, 78 , 100]
+s = pd.Series(data)
+print(s[[0,4]]) # 10 , 45
+
+# --- 0 se 4 tak sari values fetch honge
+import pandas as pd
+data = [10, 20, 30 , 30 , 45, 78, 78 , 100]
+s = pd.Series(data)
+print(s[0:4]) # 10 , 20 , 30 , 30
+
+# --- Fetch with condition
+import pandas as pd
+data = [10, 20, 30 , 30 , 45, 78, 78 , 100]
+s = pd.Series(data)
+print(s[s > 78]) # 100 
+
+# --- Checking if any Value Null so return TRUE if Not Null so return FALSE
+import pandas as pd
+data = [10, 20, 30 , 30 , 45, 100, 78, 400]
+s = pd.Series(data)
+print(s.isnull()) # FALSE
+
+# --- Series ko Dictionary Datatype mein convert kardyga
+import pandas as pd
+s = pd.Series([10, 20, 30], index=["a", "b", "c"])
+d = s.to_dict()
+print(d) # {'a': 10, 'b': 20, 'c': 30}
+
+# --- Series ko List Datatype mein convert kardyga
+import pandas as pd
+s = pd.Series([10, 20, 30], index=["a", "b", "c"])
+d = s.tolist()
+print(d) # [10, 20, 30]
 ```
 ## `DataFrame` 
 > **DataFrame**: DataFrame 2-dimensional table hota hai (rows + columns) bilkul Excel ki terha Tablular form ki terha
@@ -29,14 +72,22 @@ data = {
 } # yeah Dictionary hai Python mein
 
 df = pd.DataFrame(data)
-
 print(df)
 
 # df = pd.DataFrame(data) -> DataFrame function dictionary ko table format mein convert karta hai.
-
 # Isme teen keys hain: 'Name', 'Age', 'City'
-
 # Har key ke paas ek list of values hai.
+
+# --- Create Columns
+import pandas as pd
+data = [
+    ["Ali", 20],
+    ["Sara", 22]
+]
+
+df = pd.DataFrame(data, columns=["name", "age"])
+
+
 ```
 ---
 

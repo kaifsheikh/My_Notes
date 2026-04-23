@@ -99,25 +99,30 @@ Django mein Route jise URL Dispatcher ya URLconf kehte hain, aik kism ka URL hot
 
 | Type | Explanation |
 |------|-------------|
-| **Fix Routes** | Fixed URLs like `/about/`, `/contact/` |
-| **Dynamic Routes** | Variable URLs like `/user/5/`, `/post/2024/` |
-| **Slug Routes** | URL-friendly text like `/blog/my-first-post/` |
-| **API Routes** | GET, POST, PUT, DELETE methods ke liye |
-| **Router Routes** | Automatic routes (Django REST Framework mein) |
+| **Fix Routes** | Yeh **fixed** URLs hote hain - change nahi hote, ekdum same rehte hain. `/about/`, `/contact/` |
+| **Dynamic Routes** | Yeh **change hote hain** - URL mein variable hota hai jo alag-alag values leta hai. `/user/5/`, `/post/2024/` |
+| **Slug Routes** | Slug ka matlab hai: URL-friendly text - spaces ki jagah - (hyphen) hota hai. `/blog/my-first-post/` |
+| **API Routes** | Yeh **data send/receive** karne ke liye use hote hain. Normal websites HTML return karti hain, APIs JSON return karti hain. |
+| **Router Routes** | Yeh **automatic** routes hote hain - aapko manually sab routes likhne ki zaroorat nahi hai. Django REST Framework ka feature hai.
+ |
 
 ---
 
 ## Example of Routes:
 
 ```python
+from django.urls import path
+from . import views 
+
 # Fix Route
-path('about/', views.about)
+path('about/', views.about , name="about")
 
 # Dynamic Route
-path('user/<int:id>/', views.user_profile)
+path('user/<int:id>/', views.user_profile , name="user")
 
 # Slug Route
-path('blog/<slug:title>/', views.blog_post)
+path('blog/<slug:title>/', views.blog_post , name="blog")
+path('blog/<slug:post_slug>/', views.blog_detail, name='blog_detail'),
 ```
 
 ---

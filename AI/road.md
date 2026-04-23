@@ -1,89 +1,185 @@
-## Phase 0 — Foundations (2–3 months)
+# 🔹 Phase 0 — Core Foundations (2–3 months)
 
-**Python strong karo** — tumhare paas already hai, lekin ML ke liye specifically yeh seekhna hoga:
+### 0.1 Python (ML-focused)
 
-NumPy (arrays aur matrix operations), Pandas (data manipulation), Matplotlib/Seaborn (graphs banana), aur Jupyter Notebooks use karna. Yeh tools roz use honge tumhare pure journey mein.
-
-**Math** — sabse bada sawaal yeh hota hai. Seedha jawab: tumhe rocket scientist level math nahi chahiye, lekin yeh 4 cheezein zaroori hain.
-
-**Linear Algebra** — vectors, matrices, dot products, matrix multiplication. Yeh isliye chahiye kyunki data hamesha matrices mein hota hai. Neural network weights bhi matrices hote hain.
-
-**Calculus** — derivatives aur chain rule. Sirf itna chahiye. Gradient descent (jisse model seekhta hai) poori tarah derivatives par based hai.
-
-**Probability & Statistics** — mean, variance, distributions (Normal, Binomial), Bayes theorem, correlation. Yeh data samajhne ke liye chahiye.
-
-**Optimization** — gradient descent kya hai, loss function kya hai. Yeh DL mein sabse core concept hai.
-
-> **Shortcut**: Khan Academy se Linear Algebra aur Calculus karo (bilkul free, Urdu-friendly pace), aur 3Blue1Brown ke "Essence of Linear Algebra" aur "Essence of Calculus" YouTube series dekho — visual explanation bohot zabardast hai.
+* functions, loops, list/dict comprehension
+* file handling, basic OOP (zyada deep nahi)
 
 ---
 
-## Phase 1 — Classical ML (3–4 months)
+### 0.2 Data Tools (parallel chalao)
 
-**Library**: Scikit-learn
-
-Yeh algorithms seekhne hain:
-
-**Supervised Learning** — Linear Regression (numbers predict karna, jaise ghar ki price), Logistic Regression (categories predict karna, jaise spam/not spam), Decision Trees, Random Forest, Support Vector Machine (SVM).
-
-**Unsupervised Learning** — K-Means Clustering (data ko groups mein divide karna), PCA (dimensionality reduction).
-
-**Model Evaluation** — Accuracy, Precision, Recall, F1 Score, Cross-validation, Overfitting/Underfitting kya hota hai.
-
-> **Best resource**: Andrew Ng ka Machine Learning course (Coursera par, audit kar sakte ho free mein). Yeh field ki gold standard hai.
+* **NumPy** → arrays, broadcasting, vectorization
+* **Pandas** → DataFrame, filtering, groupby, joins
+* **Matplotlib / Seaborn** → basic visualization
+* **Jupyter Notebook** → workflow (yeh daily use hoga)
 
 ---
 
-## Phase 2 — Deep Learning (3–4 months)
+### 0.3 Math (targeted, not overkill)
 
-**Library**: PyTorch (recommended) ya TensorFlow
+Sirf yeh karo — iske bahar mat bhatko:
 
-Yahan se asli mazaa shuru hota hai.
+* **Linear Algebra**
 
-**Neural Networks basics** — neurons kya hain, layers, activation functions (ReLU, Sigmoid), forward pass, backward pass, backpropagation.
+  * vectors, matrices, dot product
+  * matrix multiplication
 
-**CNNs (Convolutional Neural Networks)** — images ke liye. Image classification, object detection. Convolutions, pooling layers.
+* **Calculus**
 
-**RNNs / LSTMs** — sequences ke liye, jaise text ya time series data.
+  * derivatives
+  * chain rule
 
-**Training techniques** — batch normalization, dropout (overfitting rokne ke liye), learning rate scheduling, Adam optimizer.
+* **Probability & Stats**
 
-> **Best resource**: fast.ai ka "Practical Deep Learning for Coders" — yeh top-down approach se sikhata hai, practical projects se start karta hai. Andrej Karpathy ka "Neural Networks: Zero to Hero" YouTube series bhi absolutely legendary hai.
+  * mean, variance
+  * distributions (normal, binomial)
+  * Bayes theorem
 
----
+* **Optimization**
 
-## Phase 3 — Advanced DL + Specialization (4–6 months)
+  * gradient descent
+  * loss functions
 
-Yahan decide karo kis direction mein jaana hai:
-
-**NLP (Natural Language Processing)** — Transformers architecture, Attention mechanism, BERT, GPT, fine-tuning LLMs. Yeh abhi sabse hot field hai.
-
-**Computer Vision** — YOLO (object detection), image segmentation, GANs (fake images banana).
-
-**Reinforcement Learning** — agent environment mein seekhta hai, game playing AI, robotics.
-
-**Diffusion Models** — Stable Diffusion jaise image generation models kaise kaam karte hain.
-
-> **Best resource**: Hugging Face ka free NLP course, Stanford ka CS231n (Computer Vision), aur "Attention is All You Need" original paper padhna.
+👉 Note:
+Math ko **theory ke liye nahi**, ML samajhne ke liye padho.
 
 ---
 
-## Phase 4 — MLOps + Deployment (2–3 months)
+# 🔹 Phase 1 — Classical Machine Learning (3–4 months)
 
-Model banana ek baat hai, duniya ko use karne dena doosri baat. Yeh seekho:
+### 1.1 Library
 
-Docker (models package karna), FastAPI (ML model ko API banana), Hugging Face Spaces (free mein model deploy karna), Weights & Biases (experiments track karna), aur basic AWS ya GCP.
+* **Scikit-learn**
 
 ---
 
-## Practical Tips
+### 1.2 Algorithms
 
-**Kaggle pe participate karo** shuru se hi. Competitions se practical experience milti hai jo koi course nahi de sakta.
+#### Supervised Learning
 
-**Projects banao** har phase ke baad — ek simple project jo tum explain kar sako interview mein.
+* Linear Regression
+* Logistic Regression
+* Decision Trees
+* Random Forest
+* SVM
 
-**GitHub pe daalo** saari cheez. Yeh tumhara portfolio banega.
+#### Unsupervised Learning
 
-**Daily consistency** kisi bhi weekend marathon se behtar hai. 2 ghante roz = 12–18 mahine mein tum genuinely capable ho jaoge.
+* K-Means Clustering
+* PCA
 
-Kisi bhi phase ke baare mein aur detail chahiye? Ya koi specific topic jaise "Transformers kaise kaam karte hain" ya "PyTorch kaise start karein" — bas batao!
+---
+
+### 1.3 Evaluation (ignore kiya to fail)
+
+* Accuracy
+* Precision / Recall
+* F1 Score
+* Cross-validation
+* Overfitting vs Underfitting
+
+---
+
+### 1.4 Resource
+
+* **Machine Learning by Andrew Ng** (gold standard — skip mat karna)
+
+---
+
+# 🔹 Phase 2 — Deep Learning (3–4 months)
+
+### 2.1 Framework
+
+* **PyTorch** (preferred)
+  *(TensorFlow optional hai, but ek hi pakdo)*
+
+---
+
+### 2.2 Core Concepts
+
+* Neural Networks (layers, neurons)
+* Activation functions (ReLU, Sigmoid)
+* Forward pass / Backpropagation
+
+---
+
+### 2.3 Architectures
+
+* CNNs → images
+* RNN / LSTM → sequences
+
+---
+
+### 2.4 Training Skills
+
+* dropout
+* batch normalization
+* optimizers (Adam)
+* learning rate tuning
+
+---
+
+### 2.5 Resources
+
+* **Practical Deep Learning for Coders**
+* **Andrej Karpathy** — “Zero to Hero”
+
+---
+
+# 🔹 Phase 3 — Specialization (4–6 months)
+
+👉 Yahan scatter mat hona — **ek track choose karo**
+
+### Option 1 — NLP (high demand)
+
+* Transformers
+* Attention mechanism
+* BERT, GPT
+* fine-tuning
+
+Resource:
+
+* **Hugging Face NLP Course**
+
+---
+
+### Option 2 — Computer Vision
+
+* CNN advanced
+* YOLO
+* Image segmentation
+
+Resource:
+
+* **CS231n**
+
+---
+
+### Option 3 — Others (later)
+
+* Reinforcement Learning
+* Diffusion Models
+
+---
+
+# 🔹 Phase 4 — MLOps + Deployment (2–3 months)
+
+### Must-learn tools:
+
+* Docker
+* FastAPI
+* basic AWS / GCP
+* experiment tracking (Weights & Biases)
+
+---
+
+# 🔹 Practical Layer (Har phase ke saath)
+
+Yeh optional nahi hai — yeh **main game hai**:
+
+* Kaggle projects / competitions
+* Har phase ke baad 1 project
+* GitHub portfolio maintain karo
+
+---
