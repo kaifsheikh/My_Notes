@@ -1,7 +1,7 @@
 # What is Model?
-1. Model aik trained mathematical function hota hai
-2. jo input (text, image, audio) ko process karke
-3. output (answer, prediction, text) generate karta hai.
+1. Model aik Pre trained mathematical function hota hai
+2. jo input (text, image, audio) ko process karta hai or Response mein hume
+3. output milta hai jaise ka (answer, prediction, text) generate karta hai.
 
 ## Model Parameters?
 1. Parameter wo numerical values hotay hain

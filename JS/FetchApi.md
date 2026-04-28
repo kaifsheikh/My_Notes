@@ -257,3 +257,8 @@ aur CORS restrictions ko bypass karne mein madad karta hai.
 | **/raw** | Ye batata hai ke hume “raw data” chahiye (JSON ya text format) |
 | **?url=** | Ye parameter kehta hai ke kis API se data chahiye |
 | **https://zenquotes.io/api/quotes** | Ye original API hai jahan se proxy data fetch karega |
+
+
+
+
+https://newsapi.org/v2/everything?q=tesla&from=2026-03-24&sortBy=publishedAt&apiKey=b8d291e010374213b1c3d1e6ac920833

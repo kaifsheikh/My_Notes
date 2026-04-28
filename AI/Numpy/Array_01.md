@@ -57,3 +57,20 @@ arr = np.array([
     [70,  65,  80]    # Row - 2
 ])
 ```
+# 3D Array:
+1. 
+
+## Example 01 - 3D Array
+```py
+
+```
+
+# Array Attributes:
+1. Array Attributes woh properties hain jo kisi bhi array ke baare mein Extra information batati hain.
+2. jaise uski shape, size, dimension, datatype, etc.
+3. yeah koi Functions nhe hote hai yeah Properties hoti hai.
+
+# Array Creation Methods:
+
+# Reshape aur Transpose
+
