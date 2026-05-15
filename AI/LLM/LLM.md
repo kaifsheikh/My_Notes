@@ -13,7 +13,7 @@
 1. Open Weight Models
 2. Proprietary Models
 
-## Open Weight Models:
+## Open Weight Models / Open Source Models:
 1. yeah wo models hote hai jo open source publically free hote hai/
 2. hum isko locally apne system mein download karke use kar sekhte hai. or isko modify or fine-tune bhe kar sekhte hai.
 3. yeah free of course hote hai jaise ka phi3 , deepseek8b , llama etc.
@@ -30,7 +30,7 @@
 2. Internet se billions of pages, Wikipedia, kitabein, articles, aur computer code uthaya jata hai.
 3. Samjhein ke humne AI ko dunya ki har library ki har kitab parhwa di.
 
---- 
+---
 
 ## Step 02: `Tokenization` `(Alfaaz ko numbers mein badalna)`
 1. Computer insaani zaban (Urdu/English/Spainsh) nahi samajhta, wo sirf `Numbers` samajhta hai.
