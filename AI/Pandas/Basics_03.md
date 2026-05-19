@@ -1,5 +1,20 @@
-## 🔹 Pandas ke main data structures
-## `Series`
+## 🔹 What is Data Structure in Pandas:
+1. Data structure ka matlab hota hai data ko aise format mein rakhna jisse us par kaam karna easy ho. Pandas mein data ko table, column, row, ya labeled form mein store kiya jata hai, taa ke aap usay quickly access aur modify kar sako
+2. Data structure batata hai ke bohat saara data kis format mein rakha gaya hai means.
+3. Data structure 2 tarah ka hote hai.
+
+## 🔹 Types of Data Structure in Pandas:
+1. `Linear Data Structure`
+    - Linear data structure woh hota hai jisme data ek seedhi line mein store hota hai. Yani ek element ke baad doosra, phir teesra — bilkul queue ya line ki tarah.
+    - is terha ka data ko hum `1 Dimentional` data bhi bolte hai. 
+    
+2. `Non-Linear Data Structure`
+    - Non-Linear Data Structure woh hota hai jisme data ek seedhi line mein store nahi hota hai. Yani data ko kisi tree, graph, ya kisi aur complex structure mein rakha jata hai.
+    - is terha ka data ko hum `2 Dimentional` data bhi bolte hai. 
+
+---
+
+## `Series` (Linear Data Structure)
 > **Series**: Series ek single column data structure hai.
 > Matlab ek hi type ka data ya mixed data ek line mein store hota hai. jisa hum 1 Dimensional data bolte hai <br>
 > Har item ka ek index (number) hota hai, jisse hum item ko access kar sakte hain or index number 0 se start hota hai.
@@ -57,6 +72,72 @@ s = pd.Series([10, 20, 30], index=["a", "b", "c"])
 d = s.tolist()
 print(d) # [10, 20, 30]
 ```
+
+## `Array` (Linear Data Structure)
+> **Array**: mein hum Same type ka Data store karta hai isme Multi type ka data aik Array mein store nhe kar sekhte hai.
+
+> aik Array numbers ke liye bana hai, to usmein sirf numbers hoge yeah agar text ke liye bana hai, to oisme sirf text hoga.
+
+> Array ka size fixed hota hai means, array bante time usmein kitne values rekhne hai , woh pehle se decide karni padti hai bad mein oisme add nahe kar sekhte hai lakin old values ko update kar sekhte ha.
+
+> Array ki values ko hum Index Number se access kar sekhte hai or index number 0 se start hota hai.
+
+## `Example 01 for Array` (Linear Data Structure)
+
+```py
+import pandas as pd
+
+country = ["Pak", "India", "USA", "UK"]
+final_data = pd.Series(country)
+
+print(final_data)
+
+# Output:
+# 0      Pak
+# 1    India
+# 2      USA
+# 3       UK
+# dtype: object
+
+# ---
+
+import pandas as pd
+
+country = ["Pak", "India", "USA", "UK"]
+final_data = pd.array(country)
+
+print(final_data)
+
+# Output:
+# <StringArray>
+# ['Pak', 'India', 'USA', 'UK']
+# Length: 4, dtype: string
+
+# ---
+
+import pandas as pd
+
+arr = [10, 20, None, 40, None, 60]
+clean_arr = pd.array(arr).dropna().tolist()
+print(clean_arr)
+
+# Output:
+# [10, 20, 40, 60]
+
+# ---
+
+import pandas as pd
+
+arr = [10, 20, 40, 60]
+a = pd.array(arr)[0]
+print(a) 
+
+# Output:
+# 10
+
+
+```
+
 ## `DataFrame` 
 > **DataFrame**: DataFrame 2-dimensional table hota hai (rows + columns) bilkul Excel ki terha Tablular form ki terha
 ---
