@@ -70,7 +70,69 @@ arr = np.array([
 2. jaise uski shape, size, dimension, datatype, etc.
 3. yeah koi Functions nhe hote hai yeah Properties hoti hai.
 
-# Array Creation Methods:
+## Example 01 - Array Attributes
 
-# Reshape aur Transpose
+---
 
+# Array Operations:
+1. Array operations wo actions hain jo NumPy arrays ke data par mathematical ya logical processing karte hain.
+
+## Example 01 - Array Operations
+
+```py
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# Arithmetic Operators:
+
+print(a + b) # Addition
+print(a - b) # Subtraction
+print(a * b) # Multiplication
+print(a / b) # Division
+print(a ** b) # Exponent
+
+---
+
+
+
+```
+
+## Example 02 - Aggregation Operations
+
+1. Aggregation operations woh mathematical functions hain jo array ke multiple values ko combine karke ek summary statistic produce karte hain, jaise sum, average, min, max, etc.
+
+```py
+import numpy as np
+a = np.array([10, 20, 30, 40])
+
+print(a.sum())  # Addition -> 100
+print(a.mean()) # Average ->  25.0
+print(a.min())  # Minimum ->  10
+print(a.max())  # Maximum ->  40
+print(a.std())  # Standard Deviation (STD) -> 
+print(a.var())  # Variance ->  
+print(a.prod()) # Product -> 
+```
+
+## Example 02 - Aggregation with Axis
+
+1. Aggregation with Axis
+
+```py
+import numpy as np
+
+a = np.array([
+    [1, 2, 3],
+    [4, 5, 6]
+])
+
+print(a.sum(axis=0)) # Column-wise sum -> [5 7 9]
+print(a.sum(axis=1)) # Row-wise sum -> [6 15]
+
+| Axis   | Direction |
+| ------ | --------- |
+| axis=0 | columns   |
+| axis=1 | rows      |
+```
