@@ -1,7 +1,7 @@
 ## 🔹 What is Data Structure in Pandas:
-1. Data structure ka matlab hota hai data ko aise format mein rakhna jisse us par kaam karna easy ho. Pandas mein data ko table, column, row, ya labeled form mein store kiya jata hai, taa ke aap usay quickly access aur modify kar sako
-2. Data structure batata hai ke bohat saara data kis format mein rakha gaya hai means.
-3. Data structure 2 tarah ka hote hai.
+> 1. ### Data structure ka matlab hota hai data ko aise format mein rakhna jisse us par kaam karna easy ho. Pandas mein data ko table, column, row, ya labeled form mein store kiya jata hai, taa ke aap usay quickly access aur modify kar sako
+> 2. ### Data structure batata hai ke bohat saara data kis format mein rakha gaya hai means.
+> 3. ### Data structure 2 tarah ka hote hai.
 
 ## 🔹 Types of Data Structure in Pandas:
 1. `Linear Data Structure`
@@ -15,11 +15,11 @@
 ---
 
 ## `Series` (Linear Data Structure)
-> **Series**: Series ek single column data structure hai.
-> Matlab ek hi type ka data ya mixed data ek line mein store hota hai. jisa hum 1 Dimensional data bolte hai <br>
-> Har item ka ek index (number) hota hai, jisse hum item ko access kar sakte hain or index number 0 se start hota hai.
+> 1. ### **Series**: Series ek single column data structure hai.
+> 2. ### Matlab ek hi type ka data ya mixed data ek line mein store hota hai. jisa hum 1 Dimensional data bolte hai <br>
+> 3. ### Har item ka ek index (number) hota hai, jisse hum item ko access kar sakte hain or index number 0 se start hota hai.
 
-## `Example 01 for Series`
+## `Examples for Series`
 ```py
 import pandas as pd
 
@@ -28,59 +28,228 @@ s = pd.Series(data)
 
 print(s)
 print(s[0]) # 10
+```
 
-# --- Custom index
+## `Series` - Custom Index Assign karna
+```py
 import pandas as pd
 data = [10, 20, 30]
 s = pd.Series(data, index=["a", "b", "c"])
 print(s)
-print(s['a'])
+print(s['a']) # 10
+print(s[['a' , 'b' , 'c']]) # 10 20 30
+print(s['a':'c']) # a se lekar c tak ka sub data ayga
+```
 
-# --- Multiple Value Fetch
+## `Series` - Multiple Value Fetch karna
+```py
 import pandas as pd
 data = [10, 20, 30 , 30 , 45, 78, 78 , 100]
 s = pd.Series(data)
 print(s[[0,4]]) # 10 , 45
+```
 
-# --- 0 se 4 tak sari values fetch honge
+## `Series` - 0 se 4 tak sari values fetch karna
+```py
 import pandas as pd
 data = [10, 20, 30 , 30 , 45, 78, 78 , 100]
 s = pd.Series(data)
 print(s[0:4]) # 10 , 20 , 30 , 30
+```
 
-# --- Fetch with condition
-import pandas as pd
-data = [10, 20, 30 , 30 , 45, 78, 78 , 100]
-s = pd.Series(data)
-print(s[s > 78]) # 100 
-
-# --- Checking if any Value Null so return TRUE if Not Null so return FALSE
-import pandas as pd
-data = [10, 20, 30 , 30 , 45, 100, 78, 400]
-s = pd.Series(data)
-print(s.isnull()) # FALSE
-
-# --- Series ko Dictionary Datatype mein convert kardyga
-import pandas as pd
-s = pd.Series([10, 20, 30], index=["a", "b", "c"])
-d = s.to_dict()
-print(d) # {'a': 10, 'b': 20, 'c': 30}
-
-# --- Series ko List Datatype mein convert kardyga
+## `Series` - Series ko List Datatype mein convert karna
+```py
 import pandas as pd
 s = pd.Series([10, 20, 30], index=["a", "b", "c"])
 d = s.tolist()
 print(d) # [10, 20, 30]
 ```
 
+## `Series` - Series ko Dictionary Datatype mein convert kardyga
+```py
+import pandas as pd
+s = pd.Series([10, 20, 30], index=["a", "b", "c"])
+d = s.to_dict()
+print(d) # {'a': 10, 'b': 20, 'c': 30}
+```
+
+## `Series` - Checking if any Value Null so return TRUE if Not Null so return FALSE
+```py
+import pandas as pd
+data = [10, 20, 30 , 30 , 45, 100, 78, 400]
+s = pd.Series(data)
+print(s.isnull()) # FALSE
+```
+
+## `Series` - Missing Values ko drop/delete karna
+
+```py
+import pandas as pd
+
+# None likhne se Pandas isko khud hi missing value (NaN) samajh leta hai
+data = [10, 20, None, 40, None, 50]
+s = pd.Series(data)
+
+# dropna() missing values ko list se hata dega
+cleaned_s = s.dropna()
+print(cleaned_s) 
+
+```
+
+## `Series` - Missing Values ko bina numpy ke kisi value se fill karna
+
+```py
+import pandas as pd
+
+data = [10, 20, None, 40]
+s = pd.Series(data)
+
+# fillna() se None ki jagah koi bhi default number set karna
+filled_s = s.fillna(0)
+print(filled_s) # 10.0, 20.0, 0.0, 40.0
+
+```
+
+## `Series` - Duplicate values ko remove karna
+
+```py
+import pandas as pd
+
+data = [10, 20, 20, 30, 10, 40]
+s = pd.Series(data)
+
+unique_s = s.drop_duplicates()
+print(unique_s) # 10, 20, 30, 40
+
+```
+
+## `Series` - Kisi specific index ka data remove/delete karna
+
+```py
+import pandas as pd
+
+s = pd.Series([10, 20, 30], index=["a", "b", "c"])
+
+# drop() ke zariye kisi bhi label/index ka data delete kar sakte hain
+s = s.drop("b")
+print(s) # Sirf 'a' aur 'c' bachenge
+
+```
+
+## `Series` - Ek se zyada indexes ko ek sath delete karna
+
+```py
+import pandas as pd
+
+s = pd.Series([10, 20, 30, 40], index=["a", "b", "c", "d"])
+
+# List ki surat mein multiple indexes pass karke delete karna
+s = s.drop(["a", "c"])
+print(s) # Sirf 'b' aur 'd' bachenge
+
+```
+
+## `Series` - Single value ko update karna
+
+```py
+import pandas as pd
+
+s = pd.Series([10, 20, 30], index=["a", "b", "c"])
+
+s["b"] = 99
+print(s) # 'b' ki jagah 99 ho jayega
+
+```
+
+## `Series` - Poori Series par ek sath math operation chala kar update karna
+
+```py
+import pandas as pd
+
+s = pd.Series([10, 20, 30])
+
+# Saari values mein ek sath 5 plus ho jayega
+s = s + 5
+print(s) # 15, 25, 35
+
+```
+
+## `Series` - Condition lagakar specific values ko update karna
+
+```py
+import pandas as pd
+
+s = pd.Series([10, 50, 20, 60, 30])
+
+# Jo values 30 se barhi hain, unki jagah 100 likh do
+s[s > 30] = 100
+print(s) # 10, 100, 20, 100, 30
+
+```
+
+## `Series` - Ek naya single record add karna
+
+```py
+import pandas as pd
+
+s = pd.Series([10, 20], index=["a", "b"])
+
+s["c"] = 30
+print(s) # 'c' add ho jayega
+
+```
+
+## `Series` - Do mukhtalif Series ko aapas mein jodna (Add Multiple Records)
+
+```py
+import pandas as pd
+
+s1 = pd.Series([10, 20], index=["a", "b"])
+s2 = pd.Series([30, 40], index=["c", "d"])
+
+combined_s = pd.concat([s1, s2])
+print(combined_s)
+
+```
+
+## `Series` - Multiple conditions apply karke filter karna
+
+```py
+import pandas as pd
+
+s = pd.Series([10, 25, 40, 55, 70])
+
+# Jin values jo 20 se barhi hon AUR 60 se choti hon (& = AND)
+filtered_s = s[(s > 20) & (s < 60)]
+print(filtered_s) # 25, 40, 55
+
+```
+
+## `Series` - Aggregate Functions (Calculations karna)
+
+```py
+import pandas as pd
+
+s = pd.Series([10, 20, 30, 40])
+
+print(s.sum())   # Total sum nikaalega (100)
+print(s.mean())  # Average nikaalega (25.0)
+print(s.max())   # Sab se barhi value (40)
+print(s.min())   # Sab se choti value (10)
+print(s.count()) # Khali jagah (None) ke ilawa total kitne items hain (4)
+
+```
+
+---
+
 ## `Array` (Linear Data Structure)
-> **Array**: mein hum Same type ka Data store karta hai isme Multi type ka data aik Array mein store nhe kar sekhte hai.
+> 1. ### **Array**: mein hum Same type ka Data store karta hai isme Multi type ka data aik Array mein store nhe kar sekhte hai.
 
-> aik Array numbers ke liye bana hai, to usmein sirf numbers hoge yeah agar text ke liye bana hai, to oisme sirf text hoga.
+> 2. ### aik Array numbers ke liye bana hai, to usmein sirf numbers hoge yeah agar text ke liye bana hai, to oisme sirf text hoga.
 
-> Array ka size fixed hota hai means, array bante time usmein kitne values rekhne hai , woh pehle se decide karni padti hai bad mein oisme add nahe kar sekhte hai lakin old values ko update kar sekhte ha.
+> 3. ### Array ka size fixed hota hai means, array bante time usmein kitne values rekhne hai , woh pehle se decide karni padti hai bad mein oisme add nahe kar sekhte hai lakin old values ko update kar sekhte ha.
 
-> Array ki values ko hum Index Number se access kar sekhte hai or index number 0 se start hota hai.
+> 4. ### Array ki values ko hum Index Number se access kar sekhte hai or index number 0 se start hota hai.
 
 ## `Example 01 for Array` (Linear Data Structure)
 
@@ -134,15 +303,14 @@ print(a)
 
 # Output:
 # 10
-
-
 ```
+
+---
 
 ## `DataFrame` 
 > **DataFrame**: DataFrame 2-dimensional table hota hai (rows + columns) bilkul Excel ki terha Tablular form ki terha
----
 
-## `Example 01 for DataFrame`
+## `Dataframe` - Dataframe create karna ka Process
 ```py
 import pandas as pd
 
@@ -150,7 +318,7 @@ data = {
     'Name': ['Ali','Sara','Umar'], 
     'Age': [22,25,20],
     'City': ['Lahore','Karachi','Multan']
-} # yeah Dictionary hai Python mein
+} # Dictionary
 
 df = pd.DataFrame(data)
 print(df)
@@ -158,18 +326,46 @@ print(df)
 # df = pd.DataFrame(data) -> DataFrame function dictionary ko table format mein convert karta hai.
 # Isme teen keys hain: 'Name', 'Age', 'City'
 # Har key ke paas ek list of values hai.
+```
 
+## `Dataframe` - Column create karne ka liya
+```py
 # --- Create Columns
 import pandas as pd
 data = [
-    ["Ali", 20],
-    ["Sara", 22]
+    ["Ali", 20], # List 
+    ["Sara", 22] # List
 ]
 
 df = pd.DataFrame(data, columns=["name", "age"])
+```
 
+## `Dataframe` - Read Data in Dataframe
+
+```py
+import pandas as pd
+
+data = {
+    "Name": ["Ali", "Shayan", "Smith"],
+    "Age": [10, 11, 30],
+    "City": ["Hyd", "Karachi", "Lahore"]
+}
+
+df = pd.DataFrame(data)
+
+print(df.head()) # Pehli 5 rows dikhata hai
+print(df.tail()) # Aakhri 5 rows dikhata hai
+print(df.info()) # fetch full Summary
+print(df.describe()) # yeah statistical Summary fetch karke deta hai
+print(df.shape) # yeah Rows aur Columns ki full summary fetch karta hai
+print(df.columns) # fetch all Columns
+print(df.index) # show all Index numbers
+print(df.dtypes) # Show all columns Datatypes
+print(df.sample(n=2)) # Random Row show karta hai
+print(df.memory_usage()) # Ram Memory ki Summary show karta hai
 
 ```
+
 ---
 
 ## Pandas Methods:
@@ -199,24 +395,6 @@ df.to_json("students.json", index=False)
 # 4. index=False -> Isse Row Index Numbers ka Column (0,1,2...) nahi likhega.
 
 # By Default yeah True hota hai jisa Row Index Number likha ate hai
-```
-
-## `Examples: (Basic Data Viewing)`
-
-```py
-import pandas as pd
-
-data = {
-    "Name": ["Ali", "Shayan", "Smith"],
-    "Age": [10, 11, 30],
-    "City": ["Hyd", "Karachi", "Lahore"]
-}
-
-df = pd.DataFrame(data)
-
-print(df.head()) # Pehli 5 rows dikhata hai
-print(df.tail()) # Aakhri 5 rows dikhata hai
- 
 ```
 
 ## `Examples: (Structure and Summary)`
