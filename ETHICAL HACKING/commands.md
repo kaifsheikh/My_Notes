@@ -1,9 +1,4 @@
-# 🐧 Kali Linux Basic Commands (Roman Urdu Mein Easy Explanation)
-
-Kali Linux ek **powerful Operating System** hai jo hackers aur cyber experts use karte hain.  
-Agar tum beginner ho to ye **basic commands** zaroor seekho 👇
-
----
+# 🐧 Kali Linux or Ubuntu Basic Commands
 
 ## 📂 1. Folder (Directory) Commands
 
