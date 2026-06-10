@@ -56,7 +56,7 @@ sales = [5000, 7000, 6000, 9000, 11000, 8000]
 plt.plot(month, sales, marker='o')
 
 # Grid Combine Properties
-plt.grid(color='red', linestyle='--', linewidth=5, alpha=0.3)
+plt.grid(axis='y', color='red', linestyle='--', linewidth=5, alpha=0.3)
 
 # Heading
 plt.title("Sales Report Dashboard")
