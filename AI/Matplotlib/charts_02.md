@@ -198,13 +198,56 @@ plt.show()
 ```py
 import matplotlib.pyplot as plt
 
-subjects = ["Math", "English", "Science"]
-marks = [40, 30, 30]
+# Data
+languages = ['Python', 'JavaScript', 'Java', 'C++', 'Ruby']
+usage = [40, 25, 18, 12, 5]
 
-plt.pie(marks, labels=subjects, autopct='%1.1f%%')
+plt.pie(usage, labels=languages)
+plt.title("Programming Languages Usage")
+plt.show()
+```
 
-plt.title("Marks Distribution")
+> 1. ### `autopct=''` iska use number ko percentage or percentage ko decimal mein karne ka liya hota hai
 
+> 2. ### `autopct='%.0f%%'` - yeah sirf percentage mein karayga decimal mein nhe.
+
+```py
+import matplotlib.pyplot as plt
+
+# Data
+languages = ['Python', 'JavaScript', 'Java', 'C++', 'Ruby']
+usage = [40, 25, 18, 12, 5]
+
+# autopct number ko decimal mein or percentage mein convert karayga
+plt.pie(usage, labels=languages, autopct='%1.1f%%')
+plt.title("Programming Languages Usage")
+plt.show()
+```
+
+```py
+import matplotlib.pyplot as plt
+
+# Data
+languages = ['Python', 'JavaScript', 'Java', 'C++', 'Ruby']
+usage = [40, 25, 18, 12, 5]
+
+plt.pie(usage)
+plt.legend(['Python', 'Java', 'C++'], title="Languages")
+plt.show()
+```
+
+```py
+import matplotlib.pyplot as plt
+
+# Data
+data = [40, 30, 20, 10]
+categories = ['Python', 'Java', 'C++', 'Ruby']
+
+plt.pie(data, autopct='%1.1f%%')
+
+plt.legend(categories, title="Language", loc="lower right")
+
+plt.title("Programming Languages")
 plt.show()
 ```
 
@@ -213,6 +256,18 @@ plt.show()
 ### 4. Histogram (Frequency dikhane ke liye)
 - **Kaam:** Data ka spread aur frequency batana (kitna baar koi value aayi).
 - **Use:** Students ke number ka distribution, age groups.
+
+```py
+import matplotlib.pyplot as plt
+import numpy as np
+marks = np.random.randint(30, 100, 200)
+
+plt.hist(marks, bins=10, color='skyblue', edgecolor='black')
+plt.title("Students Marks Distribution")
+plt.xlabel("Marks Range")
+plt.ylabel("Number of Students")
+plt.show()
+```
 
 ### 5. Scatter Plot (Relationship dekhne ke liye)
 - **Kaam:** Do variables ke beech correlation (positive/negative) dikhana.
@@ -225,6 +280,22 @@ plt.show()
 ### 7. Area Chart (Stacked comparison ke liye)
 - **Kaam:** Total value mein har part ka contribution dikhana.
 - **Use:** Website visitors ke sources (search, social, direct).
+
+```py
+import matplotlib.pyplot as plt
+import numpy as np
+
+months = ['Jan','Feb','Mar','Apr','May']
+sales = [200, 250, 270, 300, 350]
+
+plt.fill_between(range(len(months)), sales, color='skyblue', alpha=0.4)
+plt.plot(range(len(months)), sales, color='Slateblue', alpha=0.6, linewidth=2)
+plt.xticks(range(len(months)), months)
+plt.title("Monthly Sales (Area Plot)")
+plt.xlabel("Month")
+plt.ylabel("Sales")
+plt.show()
+```
 
 ### 8. Heatmap (Matrix data ke liye)
 - **Kaam:** Colors se values ki intensity dikhana.
