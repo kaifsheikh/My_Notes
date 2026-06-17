@@ -95,8 +95,6 @@ print(a ** b) # Exponent
 
 ---
 
-
-
 ```
 
 ## Example 02 - Aggregation Operations
