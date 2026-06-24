@@ -1,7 +1,7 @@
 # print(
 # """
 # 1. from sklearn.model_selection import train_test_split
-#     - train_test_split Yeh Scikit-learn ki woh scissor hai jo aap ke poore data ko do hisson mein divide kar deti hai:
+#     - train_test_split() Yeh Scikit-learn ka wo function hai jo data ko 2 hisso mein    split kar deta hai
 #     - Aik hissa padhai ke liye (Train Data)
 #     - Aik hissa exam ke liye (Test Data).
 
@@ -38,7 +38,7 @@ X = [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]]
 y = [30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=124)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 model = LinearRegression()
 model.fit(X_train, y_train)

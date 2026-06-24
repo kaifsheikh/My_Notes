@@ -1,0 +1,63 @@
+Car_Company,Engine_Size_L,Car_Color,Car_Price_Lakhs,Total_Buyers,Min_Salary_Needed_Lakhs,Source_of_Income,Target_Customer_Type
+Suzuki (Mehran),0.8,White,12,4000,0.4,Job (Salary),Lower Class
+Prince (Pearl),0.8,Silver,18,1200,0.6,Job (Salary),Lower Middle Class
+Suzuki (Alto),0.66,White,24,3500,0.7,Job (Salary),Lower Middle Class
+Suzuki,1.0,White,30,1500,1.2,Job (Salary),Middle Class
+Suzuki,0.8,Silver,22,2500,0.8,Job (Salary),Lower Middle Class
+Changan,1.5,Blue,48,700,2.0,Job (Salary),Middle Class
+Honda (City),1.2,Red,55,850,2.5,Job (Salary),Middle Class
+Toyota (Yaris),1.5,White,60,1200,2.8,Job (Salary),Middle Class
+Honda (Civic),1.5,Grey,85,1100,3.8,Job (Salary),Upper Middle Class
+Toyota (Corolla),1.8,Black,75,900,3.5,Business / Job,Upper Middle Class
+Hyundai (Elantra),1.6,Silver,70,650,3.2,Business / Job,Upper Middle Class
+MG,1.5,Red,80,500,4.0,Business,Upper Middle Class
+Kia (Sportage),2.0,Black,90,400,4.5,Business,Elite Class
+Hyundai (Tucson),2.0,White,92,350,4.6,Business,Elite Class
+Toyota (Fortuner),2.8,Black,190,200,8.0,Business,Elite Class
+Kia (Sorento),3.5,Silver,120,150,6.0,Business,Elite Class
+Changan (Oshan),1.5,White,95,500,4.8,Business / Job,Elite Class
+Proton,1.5,Blue,62,300,2.9,Job (Salary),Middle Class
+Suzuki (Bolan),0.8,White,10,3200,0.35,Job (Salary),Lower Class
+Suzuki (Ravi),0.8,White,11,2800,0.35,Job (Salary),Lower Class
+United (Bravo),0.8,Silver,9,5500,0.3,Job (Salary),Lower Class
+Suzuki (Mehran) VX,0.8,Grey,13,3800,0.45,Job (Salary),Lower Class
+Prince (Pearl) DX,0.8,Blue,17,1500,0.55,Job (Salary),Lower Middle Class
+Suzuki (WagonR),1.0,Silver,20,4200,0.65,Job (Salary),Lower Middle Class
+Suzuki (Cultus),1.0,White,22,3700,0.7,Job (Salary),Lower Middle Class
+Suzuki (Alto) AGS,0.66,Blue,25,3300,0.8,Job (Salary),Lower Middle Class
+United (U-Save),0.8,Red,16,2000,0.5,Job (Salary),Lower Middle Class
+Suzuki (Swift),1.2,Red,35,2200,1.3,Job (Salary),Middle Class
+Toyota (Vitz),1.0,White,32,1900,1.1,Job (Salary),Middle Class
+Honda (City) 1.5,1.5,Silver,58,900,2.6,Job (Salary),Middle Class
+Toyota (Yaris) 1.3,1.3,Blue,52,1100,2.3,Job (Salary),Middle Class
+Kia (Stonic),1.4,Grey,48,650,2.0,Job (Salary),Middle Class
+Changan (Alsvin),1.5,White,45,750,1.9,Job (Salary),Middle Class
+Proton (Saga),1.3,Red,28,1600,1.0,Job (Salary),Middle Class
+MG (ZS),1.5,Blue,50,850,2.2,Business / Job,Middle Class
+Hyundai (Venue),1.6,Black,52,600,2.1,Business / Job,Middle Class
+Toyota (Corolla) Altis,1.8,White,80,750,3.5,Business / Job,Upper Middle Class
+Honda (Civic) RS,1.8,Black,88,950,4.0,Job (Salary),Upper Middle Class
+Hyundai (Elantra) Hybrid,1.6,White,75,550,3.4,Business / Job,Upper Middle Class
+Kia (Sportage) Turbo,1.6,Grey,88,480,4.2,Business,Upper Middle Class
+MG (HS) PHEV,1.5,Silver,82,580,4.1,Business,Upper Middle Class
+Proton (X70),1.5,Black,75,420,3.5,Job (Salary),Upper Middle Class
+Honda (BR-V),1.5,Silver,68,700,3.0,Business / Job,Upper Middle Class
+Toyota (Camry),2.5,White,140,220,6.5,Business,Elite Class
+Honda (Accord),2.0,Grey,135,190,6.0,Business,Elite Class
+Hyundai (Santa Fe),2.5,Black,130,160,5.8,Business,Elite Class
+Kia (Carnival),2.2,Silver,110,110,5.5,Business,Elite Class
+Toyota (Land Cruiser Prado),2.8,White,250,85,10.0,Business,Elite Class
+Toyota (Land Cruiser 300),3.5,Black,450,35,18.0,Business,Elite Class
+Lexus (LX600),3.5,Black,500,25,20.0,Business,Elite Class
+BMW (3 Series),2.0,Blue,180,130,8.5,Business,Elite Class
+BMW (X5),3.0,White,350,55,14.0,Business,Elite Class
+Mercedes (C-Class),2.0,Silver,200,110,9.0,Business,Elite Class
+Mercedes (GLE),3.0,Black,400,35,16.0,Business,Elite Class
+Audi (A4),2.0,Grey,190,100,8.0,Business,Elite Class
+Audi (Q7),3.0,Black,420,30,17.0,Business,Elite Class
+Porsche (Cayenne),3.0,Red,600,12,25.0,Business,Elite Class
+Range Rover (Sport),3.0,White,550,18,22.0,Business,Elite Class
+Changan (Uni-K),2.0,White,105,420,5.0,Business / Job,Elite Class
+Hyundai (Palisade),3.5,Grey,150,80,7.0,Business,Elite Class
+Kia (Sorento) 2023,3.5,Blue,125,130,6.2,Business,Elite Class
+MG (Gloster),2.0,Black,110,90,5.2,Business,Elite Class

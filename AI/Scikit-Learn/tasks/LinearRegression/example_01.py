@@ -12,7 +12,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 # X = Features -> Time Hours
-X = np.array([ [1], [2], [3], [4], [5] ])
+X = np.array([ [2], [3], [4], [5], [6] ])
 
 # y = Target -> Past Student Marks 
 y = np.array([20, 40, 60, 80, 100])
@@ -24,9 +24,9 @@ model = LinearRegression()
 model.fit(X, y)
 
 # Naya data hamesha 2D array mein dena hota hai [[6]]
-naya_student = np.array([ [7] ])
+naya_student = np.array([ [1] ])
 
 # predict() ka matlab hai ab -> "Jawab do!"
 prediction = model.predict(naya_student)
 
-print(f"if you study for 3 hours your marks will be : {prediction[0]}")
+print(f"if you study for {naya_student} hours your marks will be : {prediction[0]}")

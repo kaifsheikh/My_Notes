@@ -37,6 +37,7 @@ X = np.array([
     [2000, 4, 1]    # Ghar 4: 2000 sqft, 4 rooms, 1 saal purana
 ])
 
+# Y = Target -> Price
 y = np.array([50, 80, 55, 120])
 
 # 1. Khali model banaya
