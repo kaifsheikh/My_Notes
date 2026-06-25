@@ -1,0 +1,510 @@
+ /* ========== Global Reset & Theme ========== */
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+   display: flex;
+   height: 100vh;
+   background: #1e1e2e;
+   color: #cdd6f4;
+   transition: all 0.3s ease;
+ }
+
+ /* Scrollbar */
+ ::-webkit-scrollbar {
+   width: 8px;
+ }
+
+ ::-webkit-scrollbar-track {
+   background: #181825;
+ }
+
+ ::-webkit-scrollbar-thumb {
+   background: #45475a;
+   border-radius: 4px;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+   background: #585b70;
+ }
+
+ /* ========== Top bar for mobile (hidden on desktop) ========== */
+ #mobile-topbar {
+   display: none;
+   /* hidden on desktop */
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 50px;
+   background: #181825;
+   border-bottom: 1px solid #313244;
+   z-index: 150;
+   align-items: center;
+   padding: 0 16px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ #mobile-hamburger {
+   background: none;
+   border: none;
+   color: #cdd6f4;
+   font-size: 1.5rem;
+   cursor: pointer;
+   margin-right: 12px;
+ }
+
+ #mobile-topbar-title {
+   font-weight: 600;
+   color: #cba6f7;
+ }
+
+ /* ========== Sidebar ========== */
+ #sidebar {
+   width: 300px;
+   background: #181825;
+   padding: 20px;
+   overflow-y: auto;
+   border-right: 1px solid #313244;
+   transition: transform 0.3s ease, width 0.3s ease, padding 0.3s ease, border 0.3s ease;
+   flex-shrink: 0;
+   position: relative;
+   z-index: 100;
+ }
+
+ /* Sidebar header */
+ .sidebar-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+ }
+
+ .sidebar-header h2 {
+   font-family: 'Inter', sans-serif;
+   font-weight: 600;
+   color: #cba6f7;
+   margin: 0;
+   font-size: 1.2rem;
+ }
+
+ .toggle-btn {
+   background: transparent;
+   border: none;
+   color: #a6adc8;
+   font-size: 1.4rem;
+   cursor: pointer;
+   padding: 4px 8px;
+   border-radius: 6px;
+   transition: background 0.2s, color 0.2s;
+   line-height: 1;
+ }
+
+ .toggle-btn:hover {
+   background: #313244;
+   color: #f5c2e7;
+ }
+
+ /* Tree styles */
+ .file-tree {
+   list-style: none;
+   padding-left: 0;
+ }
+
+ .file-tree ul {
+   list-style: none;
+   padding-left: 18px;
+ }
+
+ .folder-item {
+   margin: 3px 0;
+ }
+
+ .folder-header {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   user-select: none;
+   padding: 4px 8px;
+   border-radius: 6px;
+   color: #89b4fa;
+   font-weight: 500;
+   font-size: 0.9rem;
+ }
+
+ .folder-header:hover {
+   background: #313244;
+   color: #f5c2e7;
+ }
+
+ .folder-arrow {
+   display: inline-block;
+   width: 18px;
+   font-size: 0.8rem;
+   transition: transform 0.2s;
+   color: #a6adc8;
+ }
+
+ .folder-arrow.open {
+   transform: rotate(90deg);
+ }
+
+ .folder-icon {
+   margin-right: 6px;
+ }
+
+ .folder-children {
+   display: none;
+ }
+
+ .folder-children.open {
+   display: block;
+ }
+
+ .file-item {
+   display: block;
+   padding: 4px 8px 4px 28px;
+   color: #a6adc8;
+   text-decoration: none;
+   cursor: pointer;
+   border-radius: 6px;
+   font-size: 0.9rem;
+ }
+
+ .file-item:hover {
+   background: #313244;
+   color: #f9e2af;
+ }
+
+ .file-item.active {
+   background: #45475a;
+   color: #f9e2af;
+ }
+
+ /* ========== Main Content Area ========== */
+ #content {
+   flex: 1;
+   padding: 30px;
+   overflow-y: auto;
+   background: #1e1e2e;
+   transition: margin-left 0.3s ease;
+ }
+
+ .markdown-body {
+   max-width: 900px;
+   margin: 0 auto;
+   background: #181825;
+   padding: 40px 50px;
+   border-radius: 16px;
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+   color: #cdd6f4;
+   line-height: 1.8;
+   font-size: 1rem;
+ }
+
+ /* Headings */
+ .markdown-body h1,
+ .markdown-body h2,
+ .markdown-body h3,
+ .markdown-body h4,
+ .markdown-body h5,
+ .markdown-body h6 {
+   color: #cba6f7;
+   font-weight: 600;
+   margin-top: 1.8em;
+   margin-bottom: 0.6em;
+   line-height: 1.3;
+ }
+
+ .markdown-body h1 {
+   font-size: 2rem;
+   border-bottom: 2px solid #313244;
+   padding-bottom: 12px;
+   margin-bottom: 0.8em;
+ }
+
+ .markdown-body h2 {
+   font-size: 1.6rem;
+   border-bottom: 1px solid #313244;
+   padding-bottom: 8px;
+ }
+
+ .markdown-body h3 {
+   font-size: 1.35rem;
+ }
+
+ .markdown-body h4 {
+   font-size: 1.15rem;
+ }
+
+ /* Links */
+ .markdown-body a {
+   color: #89b4fa;
+   text-decoration: none;
+   border-bottom: 1px dashed #89b4fa;
+   transition: color 0.2s, border-color 0.2s;
+ }
+
+ .markdown-body a:hover {
+   color: #f5c2e7;
+   border-bottom-color: #f5c2e7;
+ }
+
+ /* Code */
+ .markdown-body code {
+   background: #313244;
+   padding: 2px 8px;
+   border-radius: 4px;
+   font-family: 'Fira Code', monospace;
+   font-size: 0.9em;
+   color: #f9e2af;
+ }
+
+ .markdown-body pre {
+   background: #11111b;
+   padding: 20px;
+   border-radius: 12px;
+   overflow-x: auto;
+   margin: 1.2em 0;
+   border: 1px solid #313244;
+   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ .markdown-body pre code {
+   background: none;
+   padding: 0;
+   font-size: 0.9rem;
+ }
+
+ /* Tables */
+ .markdown-body table {
+   border-collapse: separate;
+   border-spacing: 0;
+   width: 100%;
+   margin: 1.2em 0;
+   border: 1px solid #313244;
+   border-radius: 12px;
+   overflow: hidden;
+   font-size: 0.95rem;
+ }
+
+ .markdown-body th {
+   background: #313244;
+   color: #cba6f7;
+   font-weight: 600;
+   padding: 12px 16px;
+   text-align: left;
+ }
+
+ .markdown-body td {
+   padding: 10px 16px;
+   border-top: 1px solid #313244;
+ }
+
+ .markdown-body tr:nth-child(even) {
+   background: rgba(49, 50, 68, 0.3);
+ }
+
+ .markdown-body tr:hover {
+   background: rgba(69, 71, 90, 0.4);
+ }
+
+ /* Blockquotes */
+ .markdown-body blockquote {
+   border-left: 4px solid #cba6f7;
+   margin: 1.2em 0;
+   padding: 12px 20px;
+   background: rgba(203, 166, 247, 0.05);
+   border-radius: 0 8px 8px 0;
+   color: #bac2de;
+ }
+
+ /* Lists */
+ .markdown-body ul,
+ .markdown-body ol {
+   padding-left: 1.8em;
+   margin: 0.8em 0;
+ }
+
+ .markdown-body li {
+   margin-bottom: 0.4em;
+ }
+
+ /* Images */
+ .markdown-body img {
+   max-width: 100%;
+   border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   display: block;
+   margin: 1.2em auto;
+ }
+
+ .markdown-body hr {
+   border: none;
+   height: 1px;
+   background: #313244;
+   margin: 2em 0;
+ }
+
+ .empty-msg {
+   color: #585b70;
+   font-style: italic;
+   text-align: center;
+   margin-top: 60px;
+   font-size: 1.1rem;
+ }
+
+ /* Floating Open Sidebar Button (desktop only) */
+ #open-sidebar-floating {
+   display: none;
+   position: fixed;
+   top: 20px;
+   left: 20px;
+   z-index: 999;
+   background: #313244;
+   border: 1px solid #45475a;
+   color: #cba6f7;
+   font-size: 1.4rem;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   cursor: pointer;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+   transition: background 0.2s, transform 0.2s;
+   align-items: center;
+   justify-content: center;
+ }
+
+ #open-sidebar-floating:hover {
+   background: #45475a;
+   transform: scale(1.1);
+ }
+
+ /* Collapsed state (desktop) */
+ body.sidebar-collapsed #sidebar {
+   width: 0;
+   padding: 0;
+   border: none;
+   overflow: hidden;
+ }
+
+ body.sidebar-collapsed #open-sidebar-floating {
+   display: flex;
+ }
+
+ /* ========== RESPONSIVE STYLES ========== */
+ /* Tablet adjustments */
+ @media (max-width: 1024px) {
+   #sidebar {
+     width: 260px;
+   }
+
+   .markdown-body {
+     padding: 30px 35px;
+   }
+ }
+
+ /* Mobile styles */
+ @media (max-width: 768px) {
+   body {
+     flex-direction: column;
+     /* stack sidebar and content */
+     position: relative;
+   }
+
+   /* Show mobile topbar */
+   #mobile-topbar {
+     display: flex;
+   }
+
+   /* Sidebar becomes a slide-out overlay */
+   #sidebar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 100vh;
+     width: 80%;
+     /* take 80% of screen */
+     max-width: 300px;
+     z-index: 200;
+     transform: translateX(-100%);
+     /* hidden by default */
+     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+     padding: 20px;
+     border-right: 1px solid #313244;
+     transition: transform 0.3s ease;
+   }
+
+   /* When sidebar is NOT collapsed (i.e., open), slide in */
+   body:not(.sidebar-collapsed) #sidebar {
+     transform: translateX(0);
+   }
+
+   /* Hide the desktop floating button on mobile */
+   #open-sidebar-floating {
+     display: none !important;
+   }
+
+   /* Content area takes full height, add top padding for topbar */
+   #content {
+     margin-left: 0;
+     padding-top: 70px;
+     /* topbar height + some space */
+     padding-left: 16px;
+     padding-right: 16px;
+     transition: none;
+   }
+
+   .markdown-body {
+     padding: 20px 25px;
+     border-radius: 12px;
+     max-width: 100%;
+   }
+
+   .markdown-body h1 {
+     font-size: 1.6rem;
+   }
+
+   .markdown-body h2 {
+     font-size: 1.3rem;
+   }
+
+   .markdown-body h3 {
+     font-size: 1.15rem;
+   }
+
+   /* Ensure sidebar header toggle button works as close */
+   .sidebar-header .toggle-btn {
+     display: block;
+     /* visible */
+   }
+
+   /* Remove desktop collapsed state effects on mobile */
+   body.sidebar-collapsed #sidebar {
+     transform: translateX(-100%);
+     /* hidden */
+     width: 80%;
+     max-width: 300px;
+     padding: 20px;
+     border-right: 1px solid #313244;
+     overflow-y: auto;
+   }
+
+   /* Override the desktop width 0 */
+   body.sidebar-collapsed #sidebar {
+     width: 80% !important;
+     max-width: 300px;
+     padding: 20px !important;
+     border-right: 1px solid #313244 !important;
+     overflow-y: auto !important;
+   }
+
+   /* When not collapsed, show */
+   body:not(.sidebar-collapsed) #sidebar {
+     transform: translateX(0);
+   }
+ }

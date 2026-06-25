@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mere Notes</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Links -->
+   <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+  <!-- Mobile topbar -->
+  <div id="mobile-topbar">
+    <button id="mobile-hamburger" title="Toggle Sidebar">☰</button>
+    <span id="mobile-topbar-title">📚 Topics</span>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <h2>📚 Topics</h2>
+      <button class="toggle-btn" id="sidebar-toggle-btn" title="Toggle Sidebar (Ctrl+B)">☰</button>
+    </div>
+    <div id="file-tree-container">Loading...</div>
+  </div>
+
+  <!-- Floating button (desktop) -->
+  <button id="open-sidebar-floating" title="Open Sidebar (Ctrl+B)">☰</button>
+
+  <!-- Main Content -->
+  <div id="content">
+    <div class="markdown-body" id="markdown-content">
+      <p class="empty-msg">👈 No File Selected</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
