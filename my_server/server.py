@@ -8,6 +8,7 @@ NOTES_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
+    # Get Request
     def do_GET(self):
         parsed = urlparse(self.path)
 
@@ -56,7 +57,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         # Baaki requests (jaise viewer.html, images) ko default serve karo
         else:
             super().do_GET()
-
 
 if __name__ == "__main__":
     PORT = 8000
