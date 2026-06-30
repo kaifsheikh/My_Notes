@@ -112,15 +112,13 @@ foodpanda_pipeline = Pipeline([
 ])
 
 # Pipiline ko Train kiya
-print("AI Pipeline Training Shuru...")
 foodpanda_pipeline.fit(X_train, y_train)
-print("Training Mukammal!\n")
 
 # New Data Predict karwaya
 naya_customer = pd.DataFrame({
     'time_of_day': [22],
     'day_of_week': [6],
-    'customer_age': [np.nan]  # Ganda data/missing data
+    'customer_age': [np.nan]  # data/missing data
 })
 
 # Naya data seedha pipeline mein jayega
@@ -131,4 +129,10 @@ if prediction[0] == 1:
     print("AI Decision: Is customer ko 'Desi Food (Biryani)' sabsay ooper dikhao!")
 else:
     print("AI Decision: Is customer ko 'Fast Food (Burger)' sabsay ooper dikhao!")
+```
+
+# Example 02:
+
+```py
+
 ```
