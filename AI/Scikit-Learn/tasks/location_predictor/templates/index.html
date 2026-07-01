@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI City Predictor</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7f6; padding: 30px; }
+        .form-container { max-width: 450px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); margin: auto; }
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #28a745; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+        button:hover { background: #218838; }
+        #result { margin-top: 20px; font-size: 18px; font-weight: bold; color: #007bff; text-align: center; }
+        .confidence { font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>📋 AI City Predictor</h2>
+
+    <div class="form-group">
+        <label>Name (optional):</label>
+        <input type="text" id="name" placeholder="John Doe">
+    </div>
+
+    <div class="form-group">
+        <label>Email (optional):</label>
+        <input type="email" id="email" placeholder="john@example.com">
+    </div>
+
+    <div class="form-group">
+        <label>Postal Code (optional, but helps accuracy):</label>
+        <input type="number" id="postal_code" placeholder="e.g. 71000">
+    </div>
+
+    <div class="form-group">
+        <label>Nearest Famous Place *:</label>
+        <input type="text" id="nearest_place" placeholder="e.g. Clifton beach, Centaurus mall">
+    </div>
+
+    <button onclick="submitForm()">🔮 Predict City</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    async function submitForm() {
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerText = "Thinking... 🤔";
+
+        const nearest_place = document.getElementById("nearest_place").value.trim();
+        const postal_code = document.getElementById("postal_code").value.trim();
+
+        if (!nearest_place) {
+            alert("Please enter a Nearest Famous Place.");
+            resultDiv.innerText = "";
+            return;
+        }
+
+        const formData = {
+            nearest_place: nearest_place,
+            postal_code: postal_code
+        };
+
+        try {
+            const response = await fetch("/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+            const data = await response.json();
+
+            if (data.error) {
+                resultDiv.innerText = "❌ " + data.error;
+            } else {
+                resultDiv.innerHTML = `
+                    🔮 AI Prediction: <strong>${data.predicted_city}</strong>
+                    <div class="confidence">Confidence: ${data.confidence}%</div>
+                `;
+            }
+        } catch (error) {
+            resultDiv.innerText = "❌ Error connecting to server!";
+            console.error(error);
+        }
+    }
+</script>
+</body>
+</html>
