@@ -40,7 +40,7 @@ WebDriver ko rakhne ke do aasan tareeke hain. Pehla aur sabse aasan tareeqa hai 
 
 ### Auto-Installer for Chrome:
 
-yeah packages `chromedriver-binary`  ya `chromedriver-autoinstaller`  Python package use kar sakte hain. Yeh package automatically sahi WebDriver download aur install kar deta hai.
+1. yeah packages `chromedriver-binary`  ya `chromedriver-autoinstaller` Jab aap code chalayen, toh yeh check karta hai ke aap ke computer mein sahe ChromeDriver (woh bridge jo Python ko Chrome se jorta hai) hai ya nahi. Agar nahi, toh yeh khud internet se download kar ke rakh deta hai aur auto-setup kar deta hai.
 
 ```bash
 pip install chromedriver-autoinstaller

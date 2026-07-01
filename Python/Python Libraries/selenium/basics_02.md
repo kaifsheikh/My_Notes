@@ -58,3 +58,57 @@ By.LINK_TEXT           # link text se
 By.PARTIAL_LINK_TEXT   # link text ka kuch hissa se
 ```
 
+--- 
+
+# Example 01:
+
+| Import | Aasan Lafz | Kis Kaam aata hai? |
+| :--- | :--- | :--- |
+| `chromedriver_autoinstaller` | **Driver Installer** | ChromeDriver khud download karna |
+| `webdriver` | **Remote** | Browser kholna aur band karna |
+| `By` | **Address Book** | Element dhoondne ka tareeqa batana |
+| `Keys` | **Keyboard** | Enter, Backspace jaise dabana |
+| `WebDriverWait` | **Waiter/Alarm** | Element aane ka intezar karna |
+| `EC` | **Shart/Checker** | Waiter ko batana *kis* cheez ka intezar hai |
+
+---
+
+```py
+import chromedriver_autoinstaller
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# automatic chromeDriver download karta hai 
+chromedriver_autoinstaller.install()
+
+# yah chrome ko commands bhejne ka liya use hota hai like open , close etc
+driver = webdriver.Chrome()
+
+# jo open karna hai oisa link
+driver.get("https://www.google.com")
+
+# jabtak isko q webElement se kch nhe milta yeah 10 seconds tak wait karayga 
+search_box = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.NAME, "q"))
+)
+
+# searc_box mein jo window milayge yah wo box hai
+search_box.send_keys("Selenium WebDriver")
+
+# yeah ois box mein type karega "Selenium WebDriver"
+search_box.send_keys(Keys.RETURN)
+
+
+WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.CSS_SELECTOR, "div#search"))
+)
+
+first_result = driver.find_element(By.CSS_SELECTOR, "div#search h3")
+print("Robot ka jawab:", first_result.text)
+
+input("Browser band karna hai toh Enter dabayein...")
+driver.quit()
+```
