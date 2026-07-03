@@ -101,14 +101,52 @@ search_box.send_keys("Selenium WebDriver")
 # yeah ois box mein type karega "Selenium WebDriver"
 search_box.send_keys(Keys.RETURN)
 
-
+# Search results ke aane tak wait (max 20 sec) – results wala div (id="search") dikhna chahiye
 WebDriverWait(driver, 20).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, "div#search"))
 )
 
+# Pehla result jo heading (h3) mein dikhta hai, use dhundhte hain
 first_result = driver.find_element(By.CSS_SELECTOR, "div#search h3")
+
+# Pehle result ka text print karte hain
 print("Robot ka jawab:", first_result.text)
 
+# Browser band karne se pehle user se Enter press karwate hain, taake result dekh sakein
 input("Browser band karna hai toh Enter dabayein...")
 driver.quit()
+```
+
+# Major Imports:
+
+```py
+# ChromeDriver apne aap download karta hai, version ki khud se select hota hai.
+import chromedriver_autoinstaller
+
+# isa humera browser programmatically controlled hota hai
+from selenium import webdriver
+
+# Element dhundhne ke tareeqe, jaise By.ID, By.XPATH waghaira.
+from selenium.webdriver.common.by import By
+
+# Keyboard ki special keys (ENTER, TAB) bhejne ke liye.
+from selenium.webdriver.common.keys import Keys
+
+# Element ke liye wait karna, taki page load ho jaaye.
+from selenium.webdriver.support.ui import WebDriverWait
+
+# Wait ke saath condition dena, jaise "element dikhne tak ruko".
+from selenium.webdriver.support import expected_conditions as EC
+
+# Bot detection se bachne ke liye browser ko chhupata hai (anti-bot).
+from selenium_stealth import stealth
+
+# Mouse se hover, double-click, drag & drop ke liye.
+from selenium.webdriver.common.action_chains import ActionChains
+
+# <select> wale dropdown ki value choose karne ke liye.
+from selenium.webdriver.support.select import Select
+
+# Jab element na mile ya wait timeout ho jaye, test fail na ho isliye error handle karne ke liye.
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 ```
