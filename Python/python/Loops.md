@@ -1,5 +1,16 @@
 # What is Loop?
-1. Loops ka purpose: Code ko baar-baar repeat karna without writing same code again and again.
+
+1. Programming language mein **loop** ka matlab hota jo kisi specific code ko (block of code) ko baar baar execute (run) karta hai jab tak aik khaas condition **true** rehti hai.
+
+2. Loop ka basic rule hi yeh hai ke jab tak condition **True** rahegi, loop chalta rahega. Jaise hi woh condition **False** hogi, loop forn ruk jayega. Agar hum condition ko False nahi karenge, toh computer ko pata hi nahi chalega ke kab rukna hai, aur woh chalta hi chala jayega (jise infinite loop kehte hain).
+
+3. **purpose**: loop ka purpose Code **ko baar-baar repeat karna without writing same code again and again**.
+
+    - **Initialization**: Kaam kahan se shuru karna hai (e.g., ginti 1 se shuru karni hai).
+
+    - **Condition**: Kaam kab tak chalana hai (e.g., jab tak ginti 10 tak na pahunch jaye).
+
+    - **Increment/Decrement**: Har chakkar ke baad agay kaise barhna hai (e.g., 1 ke baad 2, phir 3 karna).
 
 ## Types of Loops in Python:
 

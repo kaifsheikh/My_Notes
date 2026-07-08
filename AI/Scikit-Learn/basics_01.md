@@ -59,8 +59,12 @@
 
 # Step 03: Model Choose Karna 
 
-1. Ab aapko sochna hai ke is data par kaunsa model fit baithega.
-2. SkLearn mein **3 Main Categories** hai Models ki jinke Kam Data or According kiya jata ai hai.
+1. SkLearn mein yeah Machine Learning mein **3 Main Categories** hai Models ka.
+    - **Supervised Learning**
+    - **Unsupervised Learning**
+    - **Reinforcement Learning**
+
+2. in teen main categories mein bohot saare **Algorithms (models)** hote hain, jo alag-alag problem types ke liye bane hote hain. bs hume yeah dekhna hota hai ka konsa Data par kaunsa model fit baithega oiska liya hume.
 
     - **Supervised Learning** Models
         - **Regression Models** (Numbers Predict Karne Ke Liye)
