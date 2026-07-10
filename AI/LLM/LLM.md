@@ -57,32 +57,3 @@ Embedding → Value (V) <br>
 ## Step 08: `Feed Forward Network`
 
 ## Step 09: `Layers repeat hoti hain (depth)`
-
-
-# What is Ollama:
-1. Ollama ek tool / platform hai jo hume LLMs ko locally run karne deta hai apne system mein bina internet ke.
-2. isa hum apne computers par open source AI model run kar sekhte ha easily Ollama khud LLM nahe hai yeh LLMs ko run karne ka environment hai.
-3. hum isme open-weight models download karke use kar sekhte ha.
-
-## ***Important Commands for Ollama***
-
-| Command | Category | Maqsad (Purpose) | Kab Istemal Karein? |
-| --- | --- | --- | --- |
-| **`ollama run [naam]`** | Main | Model download + Chat shuru karna. | Jab aap foran AI se baat karna chahen. |
-| **`ollama pull [naam]`** | Download | Sirf model download karna (Chat nahi). | Slow internet par ya sirf download ke liye. |
-| **`ollama list`** | Management | Downloaded models ki list dekhna. | Jab check karna ho ke F: drive mein kya kya hai. |
-| **`ollama rm [naam]`** | Delete | Model ko disk se khatam/delete karna. | Jab space khatam ho rahi ho aur model na chahiye ho. |
-| **`ollama ps`** | Monitor | Dekhna ke kaunsa model is waqt RAM mein chal raha hai. | Jab computer slow ho raha ho aur check karna ho. |
-| **`ollama show [naam]`** | Info | Model ki mukammal detail dekhna. | Jab model ke parameters ya license check karna ho. |
-| **`ollama serve`** | Service | Ollama ki background service start karna. | Agar Ollama ka icon taskbar mein nazar na aaye. |
-| **`/bye`** | Chat | Chat se bahar nikalna (Exit). | Jab AI se baat khatam ho jaye aur CMD par wapis aana ho. |
-| **`/set verbose`** | Chat | Jawab ki speed aur time (stats) dekhna. | Jab check karna ho ke AI kitna fast jawab de raha hai. |
-
----
-
-# What is Hugging Face?
-1. Hugging Face koi AI model nahi hai, balkay ye aik Platform/Community hai.
-2. Yahan hazaron free aur open-source ready-made AI models paray hain jaise play store per apps.
-3. Yahan hazaro Datasets bhe hote hai jis par AI ko train kiya jata hai
-4. aur unko use karne ke tools & APIs
-5. developers ko aik hi jagah par provide karta hai.
