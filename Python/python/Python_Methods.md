@@ -94,6 +94,48 @@ student = {
     "age": 20
 }
 print(student.get("name")) # Ali
+
+# -------------------
+
+# Kisi Key Ko remove Karta hai or Uski Value Return Karna
+student = {"name": "Ali", "age": 20}
+age = student.pop("age")
+print(age)         # 20
+print(student)     # {'name': 'Ali'}
+
+# -------------------
+
+# last ka pair ko remove kar deta hai
+student = {"name": "Ali", "age": 20}
+item = student.popitem()
+print(item)        # ('age', 20)   (Python 3.7+ mein LIFO)
+print(student)     # {'name': 'Ali'}
+
+# -------------------
+
+# dosre dic se marge karta hai
+student = {"name": "Ali", "age": 20}
+student.update({"age": 21, "grade": "A"})
+print(student)   # {'name': 'Ali', 'age': 21, 'grade': 'A'}
+
+# -------------------
+
+# Dic ko empty bana deta hai
+student = {"name": "Ali", "age": 20}
+student.clear()
+print(student)   # {}
+
+# -------------------
+
+student = {"name": "Ali"}
+grade = student.setdefault("grade", "B")
+print(grade)      # B (kyunki 'grade' nahi thi, set kar di)
+print(student)    # {'name': 'Ali', 'grade': 'B'}
+
+# Agar key hoti to value return karta, set nahi karta
+name = student.setdefault("name", "Unknown")
+print(name)       # Ali (original value, change nahi hui)
+
 ```
 
 ## map(function, iterable)
