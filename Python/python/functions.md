@@ -130,3 +130,26 @@ greet()        # Hello Guest
 greet("Kaif")  # Hello Kaif
 ```
 # Return Statement:
+
+
+# What is `*args`?
+1. *args ek special syntax hai jo aapko function mein jitne chahe utne arguments pass karne ki freedom deta hai.
+2. Iska matlab hai - aap function banaate time nahi jante ki kitne arguments aayenge, toh *args use karke aap flexible function bana sakte hain.
+
+## Breakdown:
+
+1. `*` → Ye batata hai ke "yeh special hai, multiple values lega"
+
+2. `args` → yeh arguments ka short form hai (aap koi bhi naam de sakte hain, par convention hai args)
+
+## Example:
+
+```py
+def add_all(*numbers):
+    return sum(numbers)
+
+print(add_all(1, 2))
+print(add_all(1, 2, 3, 4))
+print(add_all(1, 2, 3, 4, 5)) 
+```
+

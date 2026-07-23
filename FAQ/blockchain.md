@@ -7,7 +7,6 @@
 1. Ek block ek page jaisa hota hai jisme:
 2. Transaction info (kis ne kis ko paisay bheje)
 3. Time & date
-4.  
 
 # What is Chain?
 1. chain (zanjeer) ki tarah jure hotay hain Ek block → next block se linked hota hai
