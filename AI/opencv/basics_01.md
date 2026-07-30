@@ -114,18 +114,37 @@ cv2.destroyAllWindows()
 ---
 
 ## Threshold:
+1. Threshold sirf **Roshni** (Intensity) par kaam karta hai, **Colors** par nahi. Threshold ka formula hota hai Agar pixel ki value **127** se zyada hai toh white karo, warna black karo.
+2. image aik pixels ka hub hota hai jo numbers ki form mein hota hai.
+3. her image mein numbers ki limit (0 - 255) tak hote hai isa zeyada nhe.
+4. hum Threshold mein oin pixels ka numbers ko compare karte hai kue ka 
+5. agar pixel ki value had se zyada hai -> uska color White - **255** kar do.
+6. Agar pixel ki value had se kam ya barabar hai -> uska color Black - **0** kar do.
 
 ```py
 import cv2
 
-image = cv2.imread('image2.png')
-gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+# Image read ki
+img = cv2.imread('image1.png')
 
-# cv2.Canny algorithm ko image di. 100 aur 200 iski settings (thresholds) hain
-edges = cv2.Canny(gray_image, 100, 200)
+# phir COLORFULL image ko GRAY (Black & White) mein convert kiya - YE ZAROORI HAI!
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# Screen par sirf image ki lines (sketches) nazar aayein gi
-cv2.imshow('Image Edges', edges)
+# gray -> actual gray image
+# 127 -> jin pixels ki value 127 se greater hai oisa white kardu
+# 255 -> ager koi pixel 127 se greater hai oisa white kardu
+# cv2.THRESH_BINARY -> means yeah tu image black hoge yeah White iske ilawa nhe
+	# - THRESH_BINARY
+	# - THRESH_BINARY_INV
+	# - THRESH_TRUNC
+	# - THRESH_TOZERO
+	# - THRESH_TOZERO_INV
+ret, thresh_binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+
+# 4. Saari images dikhao: Original Color, Grayscale, aur Final Threshold wali
+cv2.imshow('Original Color', img)
+cv2.imshow('Grayscale (Black & White)', gray)
+cv2.imshow('Final Threshold Result', thresh_binary)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
@@ -141,7 +160,7 @@ cv2.destroyAllWindows()
 ```py
 import cv2
 
-image = cv2.imread('test.jpg')
+image = cv2.imread('image1.png')
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # cv2.Canny algorithm ko image di. 100 aur 200 iski settings (thresholds) hain
@@ -161,7 +180,7 @@ cv2.destroyAllWindows()
 
 ```py
 import cv2
-image = cv2.imread('car.jpg')
+image = cv2.imread('image1.png')
 
 # Humne computer ko kaha ke image ka size badal kar 300 width aur 200 height kar do
 choti_image = cv2.resize(image, (300, 200))
@@ -176,13 +195,14 @@ cv2.waitKey(0)
 
 ```py
 import cv2
-image = cv2.imread('text.jpg')
 
-# (11, 11) ka matlab hai kitna zyada blur karna hai. 
-# Yeh numbers jitne baray honge, tasveer utni dhundli hogi.
-dhundli_image = cv2.GaussianBlur(image, (11, 11), 0)
+image = cv2.imread('image1.png')
 
-cv2.imshow('Blur Image', dhundli_image)
+# 0 -> means intensity of blue
+# 11 , 11 -> how spread the blue
+blue_image = cv2.GaussianBlur(image, (21, 21), 3)
+
+cv2.imshow('Blur Image', blue_image)
 cv2.waitKey(0)
 ```
 
@@ -192,10 +212,15 @@ cv2.waitKey(0)
 
 ```py
 import cv2
-image = cv2.imread('cat.jpg')
+image = cv2.imread('image1.png')
 
-# cv2.putText(image, text, starting_point, font, size, color_bgr, thickness)
-# (0, 0, 255) ka matlab hai Red rang mein likho
+# image -> actual image
+# 'Hello World!' -> text
+# (50 , 100) -> x=50 , y=100
+# cv2.FONT_HERSHEY_SIMPLEX -> Kis style (font) mein likhna hai
+# # 1 -> font size iski value 0 se 2 tak hoti hai
+# (0, 0, 255) -> Color
+# 2 -> thickness
 cv2.putText(image, 'Hello World!', (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
 cv2.imshow('Meme Text', image)
@@ -208,9 +233,11 @@ cv2.waitKey(0)
 
 ```py
 import cv2
-image = cv2.imread('scenery.jpg')
+image = cv2.imread('image1.png')
 
-# Image ko 90 degrees seedhay haath (clockwise) ghuma diya
+# cv2.ROTATE_90_CLOCKWISE
+# cv2.ROTATE_180
+# cv2.ROTATE_90_COUNTERCLOCKWISE
 rorate_image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
 
 cv2.imshow('Rotated Image', rorate_image)
