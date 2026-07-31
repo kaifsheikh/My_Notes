@@ -39,7 +39,17 @@
 
     - isme `3` parameters hote hai `actual_image` , `scaleFactor` or `minNeighbors`
 
-    - `minNeighbors` iska kaam hai **False Detections** ko clear karna aur pakki confirmation dena hai. OpenCV jab kisi image par face dhoondta hai, toh woh bohot saari aisi jagahon par bhi box bana deta hai jo asliat mein chehra nahi hoteen—jaise deewar ka koi kona, kapdon ka koi design, ya pankha. minNeighbors unhi faltu boxes ko filter karta hai.
+3. `scaleFactor` scaleFactor yeh tay karta hai ki image ko har step par kitna feesad (percentage) chhota karna hai.
+    - Number jitne **chota** hoga oitne he accuracy hoge or jitne **bara** hoga oisa he false detection hoge
+    - Min value: `1.0` se greater hone chaiya 
+    - Max value: `2.0` iski Max value hoti hai lakin isa greater bhe de sekhte hai lakin typically 2.0 enought hota hai
+    - Aam taur par `1.05` (thoda slow but accurate) ya `1.1` (balance). Real-time video ke liye `1.1` ya `1.2` sahi rahega. Agar photo hai aur time hai toh `1.05` de sakte hain. 
+
+4. `minNeighbors` iska kaam hai **False Detections** ko clear karna aur pakki confirmation dena hai. OpenCV jab kisi image par face dhoondta hai, toh woh bohot saari aisi jagahon par bhi box bana deta hai jo asliat mein chehra nahi hoteen—jaise deewar ka koi kona, kapdon ka koi design, ya pankha. minNeighbors unhi faltu boxes ko filter karta hai.
+
+5. `minSize` Detector ko batao ki minimum face size kitna (width, height) consider karna hai. Isse chhote face ignore ho jaayenge.
+
+6. `maxSize` Maximum face size limit. Isse bade faces ignore honge. Jab aap jaante hain ki frame mein koi bahut bada face nahi aane waala, tab CPU bachane ke liye use karte hain.
 
 ```py
 import cv2
@@ -53,8 +63,14 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # Haar Cascade load kiya Yeh built-in hai
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-# find Face
-faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+# Find Face
+faces = face_cascade.detectMultiScale(
+    gray,
+    scaleFactor=1.05,
+    minNeighbors=3,
+    minSize=(30, 30),
+    maxSize=(300, 300),
+)
 
 # Jahan face mile, wahan Green box banao
 for (x, y, w, h) in faces:
@@ -65,3 +81,25 @@ cv2.imshow('Detected Faces', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+
+## Haar Cascade files:
+
+| Cascade File | Kaam |
+|-------------|------|
+| `haarcascade_frontalface_alt.xml` | Higher quality, thoda slow |
+| `haarcascade_frontalface_alt2.xml` | Aur bhi better |
+| `haarcascade_profileface.xml` | **Side face** (profile) detect karne ke liye |
+| `haarcascade_eye.xml` | **Aankhein** detect karta hai |
+| `haarcascade_eye_tree_eyeglasses.xml` | Chashme ke saath aankhein |
+| `haarcascade_smile.xml` | **Muskurahat** (smile) detect |
+| `haarcascade_fullbody.xml` | Poora insaan (full body) |
+| `haarcascade_upperbody.xml` | Upper body |
+
+---
+
+# DNN based Face Detector: (Modern & Powerful)
+1. **Haar Cascade (Purana Tarika)**: Pehle se diye gaye rules par kaam karta hai, is liye andhere, mask ya side face mein aksar face detect nahi kar pata.
+
+2. **Deep Neural Network (DNN) Modern tarika**: Yeh ek **Artificial Intelligence** base hai Isko lakhon insani faces ki photos dikha kar khud seekhaya. Yeh itna Intelligence hota hai ki agar face par andhera ho, mask pehna ho, ya face bilkul teerha (side view) ho, tab bhi yeh foran pehchan leta hai ki "Yeh ek face hai!"
+
+3. Nahi, DNN detectors ki XML file nahi hoti. **No** DNN bohot bada aur complex hota hai, isliye iske liye "Trained Models" (Pre-trained Models) use hote hain. Yeh models alag-alag formats mein aate hain jaise **.caffemodel**, **.pb**, ya **.onnx** likha hota hai.
