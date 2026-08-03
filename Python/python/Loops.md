@@ -4,7 +4,9 @@
 
 2. Loop ka basic rule hi yeh hai ke jab tak condition **True** rahegi, loop chalta rahega. Jaise hi woh condition **False** hogi, loop forn ruk jayega. Agar hum condition ko False nahi karenge, toh computer ko pata hi nahi chalega ke kab rukna hai, aur woh chalta hi chala jayega (jise infinite loop kehte hain).
 
-3. **purpose**: loop ka purpose Code **ko baar-baar repeat karna without writing same code again and again**.
+3. ek hi kaam ko baar baar karna. Jab program mein koi kaam kai dafa repeat karna ho, to hum loop likhte hain. 
+
+4. **purpose**: loop ka purpose Code **ko baar-baar repeat karna without writing same code again and again**.
 
     - **Initialization**: Kaam kahan se shuru karna hai (e.g., ginti 1 se shuru karni hai).
 
@@ -16,6 +18,10 @@
 
 1. For loop
 2. While loop
+
+## Difference between For vs While loop:
+1. `for` loop sequence (jaise list, range, string) ke har aik item par jaata hai.
+2. `while` loop shart (condition) ke sahi rehne tak chalta hai.
 
 ## Example:
 ```py
@@ -63,4 +69,15 @@ for row in matrix:
 #  1 2 3
 #  4 5 6
 #  7 8 9
+```
+
+---
+
+# While Loop:
+
+```py
+count = 0
+while count < 5:
+    print("Count:", count)
+    count += 1
 ```
