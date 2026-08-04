@@ -1,0 +1,4 @@
+# Equal Highs and Equal Lows
+1. Equal Highs aur Equal Lows yeah wo Levels hote hai jaha Price bar-bar aik hi Level ko Touch kare means aik level se matlab hai ka wo koi Support yeah Resistance ho sekhta hai ager Market kisi Support yeah Resistance per 2 se 3 dafa yeah oisa zeyada bar akar waha se Reverse hua hai means ois Support yeah Resistance ko Break nahe kiya tu iska matlab hai ka oin Levels ka Uper or neecha Liquidity ka samandar hota ha means boht saray SL or Limit Orders waha boht Liquidty hoti hai jisa hum aksar BSL or SSL bhe bolte hai
+
+2. aik baat or yaad rekhe market jitne bar kisi Level per Muliple tap karte hai 2 yeah 3 yeah oisa zeyada chahay or Support ho yeah Resistance wo Level otna he Weak hota jayga Retail Trader ka Mindset yeah hota hai ka wo Level Strong hai lakin dar hakikat Big Players ki nazar mein oin Level ka uper or neecha Liquidity ka dhar hota hai.

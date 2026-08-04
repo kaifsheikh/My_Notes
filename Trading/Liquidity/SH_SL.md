@@ -1,0 +1,4 @@
+# SH (Swing High) and SL (Swing Low)
+1. wo Level jaha se Market ka Trend change hua hai like `Up se Down` or `Down se Up` oin Level ko bhe hum `Swing High` or `Swing low` ki category mein count karte hai lakin yeah wo Point hai jaha se Market ka Actual trend Change hua hai means `Change of Character` Market Structure mein jab Price Pullback create karta hai tu ois Level ko hum Swing High or Swing Low nahe bolte hai balke ois Level ko bolte hai jaha se Market ka actual Trend Change hua hai jisa `Choch (Change of Character)` bolte hai right
+
+2. Swing High or Swing Low ko aksar Log `External Liquidity (ERL)` bhe bolte hai kue ka in Level ka uper or neecha boht sare Liquidity hoti hai.

@@ -1,0 +1,3 @@
+# PDH and PDL
+1. Previous Day High `(PDH)` & Previous Day Low `(PDL)` Ye har 24 ghante mein banne wali Important liquidity hai. jaha Hazaron intraday traders ne apne Stop Losses in do points ke upar ya niche rakhe hote hain. ab log aksar inhe `External Liquidity (ERL)` bhe bolte hai kue ka yeah Market ka PDH or PDL ko Represent karti hai kue ka iska Uper or neecha Boht sari Liquidity hoti hai.
+2. `Higher Timeframe (HTF)` jaise ka Previous Week High or Previous Week Low ko Uper or neecha bhe kaafi Liquidity hoti hai or isa bhe hum `External Liquidity (ERL)` mein Count karte hai.       
