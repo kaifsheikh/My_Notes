@@ -1,6 +1,7 @@
 # 🐼 Pandas DataTypes
 
-> 1. ### Datatype batata hai ke ek value kis qisam ki hai.
+> 1. ### DataType yeh batata hai ke ek single piece of data/value kis type ka hai.
+> 2. ### Yeh compiler ko batata hai ke is data par kis tarah ke operations ho sakte hain aur yeh memory mein kitni jagah lega. 
 
 # 🐼 Pandas Datatypes:
 

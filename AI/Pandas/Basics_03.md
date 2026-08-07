@@ -1,7 +1,8 @@
 ## 🔹 What is Data Structure in Pandas:
-> 1. ### Data structure ka matlab hota hai data ko aise format mein rakhna jisse us par kaam karna easy ho. Pandas mein data ko table, column, row, ya labeled form mein store kiya jata hai, taa ke aap usay quickly access aur modify kar sako
-> 2. ### Data structure batata hai ke bohat saara data kis format mein rakha gaya hai means.
-> 3. ### Data structure 2 tarah ka hote hai.
+> 1. ### Data ko computer ki memory mein arrange aur organize karne ka tareeqa isa hum Data Structure bolte hai.
+> 2. ### Data structure ka matlab hota hai data ko aise format mein rakhna jisse us par kaam karna easy ho. Pandas mein data ko table, column, row, ya labeled form mein store kiya jata hai, taa ke aap usay quickly access aur modify add yeah delete kiya ja sekhe.
+> 3. ### Data structure batata hai ke bohat saara data kis format mein rakha gaya hai means.
+> 4. ### Data structure 2 tarah ka hote hai.
 
 ## 🔹 Types of Data Structure in Pandas:
 1. `Linear Data Structure`
