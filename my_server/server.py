@@ -61,6 +61,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     PORT = 8000
     print(
-        f"🌟 Server shuru! Browser mein yeh kholen: http://localhost:{PORT}/viewer.html"
+        f"Server shuru! Browser mein yeh kholen: http://localhost:{PORT}/viewer.html"
     )
     http.server.HTTPServer(("localhost", PORT), Handler).serve_forever()
