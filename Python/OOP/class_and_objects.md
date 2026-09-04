@@ -1,426 +1,127 @@
-# Python OOP - Class aur Object Ka Complete Concept (Easy Roman Urdu)
+# Python OOP
+
+1. OOP (Object-Oriented Programming) ek aisa **programming style** hai jismein hum apne code ko real-world ki cheezon **objects** ke hisaab se design karte hain.
+
+2. Jab hum barra software banate hain, toh simple code mushkil aur messy ho jata hai. OOP hamare code ko organize, saaf, aur re-usable banane mein madad karta hai.
+
+# OOP Purpose:
+
+1. **Reusability (Dobara Istemaal):** Ek baar code likh lo, phir usko baar baar bina dobara likhe istemaal karo.
+2. **Organization:** Code chote chote hisson (classes aur objects) mein taqseem ho jata hai, jisse samjhna aasan hota hai.
+3. **Easy Maintenance:** Agar kisi ek hisse mein bug ya masla aaye, toh poore program ko chede bina sirf us hisse ko theek kiya ja sakta hai.
+4. **Security & Structure:** Real-world concepts ko code mein laana aasan ho jata hai.
 
 ---
 
-# OOP Kya Hai? (Object Oriented Programming)
+# Class?
 
-OOP ek programming style hai jisme hum **code ko real world ki tarah organize karte hain**.
+1. Class ek **blueprint ya template** hai.
+2. Yeh asli cheez nahi hoti, balki yeh sirf yeh bataati hai ke jab koi real object bad mein banega, toh uske paas kya kya data hoga aur woh kya kya kaam kar sakegi.
+3. Class ka andar 2 cheezay hoti hai.
+    - Attributes **Variables**: Cheez ki khususiyaat (e.g., Naam, Rang, Qeemat).
+    - Methods **Functions**: Cheez ke kaam ya actions (e.g., Chalna, Bolna, On/Off hona).
 
-Simple idea:
+# Object:
 
+1. Object class ka **practical version** aik Real Instance hota hai.
+2. Aapke aas paas jo bhi asli cheez majood hai jisko aap dekh, chhoo, ya istemaal kar sakte hain — programming mein woh ek **Object** hai.
+
+# Class vs Object (Direct Comparison):
+
+| Feature | Class | Object |
+| --- | --- | --- |
+| **Defination** | Yeh ek **Blueprint / Naqsha** hai jo bataata hai ke cheez kaisi hogi. | Yeh class se bani **Asli Cheez (Real Instance)** hoti hai. |
+| **Physical Existence** | Yeh sirf code/concept hota hai, memory mein jagah nahi leta. | Yeh computer ki memory mein jagah (RAM) leta hai. |
+| **Example (Real Life)** | Car ka paper par bana design. | Aap ke ghar ke bahar khadi asli Car. |
+| **Example (Python)** | `class Car:` | `my_car = Car("Honda", "Black")` |
+| **Quantity** | Class poore program mein ek hi baar banai jaati hai. | Ek hi class se aap **unlimited objects** bana sakte hain. |
+
+### Example: 
+
+```py
+class Phone: # Class
+    def __init__(self, brand_name):
+        self.brand = brand_name
+
+my_phone = Phone("Samsung") # Object
+print(my_phone.brand)  # Output: Samsung
 ```
-Real World → Code
-Car → Object
-Student → Object
-Phone → Object
+### Step-by-Step Easy Explanation
+
+#### 1. `def __init__(self, brand_name):`
+* `__init__()` isko Initialization bolte hai yeah new object ko ready karta hai.
+
+* ab aap class se naya object banate hain, toh Python is function ko **automatically** chala deta hai. Aap ko isey alag se call karne ki zaroorat nahi parti.
+
+* `self`: Yeh object ki api pehchan hai. Yeh Python ko batata hai ke "Yeh jo data aa raha hai, yeh IS KHASS object ka hai".
+
+* `brand_name`: Yeh woh khali jagah **variable** hai jismein hum bahar se koi naam bhejenge (jaise "Samsung", "iPhone").
+
+* `my_phone = Phone("Sumsung")` Yeh woh line hai jahan humne class ka asli Object banaya hai `Phone("Sumsung")` yeah class ka naam hai or `my_phone` yeah asli object hai.
+
+### Example:
+```py
+class Mobile:
+    def __init__(self, brand_name, car_color):
+        self.b = brand_name
+        self.c = car_color
+        
+obj1 = Mobile("Samsung", "Red")
+
+# Sahi Tareeqah:
+print(obj1.b)  # Output: Samsung
+print(obj1.c)  # Output: Red
 ```
-
-Har cheez ka **blueprint** hota hai aur us blueprint se **objects** bante hain.
-
 ---
 
-# Class Kya Hai?
+## Create Multiple Objects:
 
-Class ek **blueprint ya template** hai.
+```py
+class Mobile:
+    def __init__(self, brand_name, color):
+        self.a = brand_name
+        self.b = color
 
-Jaise ghar banane se pehle **naksha (map)** banta hai, waise hi object banane se pehle **class** banti hai.
+    def show_info(self):
+        print(f"Mobile Brand: {self.a} | Color: {self.b}")
+        
+# Object 1
+phone1 = Mobile("Samsung", "Black")
 
-Class mein hum define karte hain:
+# Object 2
+phone2 = Mobile("Apple", "White")
 
-* **Data** (kya kya information hogi)
-* **Functions** (kya kya kaam hoga)
+# Object 3
+phone3 = Mobile("Redmi", "Blue")
 
-Example:
-
-```python
-class Student:
-    pass
+phone1.show_info()
+phone2.show_info() 
+phone3.show_info()
 ```
 
-Yeh ek simple class hai abhi kuch nahi hai isme.
+```py
+class Product:
+    def __init__(self, title, price, stock):
+        self.tit = title
+        self.pri = price
+        self.sto = stock
 
----
+    def buy(self, quantity):
 
-# Object Kya Hai?
+        if quantity <= self.sto:
 
-Object class ka **practical version** hai.
-
-Jaise class = naksha, to object = **asli ghar**
-
-Class se object banane ka tarika:
-
-```python
-class Student:
-    pass
-
-# Object banana
-student1 = Student()
-student2 = Student()
-```
-
-Ab `student1` aur `student2` dono **Student class ke objects** hain.
-
----
-
-# Class Mein Data Kaise Dalein (Attributes)
-
-Class ke andar **variables** bana sakte hain jo data store karein.
-
-Inko bolte hain **attributes** ya **properties**.
-
-Example:
-
-```python
-class Student:
-    name = "Ali"
-    age = 20
-    grade = "A"
-```
-
-Ab jab object banayenge to yeh data uske paas hoga:
-
-```python
-student1 = Student()
-
-print(student1.name)  # Output: Ali
-print(student1.age)   # Output: 20
-print(student1.grade) # Output: A
-```
-
----
-
-# Object Mein Data Kaise Badlein
-
-Ek object ka data change kar sakte hain:
-
-```python
-student1 = Student()
-student1.name = "Ahmed"
-print(student1.name)  # Output: Ahmed
-```
-
-Ab `student1` ka naam `Ali` se `Ahmed` ho gaya.
-
-Important baat:
-
-* `student2` ka naam abhi bhi `Ali` hai
-* Har object ka **alag data** hota hai
-
----
-
-# __init__ Method (Constructor)
-
-Jab object banta hai to automatically ek function chalta hai.
-
-Usko bolte hain **constructor** ya **__init__ method**.
-
-Yeh method object initialize karta hai.
-
-Example:
-
-```python
-class Student:
-    def __init__(self, name, age, grade):
-        self.name = name
-        self.age = age
-        self.grade = grade
-```
-
-Yahan:
-
-* `__init__` = constructor function
-* `self` = current object (jo object ban raha hai uska reference)
-* `name, age, grade` = parameters jo hum denge
-
-Ab object aise banayenge:
-
-```python
-student1 = Student("Ali", 20, "A")
-student2 = Student("Ahmed", 22, "B")
-
-print(student1.name)  # Output: Ali
-print(student2.name)  # Output: Ahmed
-```
-
----
-
-# Self Kya Hai?
-
-`self` ka matlab hai **current object**.
-
-Jab hum `student1 = Student("Ali", 20, "A")` likhte hain to:
-
-* `self` automatically `student1` ban jata hai
-* `self.name = "Ali"` matlab `student1.name = "Ali"`
-
-Jab `student2` banega to `self` woh `student2` ban jayega.
-
-Simple rule:
-
-```
-self = jo object abhi use ho raha hai
-```
-
----
-
-# Methods (Class Mein Functions)
-
-Class ke andar functions banate hain.
-
-Inko bolte hain **methods**.
-
-Example:
-
-```python
-class Student:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-    
-    def greet(self):
-        print(f"Hello, mera naam {self.name} hai aur meri age {self.age} hai")
-    
-    def is_adult(self):
-        if self.age >= 18:
-            return True
+            self.sto -= quantity
+            total = quantity * self.pri
+            print(f"{quantity}x {self.tit} Total Bill: Rs. {total}")
+        
         else:
-            return False
+            print(f"Sorry! Out of Stock only {self.sto} Available")
+
+# Objects
+p1 = Product("Wireless Mouse", 1500, 10)
+p2 = Product("Mechanical Keyboard", 4500, 2)
+
+# Real-time Actions
+p1.buy(2)
+p2.buy(2)
 ```
-
-Ab object banakar methods call karein:
-
-```python
-student1 = Student("Ali", 20)
-
-student1.greet()
-# Output: Hello, mera naam Ali hai aur meri age 20 hai
-
-print(student1.is_adult())
-# Output: True
-```
-
----
-
-# Class Variable vs Instance Variable
-
-**Instance Variable** = Har object ka alag data hota hai
-
-**Class Variable** = Sab objects ka common data hota hai
-
-Example:
-
-```python
-class Student:
-    school = "ABC School"  # Class variable (sabke liye same)
-    
-    def __init__(self, name):
-        self.name = name  # Instance variable (har alag hai)
-```
-
-```python
-student1 = Student("Ali")
-student2 = Student("Ahmed")
-
-print(student1.school)  # Output: ABC School
-print(student2.school)  # Output: ABC School
-print(student1.name)    # Output: Ali
-print(student2.name)    # Output: Ahmed
-```
-
----
-
-# Inheritance (Virasat)
-
-Ek class doosri class se **data aur methods le sakti hai**.
-
-Isko bolte hain **inheritance**.
-
-Example:
-
-```python
-class Animal:
-    def __init__(self, name):
-        self.name = name
-    
-    def speak(self):
-        print(f"{self.name} bol raha hai")
-
-class Dog(Animal):  # Dog, Animal se inherit kar raha hai
-    def bark(self):
-        print("Bhau Bhau!")
-```
-
-```python
-dog1 = Dog("Tommy")
-
-dog1.speak()   # Output: Tommy bol raha hai
-dog1.bark()    # Output: Bhau Bhau!
-```
-
-Yahan `Dog` ko `Animal` ka `name` aur `speak()` method **free mein mil gaya**.
-
----
-
-# Encapsulation (Data Chupana)
-
-Hum data ko **bahar se access hone se rok sakte hain**.
-
-Isko bolte hain **encapsulation**.
-
-Private variables banane ke liye **double underscore** lagate hain:
-
-```python
-class BankAccount:
-    def __init__(self, balance):
-        self.__balance = balance  # Private variable
-    
-    def get_balance(self):
-        return self.__balance
-    
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
-            print(f"Deposit ho gaya! Naya balance: {self.__balance}")
-```
-
-```python
-account = BankAccount(1000)
-
-print(account.get_balance())  # Output: 1000
-account.deposit(500)          # Output: Deposit ho gaya! Naya balance: 1500
-
-# account.__balance  # Error! Direct access nahi ho sakta
-```
-
----
-
-# Polymorphism (Ek Hi Naam, Alag Kaam)
-
-Ek hi function **alag alag objects par alag kaam karta hai**.
-
-Example:
-
-```python
-class Cat:
-    def speak(self):
-        print("Meow Meow!")
-
-class Dog:
-    def speak(self):
-        print("Bhau Bhau!")
-```
-
-```python
-animals = [Cat(), Dog()]
-
-for animal in animals:
-    animal.speak()
-```
-
-Output:
-
-```
-Meow Meow!
-Bhau Bhau!
-```
-
-Dekha? `speak()` function dono mein hai lekin **alag alag kaam kar raha hai**.
-
----
-
-# Practical Example - Purana Example
-
-Ek complete example jo sab kuch cover kare:
-
-```python
-class Car:
-    # Class variable
-    wheels = 4
-    
-    def __init__(self, brand, model, year):
-        # Instance variables
-        self.brand = brand
-        self.model = model
-        self.year = year
-        self.speed = 0
-    
-    def start(self):
-        print(f"{self.brand} {self.model} start ho raha hai!")
-    
-    def accelerate(self, increase):
-        self.speed += increase
-        print(f"Speed ab {self.speed} km/h hai")
-    
-    def brake(self, decrease):
-        self.speed -= decrease
-        if self.speed < 0:
-            self.speed = 0
-        print(f"Speed ab {self.speed} km/h hai")
-    
-    def info(self):
-        print(f"{self.year} {self.brand} {self.model}")
-```
-
-```python
-# Objects banana
-car1 = Car("Toyota", "Corolla", 2023)
-car2 = Car("Honda", "Civic", 2024)
-
-# Methods use karna
-car1.start()
-car1.accelerate(60)
-car1.accelerate(20)
-car1.brake(30)
-car1.info()
-
-print()
-
-car2.start()
-car2.accelerate(80)
-car2.info()
-```
-
-Output:
-
-```
-Toyota Corolla start ho raha hai!
-Speed ab 60 km/h hai
-Speed ab 80 km/h hai
-Speed ab 50 km/h hai
-2023 Toyota Corolla
-
-Honda Civic start ho raha hai!
-Speed ab 80 km/h hai
-2024 Honda Civic
-```
-
----
-
-# Summary (Short Version)
-
-| Concept | Kya Hai | Example |
-|---------|---------|---------|
-| Class | Blueprint/Template | `class Student:` |
-| Object | Class ka practical version | `student1 = Student()` |
-| __init__ | Constructor (object setup) | `def __init__(self, name):` |
-| self | Current object ka reference | `self.name = name` |
-| Method | Class ka function | `def greet(self):` |
-| Inheritance | Class se class banana | `class Dog(Animal):` |
-| Encapsulation | Data ko private karna | `self.__balance` |
-| Polymorphism | Same function, alag kaam | `animal.speak()` |
-
----
-
-# Real Life Analogy
-
-```
-Class = Car ka naksha (blueprint)
-Object = Asli Car jo road par chal rahi hai
-__init__ = Car ka setup (color, model, etc.)
-Method = Car ke kaam (start, brake, accelerate)
-Inheritance = ElectricCar, Car ki tarah hai lekin extra features hain
-Encapsulation = Engine andar hai, bahar se directly access nahi ho sakta
-Polymorphism = Sab gaadiyan chal sakti hain lekin alag alag tareeqe se
-```
-
----
