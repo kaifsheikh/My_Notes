@@ -13,7 +13,7 @@ LangChain ko samajhne ke liye iske saare core modules aur concepts ko **6 main p
 * is ke andar 3 main cheezein hoti hain jo mil kar kaam karti hain:
     - Prompt Engineering
     - Model 
-    - Output Parsers 
+    - Output Parsers
 
 * **Chat Models & LLMs:** Groq, OpenAI, ya Anthropic ke models ko Python ke sath connect karna (e.g., `ChatGroq`, `ChatOpenAI`).
 * **Prompt Templates:** Static prompts ke bajaye dynamic user inputs add karne ke liye formats banana (e.g., `ChatPromptTemplate`, `SystemMessage`, `HumanMessage`).
@@ -25,7 +25,7 @@ LangChain ko samajhne ke liye iske saare core modules aur concepts ko **6 main p
 
 AI Model ko sirf baatein karne se rok kar real-world tasks perform karne ki taqat dena.
 
-* **`@tool` Decorator:** Simple Python functions ko AI Tools mein wrap karna taake model unhein zarurat ke waqt execute kar sake.
+* **`@tool` Decorator:** hum Python mein normal function likhte hain (jaise file delete karna ya math calculate karna). Lekin AI ko kaise pata chalega ke yeh function uske istemal ke liye hai. tu jab hum function ke upar **@tool** likhte hain, toh LangChain us normal Python function ko ek Special AI Tool mein convert kar deta hai.
 * **Tool Schemas & Type Hints:** Model ko yeh batana ke function kya kaam karta hai aur usme konse parameters (`str`, `int`) chahiye.
 * **Structured Tools:** Complex inputs (multiparams) wale tools banana (using `Pydantic`).
 
@@ -81,8 +81,3 @@ Autonomous decision-making system banana jahan AI khud decide karta hai ke kaun 
 | **Memory** | History Management | `trim_messages`, `ChatMessageHistory` |
 | **Retrieval (RAG)** | Private Documents QA | `TextSplitters`, `VectorStores` |
 | **Agents** | Autonomous Execution | `create_tool_calling_agent` |
-
-# What is LangGraph:
-1. LangGraph ek alag framework (library) hai, lekin yeh LangChain ka hi banaya hua extension/child ecosystem hai.
-1. Jab aapke paas bohot saare tools ho jayein, toh AI bhatak sakta hai. LangGraph AI ko ek step-by-step rasta (Flow Chart) deta hai ke kis waqt kaun sa tool chala kar kahan jana hai.
-2. Yeh AI ka Work Plan / Mind Map hai. Agar AI se koi galti ho jaye, toh LangGraph usay batata hai: "Pehle step 1 par wapis jao, galti theek karo, aur phir step 2 par aao."
