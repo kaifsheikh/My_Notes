@@ -1,7 +1,3 @@
-Bilkul! Main aapko **bilkul shuruaat se** step-by-step batata hoon, taake aap bina kisi confusion ke Opencode ko Groq API ke saath configure kar saken aur VS Code mein use kar saken.
-
----
-
 ## 🧰 **Step 1: Node.js Install Karein (Agar pehle se nahi hai)**
 
 Opencode Node.js par chalta hai, isliye pehle Node.js install karna hoga.
