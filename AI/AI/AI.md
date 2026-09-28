@@ -24,7 +24,3 @@ hum jitne bhe AI use karte hai wo sub **ANI** hai jaise ka ChatGPT , Gemini , Cl
 
 ---
 
-## 3 Layers of Neural Network:
-1. Input Layer
-2. Hidden Layer
-3. Output Layer 
