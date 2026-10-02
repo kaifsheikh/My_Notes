@@ -1,26 +1,33 @@
-## 🔹 What is Data Structure in Pandas:
-> 1. ### Data ko computer ki memory mein arrange aur organize karne ka tareeqa isa hum Data Structure bolte hai.
-> 2. ### Data structure ka matlab hota hai data ko aise format mein rakhna jisse us par kaam karna easy ho. Pandas mein data ko table, column, row, ya labeled form mein store kiya jata hai, taa ke aap usay quickly access aur modify add yeah delete kiya ja sekhe.
-> 3. ### Data structure batata hai ke bohat saara data kis format mein rakha gaya hai means.
-> 4. ### Data structure 2 tarah ka hote hai.
+# 🔹 What is Data Structure in Pandas:
+1. Data ko computer ki memory mein arrange aur organize karne ka tareeqa hai isa hum Data Structure bolte hai means.
 
-## 🔹 Types of Data Structure in Pandas:
-1. `Linear Data Structure`
+2. **Data structure** ka matlab hota hai data ko aise format mein rakhna jisse us par kaam karna easy ho.
+
+3. tu Pandas mein data ko **table** **column** **row** ya **labeled** ki form mein store kiya jata hai, taa ke aap usay quickly **access** aur **modify** **add** yeah delete kiya ja sekhe.
+
+4. Data structure batata hai ke bohat saara data kis format mein rakha gaya hai.
+
+5. Data structure 2 tarah ka hote hai.
+
+# 🔹 Types of Data Structure in Pandas:
+1. **`Linear Data Structure`**
     - Linear data structure woh hota hai jisme data ek seedhi line mein store hota hai. Yani ek element ke baad doosra, phir teesra — bilkul queue ya line ki tarah.
     - is terha ka data ko hum `1 Dimentional` data bhi bolte hai. 
     
-2. `Non-Linear Data Structure`
+2. **`Non-Linear Data Structure`**
     - Non-Linear Data Structure woh hota hai jisme data ek seedhi line mein store nahi hota hai. Yani data ko kisi tree, graph, ya kisi aur complex structure mein rakha jata hai.
     - is terha ka data ko hum `2 Dimentional` data bhi bolte hai. 
 
 ---
 
-## `Series` (Linear Data Structure)
-> 1. ### **Series**: Series ek single column data structure hai.
-> 2. ### Matlab ek hi type ka data ya mixed data ek line mein store hota hai. jisa hum 1 Dimensional data bolte hai <br>
-> 3. ### Har item ka ek index (number) hota hai, jisse hum item ko access kar sakte hain or index number 0 se start hota hai.
+# `Series` - Linear Data Structure
+1. **Series**: Series ek single column data structure hai means.
 
-## `Examples for Series`
+2. Series ek hi type ka data ya mixed data ko ek he line mein store karta hai. jisa hum **1 Dimensional** data bolte hai.
+
+3. Har item ka ek **index number** hota hai, jisse hum item ko access kar sakte hain or index number 0 se start hota hai.
+
+## `Series` - Examples
 ```py
 import pandas as pd
 
@@ -28,71 +35,221 @@ data = [10, 20, 30, 40]
 s = pd.Series(data)
 
 print(s)
-print(s[0]) # 10
+print(s[0])
+
+# ---
+
+import pandas as pd
+
+s = pd.Series([10, 20, 30, 40])
+print(s)
 ```
 
 ## `Series` - Custom Index Assign karna
 ```py
 import pandas as pd
+
 data = [10, 20, 30]
+
 s = pd.Series(data, index=["a", "b", "c"])
+
 print(s)
-print(s['a']) # 10
-print(s[['a' , 'b' , 'c']]) # 10 20 30
+
+print(s['a'])
+
+print(s[['a' , 'b' , 'c']])
+
 print(s['a':'c']) # a se lekar c tak ka sub data ayga
 ```
 
-## `Series` - Multiple Value Fetch karna
+## `Series` - Specific Multiple Values Fetch karna
 ```py
 import pandas as pd
+
 data = [10, 20, 30 , 30 , 45, 78, 78 , 100]
+
 s = pd.Series(data)
+
 print(s[[0,4]]) # 10 , 45
 ```
 
-## `Series` - 0 se 4 tak sari values fetch karna
+## `Series` - 0 se 4 tak sari values fetch hoge
+
+1. ager hum **0:5** likhte hai tu yeah **0 se 4** tak jayga means 1 number less.
+
 ```py
 import pandas as pd
+
 data = [10, 20, 30 , 30 , 45, 78, 78 , 100]
+
 s = pd.Series(data)
+
 print(s[0:4]) # 10 , 20 , 30 , 30
+```
+
+## `Series` - same index number in a single value
+
+1. **value 1** hai or oisa **index number 3** hai. 
+
+```py
+import pandas as pd
+
+s = pd.Series(5, index=['a', 'b', 'c'])
+
+print(s)
+
+print(s['c'])
+```
+
+## `Series` - Series ki full information
+
+```py
+import pandas as pd
+
+s = pd.Series(
+    [10, 20, 30],
+    index=['a', 'b', 'c']
+)
+
+print(s.values) # [10 20 30]
+
+print(s.index)  # Index(['a', 'b', 'c'], dtype='str')
+
+print(s.dtype)  # int64
+
+print(s.name)   # None
+
+print(s.size)   # 3
 ```
 
 ## `Series` - Series ko List Datatype mein convert karna
 ```py
 import pandas as pd
+
 s = pd.Series([10, 20, 30], index=["a", "b", "c"])
-d = s.tolist()
-print(d) # [10, 20, 30]
+
+d = s.tolist() # Series into List
+
+print(type(d))
+
+print(d)
+
+# ---
+
+import pandas as pd
+
+data = [10, 20, 30]
+
+s = pd.Series(data)
+
+d = s.tolist() # Series into List
+
+print(type(d))
+
+print(d)
 ```
 
-## `Series` - Series ko Dictionary Datatype mein convert kardyga
+## `Series` - Series ko Dictionary Datatype mein convert karna
 ```py
 import pandas as pd
+
 s = pd.Series([10, 20, 30], index=["a", "b", "c"])
+
 d = s.to_dict()
+
 print(d) # {'a': 10, 'b': 20, 'c': 30}
+```
+
+## `Series` - Series mein Dictionary create karna direct
+
+```py
+import pandas as pd
+
+s = pd.Series(
+    {
+        'Ali': 25, 
+        'Sara': 30, 
+        'John': 35
+    }
+)
+
+print(s)
+
+print(s['Ali'])
+```
+
+## `Series` - **name()** parameter
+
+```py
+import pandas as pd
+
+marks = pd.Series(
+    [85, 90, 78, 92, 88],
+    index=['Ali', 'Sara', 'John', 'Ayesha', 'Bilal'],
+    name='Marks'
+)
+
+print(marks)
 ```
 
 ## `Series` - Checking if any Value Null so return TRUE if Not Null so return FALSE
 ```py
 import pandas as pd
+
 data = [10, 20, 30 , 30 , 45, 100, 78, 400]
+
 s = pd.Series(data)
+
 print(s.isnull()) # FALSE
+
+# 0    False
+# 1    False
+# 2    False
+# 3    False
+# 4    False
+# 5    False
+# 6    False
+# 7    False
+
+# dtype: bool
+
+# ---
+
+import pandas as pd
+
+data = [10, 20, 30 , None , 45, 100, 78, 400]
+
+s = pd.Series(data)
+
+print(s.isnull()) # FALSE
+
+# 0    False
+# 1    False
+# 2    False
+# 3    True
+# 4    False
+# 5    False
+# 6    False
+# 7    False
+
+# dtype: bool
 ```
 
 ## `Series` - Missing Values ko drop/delete karna
 
+1. **None** likhne se Pandas isko khud hi missing value (NaN) samajh leta hai
+
+2. **dropna()** missing values ko list se remove karta hai.
+
 ```py
 import pandas as pd
 
-# None likhne se Pandas isko khud hi missing value (NaN) samajh leta hai
 data = [10, 20, None, 40, None, 50]
+
 s = pd.Series(data)
 
-# dropna() missing values ko list se hata dega
 cleaned_s = s.dropna()
+
 print(cleaned_s) 
 
 ```
@@ -113,40 +270,70 @@ print(filled_s) # 10.0, 20.0, 0.0, 40.0
 
 ## `Series` - Duplicate values ko remove karna
 
+1. jo bhe duplicate values honge wo sari remove hojaynge.
+
 ```py
 import pandas as pd
 
 data = [10, 20, 20, 30, 10, 40]
+
 s = pd.Series(data)
 
 unique_s = s.drop_duplicates()
-print(unique_s) # 10, 20, 30, 40
 
+print(unique_s)
 ```
 
-## `Series` - Kisi specific index ka data remove/delete karna
+## `Series` - Kisi specific index ka data remove/delete karna ho
+
+1. **drop()** ke zariye kisi bhi label/index ka data delete kar sakte hain
 
 ```py
 import pandas as pd
 
 s = pd.Series([10, 20, 30], index=["a", "b", "c"])
 
-# drop() ke zariye kisi bhi label/index ka data delete kar sakte hain
 s = s.drop("b")
-print(s) # Sirf 'a' aur 'c' bachenge
 
+print(s)
+
+# ---
+
+import pandas as pd
+
+data = [10, 20, 30]
+
+s = pd.Series(data)
+
+s = s.drop(1)
+
+print(s)
 ```
 
 ## `Series` - Ek se zyada indexes ko ek sath delete karna
+
+1. List ki surat mein multiple indexes pass karke delete karna
 
 ```py
 import pandas as pd
 
 s = pd.Series([10, 20, 30, 40], index=["a", "b", "c", "d"])
 
-# List ki surat mein multiple indexes pass karke delete karna
 s = s.drop(["a", "c"])
-print(s) # Sirf 'b' aur 'd' bachenge
+
+print(s)
+
+# ---
+
+import pandas as pd
+
+data = [10, 20, 30, 40]
+
+s = pd.Series(data)
+
+s = s.drop([0 , 2])
+
+print(s)
 
 ```
 
@@ -158,7 +345,7 @@ import pandas as pd
 s = pd.Series([10, 20, 30], index=["a", "b", "c"])
 
 s["b"] = 99
-print(s) # 'b' ki jagah 99 ho jayega
+print(s)
 
 ```
 
