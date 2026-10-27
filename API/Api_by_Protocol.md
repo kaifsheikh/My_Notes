@@ -10,17 +10,7 @@
 
 # REST API:
 
-1. REST koi software ya architectural design style (tarz) hai jo web services banane ke liye use hota hai.
-
-2. Iska asal maqsad Resources (data jaisa ke Users, Photos, ya Products) ko access karna aur un par action lena hota hai.
-
-3. REST API hamesha HTTP Protocols par kaam karti hai. Is mein 4 buniyadi kaam hote hain jinhein hum CRUD kehte hain `Create`, `Read` , `Update` or `Delete`.
-
-4. Agar ek software Python mein bana hai aur dusra Java mein, to wo aapas mein direct baat nahi kar sakte. REST API unhe ek common rasta deti hai (HTTP) aur ek common zubaan deti hai (JSON).
-
-5. REST ka ek barha rule hai `Statelessness`. Iska matlab hai ke server ko ye yaad rakhne ki zaroorat nahi ke aapne 2 minute pehle kya kiya tha.
-
-6. Har request apne sath apni puri pehchan (Token/ID) lekar aati hai.
+1. [RestApi](./RestApi)
 
 # SOAP API:
 

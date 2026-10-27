@@ -23,9 +23,9 @@
 2. Partner APIs
 3. Private (Internal) APIs
 
-## Public API:
+## Public (Open) APIs:
 
-1. Public API woh API hai jo internet par sabke liye open hoti hai. Koi bhi use kar sakta hai, chahe woh developer ho ya koi organization or koi public user bhi use kar sakta hai.
+1. Public API woh API hai jo internet par sabke liye open hoti hai. Koi bhi use kar sakta hai, chahe woh developer ho ya koi organization ho developer ho, student ho, ya koi company ho.
 2. Iska istemal koi bhi kar sakta hai (learning ke liye best)
 3. Documentation available hoti hai
 4. Community support milti hai
