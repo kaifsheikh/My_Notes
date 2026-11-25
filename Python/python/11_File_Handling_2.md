@@ -94,6 +94,8 @@ with open("student.txt", "r+") as f:
 
 ---
 
+# Real life Example:
+
 ## 1. Login / Activity Log File
 
 ```python
@@ -106,4 +108,39 @@ def log_activity(username, action="logged in"):
 
 # Naye logs append honge (purane safe rahenge)
 log_activity("ali_raza", "logged out")
+```
+
+### 1. Daily Expense Tracker:
+
+```py
+from datetime import datetime
+
+file_name = "expenses.txt"
+
+# 1. Get user input
+product_name = input("Enter product name: ")
+price = float(input("Enter product price: "))
+today_date = datetime.now().strftime("%Y-%m-%d")
+
+# 2. Append data to the file (old data is kept)
+with open(file_name, "a", encoding="utf-8") as file:
+    file.write(f"{today_date} | {product_name} | {price}\n")
+
+print("Saved successfully!\n")
+
+# 3. Read the file and show a simple summary
+with open(file_name, "r", encoding="utf-8") as file:
+    content = file.read()
+
+# Count products by counting lines (each entry is one line)
+lines = content.strip().split("\n")
+total_products = len(lines)
+
+# Calculate total price without using a loop
+prices = [float(line.split("|")[2].strip()) for line in lines]
+total_price = sum(prices)
+
+print("--- Final Summary ---")
+print(f"Total Products: {total_products}")
+print(f"Total Price: {total_price:.2f}")
 ```
